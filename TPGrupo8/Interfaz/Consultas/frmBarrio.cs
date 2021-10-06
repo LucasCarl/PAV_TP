@@ -27,22 +27,14 @@ namespace TPGrupo8.Interfaz.Consultas
         private void btnConsultar_Click(object sender, EventArgs e)
         {
             IList<Barrio> lista;
-            /*
             //Comprueba si hay que tomar filtros o no
-            if (chkTodos.Checked)
-                lista = contactoService.ObtenerContactos();
-            else
-            {
-                Dictionary<string, object> parametros = new Dictionary<string, object>();
-                if (!String.IsNullOrEmpty(txtNombre.Text))
-                    parametros.Add("nombre", txtNombre.Text);
+            Dictionary<string, object> parametros = new Dictionary<string, object>();
+            if (!String.IsNullOrEmpty(txtNombre.Text))
+                parametros.Add("nombre", txtNombre.Text);
 
-                lista = contactoService.ObtenerContactos(parametros);
-            }
-            
+            lista = barrioService.ObtenerBarrios(parametros);
 
             dgvTabla.DataSource = lista;
-            */
 
             //Resetea botones borrar/editar
             btnBorrar.Enabled = false;
