@@ -4,7 +4,7 @@ using System.Text;
 
 namespace TPGrupo8.Entidades
 {
-    class DetalleFactura
+    public class DetalleFactura
     {
         public int IdDetalleFactura { get; set; }
         public int NumeroOrden { get; set; }

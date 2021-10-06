@@ -4,7 +4,7 @@ using System.Text;
 
 namespace TPGrupo8.Entidades
 {
-    class Usuario
+    public class Usuario
     {
         public int IdUsuario { get; set; }
         public string NombreUsuario { get; set; }

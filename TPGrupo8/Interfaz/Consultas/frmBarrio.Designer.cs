@@ -48,6 +48,7 @@ namespace TPGrupo8.Interfaz.Consultas
             this.btnBorrar.TabIndex = 22;
             this.btnBorrar.Text = "Borrar";
             this.btnBorrar.UseVisualStyleBackColor = true;
+            this.btnBorrar.Click += new System.EventHandler(this.btnBorrar_Click);
             // 
             // btnEditar
             // 
@@ -58,6 +59,7 @@ namespace TPGrupo8.Interfaz.Consultas
             this.btnEditar.TabIndex = 21;
             this.btnEditar.Text = "Editar";
             this.btnEditar.UseVisualStyleBackColor = true;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // btnNuevo
             // 
@@ -67,6 +69,7 @@ namespace TPGrupo8.Interfaz.Consultas
             this.btnNuevo.TabIndex = 20;
             this.btnNuevo.Text = "Nuevo";
             this.btnNuevo.UseVisualStyleBackColor = true;
+            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
             // dgvTabla
             // 

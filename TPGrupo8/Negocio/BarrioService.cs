@@ -19,5 +19,20 @@ namespace TPGrupo8.Negocio
         {
             return (parametros != null) ? barrioDao.ObtenerBarriosFiltros(parametros) : barrioDao.ObtenerTodos();
         }
+
+        public bool NuevoBarrio(Barrio barrio)
+        {
+            return barrioDao.NuevoBarrio(barrio);
+        }
+
+        public bool ModificarBarrio(Barrio barrio, int id)
+        {
+            return barrioDao.ModificarBarrio(barrio, id);
+        }
+
+        public bool EliminarBarrio(Barrio barrio)
+        {
+            return barrioDao.EliminarBarrio(barrio);
+        }
     }
 }

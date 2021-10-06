@@ -57,5 +57,34 @@ namespace TPGrupo8.Datos
 
             return listadoBarrios;
         }
+
+        public bool NuevoBarrio(Barrio barrio)
+        {
+            string sqlComando = "INSERT INTO Barrios (nombre, borrado) VALUES (@nombre, 0)";
+
+            Dictionary<string, object> parametros = new Dictionary<string, object>();
+            parametros.Add("nombre", barrio.Nombre);
+
+            return (DataManager.Instancia().EjecutarSQL(sqlComando, parametros) == 1);
+        }
+
+        public bool ModificarBarrio(Barrio barrio, int id)
+        {
+            string sqlComando = "UPDATE Barrios SET nombre = @nombre, borrado = 0 WHERE id_barrio = @idBarrio";
+            Dictionary<string, object> parametros = new Dictionary<string, object>();
+            parametros.Add("idBarrio", id);
+            parametros.Add("nombre", barrio.Nombre);
+
+            return (DataManager.Instancia().EjecutarSQL(sqlComando, parametros) == 1);
+        }
+
+        public bool EliminarBarrio(Barrio barrio)
+        {
+            string sqlComando = "UPDATE Barrios SET borrado = 1 WHERE id_barrio = @idBarrio";
+            Dictionary<string, object> parametros = new Dictionary<string, object>();
+            parametros.Add("idBarrio", barrio.IdBarrio);
+
+            return (DataManager.Instancia().EjecutarSQL(sqlComando, parametros) == 1);
+        }
     }
 }

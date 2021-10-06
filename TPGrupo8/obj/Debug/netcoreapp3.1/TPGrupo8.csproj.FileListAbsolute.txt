@@ -98,3 +98,6 @@ F:\Proyectos Visual Studio\PAV I\PAV_TP\TPGrupo8\obj\Debug\netcoreapp3.1\TPGrupo
 F:\Proyectos Visual Studio\PAV I\PAV_TP\TPGrupo8\obj\Debug\netcoreapp3.1\TPGrupo8.dll
 F:\Proyectos Visual Studio\PAV I\PAV_TP\TPGrupo8\obj\Debug\netcoreapp3.1\TPGrupo8.pdb
 F:\Proyectos Visual Studio\PAV I\PAV_TP\TPGrupo8\obj\Debug\netcoreapp3.1\TPGrupo8.genruntimeconfig.cache
+F:\Proyectos Visual Studio\PAV I\PAV_TP\TPGrupo8\obj\Debug\netcoreapp3.1\TPGrupo8.Interfaz.Consultas.frmABMBario.resources
+F:\Proyectos Visual Studio\PAV I\PAV_TP\TPGrupo8\obj\Debug\netcoreapp3.1\TPGrupo8.Interfaz.Consultas.frmCliente.resources
+F:\Proyectos Visual Studio\PAV I\PAV_TP\TPGrupo8\obj\Debug\netcoreapp3.1\TPGrupo8.Interfaz.Consultas.frmProyectos.resources

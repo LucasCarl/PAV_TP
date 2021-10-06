@@ -40,5 +40,26 @@ namespace TPGrupo8.Interfaz.Consultas
             btnBorrar.Enabled = false;
             btnEditar.Enabled = false;
         }
+
+        private void btnNuevo_Click(object sender, EventArgs e)
+        {
+            frmABMBario abmBarrio = new frmABMBario();
+            abmBarrio.IniciarFormulario(frmABMBario.FormMode.nuevo);
+            abmBarrio.ShowDialog();
+        }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            frmABMBario aBMBarrio = new frmABMBario();
+            aBMBarrio.IniciarFormulario(frmABMBario.FormMode.modificar, (Barrio)dgvTabla.CurrentRow.DataBoundItem);
+            aBMBarrio.ShowDialog();
+        }
+
+        private void btnBorrar_Click(object sender, EventArgs e)
+        {
+            frmABMBario aBMBarrio = new frmABMBario();
+            aBMBarrio.IniciarFormulario(frmABMBario.FormMode.eliminar, (Barrio)dgvTabla.CurrentRow.DataBoundItem);
+            aBMBarrio.ShowDialog();
+        }
     }
 }

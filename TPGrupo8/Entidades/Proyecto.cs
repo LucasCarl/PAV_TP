@@ -4,7 +4,7 @@ using System.Text;
 
 namespace TPGrupo8.Entidades
 {
-    class Proyecto
+    public class Proyecto
     {
         public int IdProyecto { get; set; }
         public Producto Producto { get; set; }
