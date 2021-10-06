@@ -1,0 +1,73 @@
+F:\Proyectos Visual Studio\PAV I\TP\TPGrupo8\bin\Debug\netcoreapp3.1\TPGrupo8.exe
+F:\Proyectos Visual Studio\PAV I\TP\TPGrupo8\bin\Debug\netcoreapp3.1\TPGrupo8.deps.json
+F:\Proyectos Visual Studio\PAV I\TP\TPGrupo8\bin\Debug\netcoreapp3.1\TPGrupo8.runtimeconfig.json
+F:\Proyectos Visual Studio\PAV I\TP\TPGrupo8\bin\Debug\netcoreapp3.1\TPGrupo8.runtimeconfig.dev.json
+F:\Proyectos Visual Studio\PAV I\TP\TPGrupo8\bin\Debug\netcoreapp3.1\TPGrupo8.dll
+F:\Proyectos Visual Studio\PAV I\TP\TPGrupo8\bin\Debug\netcoreapp3.1\TPGrupo8.pdb
+F:\Proyectos Visual Studio\PAV I\TP\TPGrupo8\obj\Debug\netcoreapp3.1\TPGrupo8.csproj.AssemblyReference.cache
+F:\Proyectos Visual Studio\PAV I\TP\TPGrupo8\obj\Debug\netcoreapp3.1\TPGrupo8.csproj.GenerateResource.cache
+F:\Proyectos Visual Studio\PAV I\TP\TPGrupo8\obj\Debug\netcoreapp3.1\TPGrupo8.AssemblyInfoInputs.cache
+F:\Proyectos Visual Studio\PAV I\TP\TPGrupo8\obj\Debug\netcoreapp3.1\TPGrupo8.AssemblyInfo.cs
+F:\Proyectos Visual Studio\PAV I\TP\TPGrupo8\obj\Debug\netcoreapp3.1\TPGrupo8.csproj.CoreCompileInputs.cache
+F:\Proyectos Visual Studio\PAV I\TP\TPGrupo8\obj\Debug\netcoreapp3.1\TPGrupo8.dll
+F:\Proyectos Visual Studio\PAV I\TP\TPGrupo8\obj\Debug\netcoreapp3.1\TPGrupo8.pdb
+F:\Proyectos Visual Studio\PAV I\TP\TPGrupo8\obj\Debug\netcoreapp3.1\TPGrupo8.genruntimeconfig.cache
+F:\Proyectos Visual Studio\PAV I\TP\TPGrupo8\obj\Debug\netcoreapp3.1\TPGrupo8.Interfaz.frmLogin.resources
+F:\Proyectos Visual Studio\PAV I\TP\TPGrupo8\obj\Debug\netcoreapp3.1\TPGrupo8.Properties.Resources.resources
+F:\Proyectos Visual Studio\PAV I\TP\TPGrupo8\obj\Debug\netcoreapp3.1\TPGrupo8.Interfaz.Abms.frmAbm.resources
+F:\Proyectos Visual Studio\PAV I\TP\TPGrupo8\obj\Debug\netcoreapp3.1\TPGrupo8.Interfaz.Abms.frmContacto.resources
+F:\Proyectos Visual Studio\PAV I\TP\TPGrupo8\obj\Debug\netcoreapp3.1\TPGrupo8.Interfaz.frmMenu.resources
+D:\Lucas\VisualStudio\TP PAV I\grupo_PAVI_3k5_modulo4\TPGrupo8\bin\Debug\netcoreapp3.1\TPGrupo8.exe
+D:\Lucas\VisualStudio\TP PAV I\grupo_PAVI_3k5_modulo4\TPGrupo8\bin\Debug\netcoreapp3.1\TPGrupo8.deps.json
+D:\Lucas\VisualStudio\TP PAV I\grupo_PAVI_3k5_modulo4\TPGrupo8\bin\Debug\netcoreapp3.1\TPGrupo8.runtimeconfig.json
+D:\Lucas\VisualStudio\TP PAV I\grupo_PAVI_3k5_modulo4\TPGrupo8\bin\Debug\netcoreapp3.1\TPGrupo8.runtimeconfig.dev.json
+D:\Lucas\VisualStudio\TP PAV I\grupo_PAVI_3k5_modulo4\TPGrupo8\bin\Debug\netcoreapp3.1\TPGrupo8.dll
+D:\Lucas\VisualStudio\TP PAV I\grupo_PAVI_3k5_modulo4\TPGrupo8\bin\Debug\netcoreapp3.1\TPGrupo8.pdb
+D:\Lucas\VisualStudio\TP PAV I\grupo_PAVI_3k5_modulo4\TPGrupo8\obj\Debug\netcoreapp3.1\TPGrupo8.csproj.AssemblyReference.cache
+D:\Lucas\VisualStudio\TP PAV I\grupo_PAVI_3k5_modulo4\TPGrupo8\obj\Debug\netcoreapp3.1\TPGrupo8.Interfaz.Consultas.frmConsulta.resources
+D:\Lucas\VisualStudio\TP PAV I\grupo_PAVI_3k5_modulo4\TPGrupo8\obj\Debug\netcoreapp3.1\TPGrupo8.Interfaz.Consultas.frmContactos.resources
+D:\Lucas\VisualStudio\TP PAV I\grupo_PAVI_3k5_modulo4\TPGrupo8\obj\Debug\netcoreapp3.1\TPGrupo8.Interfaz.frmLogin.resources
+D:\Lucas\VisualStudio\TP PAV I\grupo_PAVI_3k5_modulo4\TPGrupo8\obj\Debug\netcoreapp3.1\TPGrupo8.Properties.Resources.resources
+D:\Lucas\VisualStudio\TP PAV I\grupo_PAVI_3k5_modulo4\TPGrupo8\obj\Debug\netcoreapp3.1\TPGrupo8.csproj.GenerateResource.cache
+D:\Lucas\VisualStudio\TP PAV I\grupo_PAVI_3k5_modulo4\TPGrupo8\obj\Debug\netcoreapp3.1\TPGrupo8.GeneratedMSBuildEditorConfig.editorconfig
+D:\Lucas\VisualStudio\TP PAV I\grupo_PAVI_3k5_modulo4\TPGrupo8\obj\Debug\netcoreapp3.1\TPGrupo8.AssemblyInfoInputs.cache
+D:\Lucas\VisualStudio\TP PAV I\grupo_PAVI_3k5_modulo4\TPGrupo8\obj\Debug\netcoreapp3.1\TPGrupo8.AssemblyInfo.cs
+D:\Lucas\VisualStudio\TP PAV I\grupo_PAVI_3k5_modulo4\TPGrupo8\obj\Debug\netcoreapp3.1\TPGrupo8.csproj.CoreCompileInputs.cache
+D:\Lucas\VisualStudio\TP PAV I\grupo_PAVI_3k5_modulo4\TPGrupo8\obj\Debug\netcoreapp3.1\TPGrupo8.dll
+D:\Lucas\VisualStudio\TP PAV I\grupo_PAVI_3k5_modulo4\TPGrupo8\obj\Debug\netcoreapp3.1\TPGrupo8.pdb
+D:\Lucas\VisualStudio\TP PAV I\grupo_PAVI_3k5_modulo4\TPGrupo8\obj\Debug\netcoreapp3.1\TPGrupo8.genruntimeconfig.cache
+D:\Lucas\VisualStudio\TP PAV I\grupo_PAVI_3k5_modulo4\TPGrupo8\bin\Debug\netcoreapp3.1\System.Data.SqlClient.dll
+D:\Lucas\VisualStudio\TP PAV I\grupo_PAVI_3k5_modulo4\TPGrupo8\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\sni.dll
+D:\Lucas\VisualStudio\TP PAV I\grupo_PAVI_3k5_modulo4\TPGrupo8\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\sni.dll
+D:\Lucas\VisualStudio\TP PAV I\grupo_PAVI_3k5_modulo4\TPGrupo8\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\sni.dll
+D:\Lucas\VisualStudio\TP PAV I\grupo_PAVI_3k5_modulo4\TPGrupo8\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+D:\Lucas\VisualStudio\TP PAV I\grupo_PAVI_3k5_modulo4\TPGrupo8\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+D:\Lucas\VisualStudio\TP PAV I\grupo_PAVI_3k5_modulo4\TPGrupo8\obj\Debug\netcoreapp3.1\TPGrupo8.csproj.CopyComplete
+D:\Lucas\VisualStudio\TP PAV I\grupo_PAVI_3k5_modulo4\TPGrupo8\obj\Debug\netcoreapp3.1\TPGrupo8.Interfaz.frmPrincipal.resources
+F:\Proyectos Visual Studio\PAV I\TP\grupo_PAVI_3k5_modulo4\TPGrupo8\bin\Debug\netcoreapp3.1\TPGrupo8.exe
+F:\Proyectos Visual Studio\PAV I\TP\grupo_PAVI_3k5_modulo4\TPGrupo8\bin\Debug\netcoreapp3.1\TPGrupo8.deps.json
+F:\Proyectos Visual Studio\PAV I\TP\grupo_PAVI_3k5_modulo4\TPGrupo8\bin\Debug\netcoreapp3.1\TPGrupo8.runtimeconfig.json
+F:\Proyectos Visual Studio\PAV I\TP\grupo_PAVI_3k5_modulo4\TPGrupo8\bin\Debug\netcoreapp3.1\TPGrupo8.runtimeconfig.dev.json
+F:\Proyectos Visual Studio\PAV I\TP\grupo_PAVI_3k5_modulo4\TPGrupo8\bin\Debug\netcoreapp3.1\TPGrupo8.dll
+F:\Proyectos Visual Studio\PAV I\TP\grupo_PAVI_3k5_modulo4\TPGrupo8\bin\Debug\netcoreapp3.1\TPGrupo8.pdb
+F:\Proyectos Visual Studio\PAV I\TP\grupo_PAVI_3k5_modulo4\TPGrupo8\bin\Debug\netcoreapp3.1\System.Data.SqlClient.dll
+F:\Proyectos Visual Studio\PAV I\TP\grupo_PAVI_3k5_modulo4\TPGrupo8\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\sni.dll
+F:\Proyectos Visual Studio\PAV I\TP\grupo_PAVI_3k5_modulo4\TPGrupo8\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\sni.dll
+F:\Proyectos Visual Studio\PAV I\TP\grupo_PAVI_3k5_modulo4\TPGrupo8\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\sni.dll
+F:\Proyectos Visual Studio\PAV I\TP\grupo_PAVI_3k5_modulo4\TPGrupo8\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+F:\Proyectos Visual Studio\PAV I\TP\grupo_PAVI_3k5_modulo4\TPGrupo8\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+F:\Proyectos Visual Studio\PAV I\TP\grupo_PAVI_3k5_modulo4\TPGrupo8\obj\Debug\netcoreapp3.1\TPGrupo8.csproj.AssemblyReference.cache
+F:\Proyectos Visual Studio\PAV I\TP\grupo_PAVI_3k5_modulo4\TPGrupo8\obj\Debug\netcoreapp3.1\TPGrupo8.Interfaz.Consultas.frmContactos.resources
+F:\Proyectos Visual Studio\PAV I\TP\grupo_PAVI_3k5_modulo4\TPGrupo8\obj\Debug\netcoreapp3.1\TPGrupo8.Interfaz.frmLogin.resources
+F:\Proyectos Visual Studio\PAV I\TP\grupo_PAVI_3k5_modulo4\TPGrupo8\obj\Debug\netcoreapp3.1\TPGrupo8.Interfaz.frmPrincipal.resources
+F:\Proyectos Visual Studio\PAV I\TP\grupo_PAVI_3k5_modulo4\TPGrupo8\obj\Debug\netcoreapp3.1\TPGrupo8.Properties.Resources.resources
+F:\Proyectos Visual Studio\PAV I\TP\grupo_PAVI_3k5_modulo4\TPGrupo8\obj\Debug\netcoreapp3.1\TPGrupo8.csproj.GenerateResource.cache
+F:\Proyectos Visual Studio\PAV I\TP\grupo_PAVI_3k5_modulo4\TPGrupo8\obj\Debug\netcoreapp3.1\TPGrupo8.AssemblyInfoInputs.cache
+F:\Proyectos Visual Studio\PAV I\TP\grupo_PAVI_3k5_modulo4\TPGrupo8\obj\Debug\netcoreapp3.1\TPGrupo8.AssemblyInfo.cs
+F:\Proyectos Visual Studio\PAV I\TP\grupo_PAVI_3k5_modulo4\TPGrupo8\obj\Debug\netcoreapp3.1\TPGrupo8.csproj.CoreCompileInputs.cache
+F:\Proyectos Visual Studio\PAV I\TP\grupo_PAVI_3k5_modulo4\TPGrupo8\obj\Debug\netcoreapp3.1\TPGrupo8.csproj.CopyComplete
+F:\Proyectos Visual Studio\PAV I\TP\grupo_PAVI_3k5_modulo4\TPGrupo8\obj\Debug\netcoreapp3.1\TPGrupo8.dll
+F:\Proyectos Visual Studio\PAV I\TP\grupo_PAVI_3k5_modulo4\TPGrupo8\obj\Debug\netcoreapp3.1\TPGrupo8.pdb
+F:\Proyectos Visual Studio\PAV I\TP\grupo_PAVI_3k5_modulo4\TPGrupo8\obj\Debug\netcoreapp3.1\TPGrupo8.genruntimeconfig.cache
+F:\Proyectos Visual Studio\PAV I\TP\grupo_PAVI_3k5_modulo4\TPGrupo8\obj\Debug\netcoreapp3.1\TPGrupo8.Interfaz.Consultas.frmABMContacto.resources
+F:\Proyectos Visual Studio\PAV I\TP\grupo_PAVI_3k5_modulo4\TPGrupo8\obj\Debug\netcoreapp3.1\TPGrupo8.Interfaz.Consultas.frmBarrio.resources
