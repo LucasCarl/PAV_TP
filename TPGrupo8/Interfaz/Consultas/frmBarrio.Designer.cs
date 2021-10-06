@@ -32,7 +32,6 @@ namespace TPGrupo8.Interfaz.Consultas
             this.btnBorrar = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnNuevo = new System.Windows.Forms.Button();
-            this.chkTodos = new System.Windows.Forms.CheckBox();
             this.dgvTabla = new System.Windows.Forms.DataGridView();
             this.btnConsultar = new System.Windows.Forms.Button();
             this.txtNombre = new System.Windows.Forms.TextBox();
@@ -69,16 +68,6 @@ namespace TPGrupo8.Interfaz.Consultas
             this.btnNuevo.Text = "Nuevo";
             this.btnNuevo.UseVisualStyleBackColor = true;
             // 
-            // chkTodos
-            // 
-            this.chkTodos.AutoSize = true;
-            this.chkTodos.Location = new System.Drawing.Point(113, 73);
-            this.chkTodos.Name = "chkTodos";
-            this.chkTodos.Size = new System.Drawing.Size(92, 19);
-            this.chkTodos.TabIndex = 19;
-            this.chkTodos.Text = "Tomar todos";
-            this.chkTodos.UseVisualStyleBackColor = true;
-            // 
             // dgvTabla
             // 
             this.dgvTabla.AllowUserToAddRows = false;
@@ -106,6 +95,7 @@ namespace TPGrupo8.Interfaz.Consultas
             // txtNombre
             // 
             this.txtNombre.Location = new System.Drawing.Point(68, 23);
+            this.txtNombre.MinimumSize = new System.Drawing.Size(136, 23);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(136, 23);
             this.txtNombre.TabIndex = 24;
@@ -129,7 +119,6 @@ namespace TPGrupo8.Interfaz.Consultas
             this.Controls.Add(this.btnBorrar);
             this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.btnNuevo);
-            this.Controls.Add(this.chkTodos);
             this.Controls.Add(this.dgvTabla);
             this.Controls.Add(this.btnConsultar);
             this.Name = "frmBarrio";
@@ -145,7 +134,6 @@ namespace TPGrupo8.Interfaz.Consultas
         private System.Windows.Forms.Button btnBorrar;
         private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.Button btnNuevo;
-        private System.Windows.Forms.CheckBox chkTodos;
         private System.Windows.Forms.DataGridView dgvTabla;
         private System.Windows.Forms.Button btnConsultar;
         private System.Windows.Forms.TextBox txtNombre;

@@ -16,10 +16,7 @@ namespace TPGrupo8.Negocio
 
         public IList<Contacto> ObtenerContactos(Dictionary<string, object> parametros = null)
         {
-            if(parametros != null)
-                return contactoDao.ObtenerContactosFiltros(parametros);
-            else
-                return contactoDao.ObtenerTodos();
+            return (parametros != null)? contactoDao.ObtenerContactosFiltros(parametros): contactoDao.ObtenerTodos();
         }
 
         public bool NuevoContacto(Contacto contacto)

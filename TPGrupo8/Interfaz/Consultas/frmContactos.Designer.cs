@@ -196,6 +196,7 @@ namespace TPGrupo8.Interfaz.Consultas
             this.Controls.Add(this.lblApellido);
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.lblNombre);
+            this.MinimumSize = new System.Drawing.Size(495, 433);
             this.Name = "frmContactos";
             this.Text = "Contactos";
             ((System.ComponentModel.ISupportInitialize)(this.dgvTabla)).EndInit();
