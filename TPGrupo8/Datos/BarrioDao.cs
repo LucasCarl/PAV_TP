@@ -47,7 +47,7 @@ namespace TPGrupo8.Datos
             if(parametros.ContainsKey("nombre"))
                 sqlComando += " AND nombre LIKE '%' + @nombre + '%' ";
 
-            var resultadoConsulta = (DataRowCollection)DataManager.Instancia().ConsultaSQL(sqlComando).Rows;
+            var resultadoConsulta = (DataRowCollection)DataManager.Instancia().ConsultaSQL(sqlComando, parametros).Rows;
 
             //Transforma filas en Barrios
             foreach (DataRow fila in resultadoConsulta)

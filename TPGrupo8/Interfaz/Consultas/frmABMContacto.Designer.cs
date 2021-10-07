@@ -51,6 +51,7 @@ namespace TPGrupo8.Interfaz.Consultas
             // 
             // txtNombre
             // 
+            this.txtNombre.BackColor = System.Drawing.SystemColors.Window;
             this.txtNombre.Location = new System.Drawing.Point(79, 24);
             this.txtNombre.MaxLength = 50;
             this.txtNombre.Name = "txtNombre";
@@ -59,6 +60,7 @@ namespace TPGrupo8.Interfaz.Consultas
             // 
             // txtApellido
             // 
+            this.txtApellido.BackColor = System.Drawing.Color.White;
             this.txtApellido.Location = new System.Drawing.Point(79, 72);
             this.txtApellido.MaxLength = 50;
             this.txtApellido.Name = "txtApellido";

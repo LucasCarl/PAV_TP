@@ -62,6 +62,13 @@ namespace TPGrupo8.Interfaz.Consultas
 
         private void btnAccion_Click(object sender, EventArgs e)
         {
+            //Comprueba que el campo este lleno
+            if(string.IsNullOrEmpty(txtNombre.Text))
+            {
+                MessageBox.Show("Debe llenar todos los campos antes de continuar", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
             switch (modo)
             {
                 case FormMode.nuevo:
