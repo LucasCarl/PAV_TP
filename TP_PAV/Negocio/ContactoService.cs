@@ -10,7 +10,7 @@ namespace TP_PAV.Negocio
 {
     class ContactoService
     {
-        ContactoDao contactoDao = new ContactoDao();
+        ContactoDao contactoDao;
         public ContactoService()
         {
             contactoDao = new ContactoDao();

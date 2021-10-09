@@ -9,7 +9,7 @@ namespace TP_PAV.Negocio
 {
     class UsuarioService
     {
-        UsuarioDao usuDao = new UsuarioDao();
+        UsuarioDao usuDao;
         public UsuarioService()
         {
             usuDao = new UsuarioDao();

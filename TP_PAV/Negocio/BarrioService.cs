@@ -10,7 +10,7 @@ namespace TP_PAV.Negocio
 {
     class BarrioService
     {
-        BarrioDao barrioDao = new BarrioDao();
+        BarrioDao barrioDao;
 
         public BarrioService()
         {

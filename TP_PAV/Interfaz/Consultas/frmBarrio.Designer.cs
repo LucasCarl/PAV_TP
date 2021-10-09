@@ -42,9 +42,9 @@ namespace TP_PAV.Interfaz.Consultas
             // btnBorrar
             // 
             this.btnBorrar.Enabled = false;
-            this.btnBorrar.Location = new System.Drawing.Point(173, 306);
+            this.btnBorrar.Location = new System.Drawing.Point(148, 265);
             this.btnBorrar.Name = "btnBorrar";
-            this.btnBorrar.Size = new System.Drawing.Size(75, 23);
+            this.btnBorrar.Size = new System.Drawing.Size(64, 20);
             this.btnBorrar.TabIndex = 22;
             this.btnBorrar.Text = "Borrar";
             this.btnBorrar.UseVisualStyleBackColor = true;
@@ -53,9 +53,9 @@ namespace TP_PAV.Interfaz.Consultas
             // btnEditar
             // 
             this.btnEditar.Enabled = false;
-            this.btnEditar.Location = new System.Drawing.Point(92, 306);
+            this.btnEditar.Location = new System.Drawing.Point(79, 265);
             this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(75, 23);
+            this.btnEditar.Size = new System.Drawing.Size(64, 20);
             this.btnEditar.TabIndex = 21;
             this.btnEditar.Text = "Editar";
             this.btnEditar.UseVisualStyleBackColor = true;
@@ -63,9 +63,9 @@ namespace TP_PAV.Interfaz.Consultas
             // 
             // btnNuevo
             // 
-            this.btnNuevo.Location = new System.Drawing.Point(11, 306);
+            this.btnNuevo.Location = new System.Drawing.Point(9, 265);
             this.btnNuevo.Name = "btnNuevo";
-            this.btnNuevo.Size = new System.Drawing.Size(75, 23);
+            this.btnNuevo.Size = new System.Drawing.Size(64, 20);
             this.btnNuevo.TabIndex = 20;
             this.btnNuevo.Text = "Nuevo";
             this.btnNuevo.UseVisualStyleBackColor = true;
@@ -76,20 +76,20 @@ namespace TP_PAV.Interfaz.Consultas
             this.dgvTabla.AllowUserToAddRows = false;
             this.dgvTabla.AllowUserToDeleteRows = false;
             this.dgvTabla.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvTabla.Location = new System.Drawing.Point(12, 99);
+            this.dgvTabla.Location = new System.Drawing.Point(10, 86);
             this.dgvTabla.MultiSelect = false;
             this.dgvTabla.Name = "dgvTabla";
             this.dgvTabla.ReadOnly = true;
             this.dgvTabla.RowTemplate.Height = 25;
-            this.dgvTabla.Size = new System.Drawing.Size(284, 201);
+            this.dgvTabla.Size = new System.Drawing.Size(243, 174);
             this.dgvTabla.TabIndex = 18;
             this.dgvTabla.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTabla_CellClick);
             // 
             // btnConsultar
             // 
-            this.btnConsultar.Location = new System.Drawing.Point(221, 70);
+            this.btnConsultar.Location = new System.Drawing.Point(10, 60);
             this.btnConsultar.Name = "btnConsultar";
-            this.btnConsultar.Size = new System.Drawing.Size(75, 23);
+            this.btnConsultar.Size = new System.Drawing.Size(64, 20);
             this.btnConsultar.TabIndex = 17;
             this.btnConsultar.Text = "Consultar";
             this.btnConsultar.UseVisualStyleBackColor = true;
@@ -97,26 +97,26 @@ namespace TP_PAV.Interfaz.Consultas
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(68, 23);
-            this.txtNombre.MinimumSize = new System.Drawing.Size(136, 23);
+            this.txtNombre.Location = new System.Drawing.Point(58, 20);
+            this.txtNombre.MinimumSize = new System.Drawing.Size(117, 23);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(136, 23);
+            this.txtNombre.Size = new System.Drawing.Size(117, 20);
             this.txtNombre.TabIndex = 24;
             // 
             // lblNombre
             // 
             this.lblNombre.AutoSize = true;
-            this.lblNombre.Location = new System.Drawing.Point(12, 26);
+            this.lblNombre.Location = new System.Drawing.Point(10, 23);
             this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(51, 15);
+            this.lblNombre.Size = new System.Drawing.Size(44, 13);
             this.lblNombre.TabIndex = 23;
             this.lblNombre.Text = "Nombre";
             // 
             // frmBarrio
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(307, 335);
+            this.ClientSize = new System.Drawing.Size(263, 291);
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.lblNombre);
             this.Controls.Add(this.btnBorrar);
@@ -124,8 +124,11 @@ namespace TP_PAV.Interfaz.Consultas
             this.Controls.Add(this.btnNuevo);
             this.Controls.Add(this.dgvTabla);
             this.Controls.Add(this.btnConsultar);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(279, 330);
+            this.MinimumSize = new System.Drawing.Size(279, 330);
             this.Name = "frmBarrio";
-            this.Text = "frmBarrio";
+            this.Text = "Barrios";
             ((System.ComponentModel.ISupportInitialize)(this.dgvTabla)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

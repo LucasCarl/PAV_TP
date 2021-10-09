@@ -12,14 +12,14 @@ using TP_PAV.Negocio;
 
 namespace TP_PAV.Interfaz.Consultas
 {
-    public partial class frmABMBario : Form
+    public partial class frmABMBarrio : Form
     {
         public enum FormMode { nuevo, eliminar, modificar };
         private FormMode modo = FormMode.nuevo;
         private BarrioService barrioService;
         private Barrio oBarrio;
 
-        public frmABMBario()
+        public frmABMBarrio()
         {
             InitializeComponent();
             barrioService = new BarrioService();

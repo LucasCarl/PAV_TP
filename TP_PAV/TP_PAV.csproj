@@ -47,8 +47,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Datos\BarrioDao.cs" />
+    <Compile Include="Datos\ClienteDao.cs" />
     <Compile Include="Datos\ContactoDao.cs" />
     <Compile Include="Datos\DataManager.cs" />
+    <Compile Include="Datos\ProyectoDao.cs" />
     <Compile Include="Datos\UsuarioDao.cs" />
     <Compile Include="Entidades\Barrio.cs" />
     <Compile Include="Entidades\Cliente.cs" />
@@ -59,17 +61,29 @@
     <Compile Include="Entidades\Producto.cs" />
     <Compile Include="Entidades\Proyecto.cs" />
     <Compile Include="Entidades\Usuario.cs" />
-    <Compile Include="Interfaz\Consultas\frmABMBario.cs">
+    <Compile Include="Interfaz\Consultas\frmABMBarrio.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Interfaz\Consultas\frmABMBario.Designer.cs">
-      <DependentUpon>frmABMBario.cs</DependentUpon>
+    <Compile Include="Interfaz\Consultas\frmABMBarrio.Designer.cs">
+      <DependentUpon>frmABMBarrio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaz\Consultas\frmABMCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interfaz\Consultas\frmABMCliente.Designer.cs">
+      <DependentUpon>frmABMCliente.cs</DependentUpon>
     </Compile>
     <Compile Include="Interfaz\Consultas\frmABMContacto.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Interfaz\Consultas\frmABMContacto.Designer.cs">
       <DependentUpon>frmABMContacto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaz\Consultas\frmABMProyecto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interfaz\Consultas\frmABMProyecto.Designer.cs">
+      <DependentUpon>frmABMProyecto.cs</DependentUpon>
     </Compile>
     <Compile Include="Interfaz\Consultas\frmBarrio.cs">
       <SubType>Form</SubType>
@@ -108,10 +122,33 @@
       <DependentUpon>frmPrincipal.cs</DependentUpon>
     </Compile>
     <Compile Include="Negocio\BarrioService.cs" />
+    <Compile Include="Negocio\ClienteService.cs" />
     <Compile Include="Negocio\ContactoService.cs" />
+    <Compile Include="Negocio\ProyectoService.cs" />
     <Compile Include="Negocio\UsuarioService.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Interfaz\Consultas\frmABMBarrio.resx">
+      <DependentUpon>frmABMBarrio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interfaz\Consultas\frmABMCliente.resx">
+      <DependentUpon>frmABMCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interfaz\Consultas\frmABMProyecto.resx">
+      <DependentUpon>frmABMProyecto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interfaz\Consultas\frmBarrio.resx">
+      <DependentUpon>frmBarrio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interfaz\Consultas\frmCliente.resx">
+      <DependentUpon>frmCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interfaz\Consultas\frmContactos.resx">
+      <DependentUpon>frmContactos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interfaz\Consultas\frmProyectos.resx">
+      <DependentUpon>frmProyectos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Interfaz\frmPrincipal.resx">
       <DependentUpon>frmPrincipal.cs</DependentUpon>
     </EmbeddedResource>

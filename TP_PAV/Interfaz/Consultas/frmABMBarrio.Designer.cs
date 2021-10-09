@@ -1,7 +1,7 @@
 ﻿
 namespace TP_PAV.Interfaz.Consultas
 {
-    partial class frmABMBario
+    partial class frmABMBarrio
     {
         /// <summary>
         /// Required designer variable.
@@ -36,44 +36,44 @@ namespace TP_PAV.Interfaz.Consultas
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(71, 18);
+            this.txtNombre.Location = new System.Drawing.Point(61, 16);
             this.txtNombre.MaxLength = 50;
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(120, 23);
+            this.txtNombre.Size = new System.Drawing.Size(103, 20);
             this.txtNombre.TabIndex = 3;
             // 
             // lblNombre
             // 
             this.lblNombre.AutoSize = true;
-            this.lblNombre.Location = new System.Drawing.Point(12, 21);
+            this.lblNombre.Location = new System.Drawing.Point(10, 18);
             this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(51, 15);
+            this.lblNombre.Size = new System.Drawing.Size(44, 13);
             this.lblNombre.TabIndex = 2;
             this.lblNombre.Text = "Nombre";
             // 
             // btnAccion
             // 
-            this.btnAccion.Location = new System.Drawing.Point(142, 70);
+            this.btnAccion.Location = new System.Drawing.Point(122, 61);
             this.btnAccion.Name = "btnAccion";
-            this.btnAccion.Size = new System.Drawing.Size(75, 23);
+            this.btnAccion.Size = new System.Drawing.Size(64, 20);
             this.btnAccion.TabIndex = 9;
             this.btnAccion.Text = "Accion";
             this.btnAccion.UseVisualStyleBackColor = true;
             this.btnAccion.Click += new System.EventHandler(this.btnAccion_Click);
             // 
-            // frmABMBario
+            // frmABMBarrio
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(229, 105);
+            this.ClientSize = new System.Drawing.Size(196, 91);
             this.Controls.Add(this.btnAccion);
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.lblNombre);
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(245, 144);
+            this.MaximumSize = new System.Drawing.Size(212, 130);
             this.MinimizeBox = false;
-            this.MinimumSize = new System.Drawing.Size(245, 144);
-            this.Name = "frmABMBario";
+            this.MinimumSize = new System.Drawing.Size(212, 130);
+            this.Name = "frmABMBarrio";
             this.Text = "ABMBario";
             this.Load += new System.EventHandler(this.frmABMBario_Load);
             this.ResumeLayout(false);

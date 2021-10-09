@@ -24,37 +24,25 @@ namespace TP_PAV.Interfaz.Consultas
         private void btnConsultar_Click(object sender, EventArgs e)
         {
             IList<Contacto> lista;
-            //Comprueba si hay que tomar filtros o no
-            if (chkTodos.Checked)
-                lista = contactoService.ObtenerContactos();
-            else
-            {
-                Dictionary<string, object> parametros = new Dictionary<string, object>();
-                if (!String.IsNullOrEmpty(txtNombre.Text))
-                    parametros.Add("nombre", txtNombre.Text);
-                if (!String.IsNullOrEmpty(txtApellido.Text))
-                    parametros.Add("apellido", txtApellido.Text);
-                if (!String.IsNullOrEmpty(txtEmail.Text))
-                    parametros.Add("email", txtEmail.Text);
-                if (!String.IsNullOrEmpty(txtTelefono.Text))
-                    parametros.Add("telefono", txtTelefono.Text);
+            
+            //Filtros
+            Dictionary<string, object> parametros = new Dictionary<string, object>();
+            if (!String.IsNullOrEmpty(txtNombre.Text))
+                parametros.Add("nombre", txtNombre.Text);
+            if (!String.IsNullOrEmpty(txtApellido.Text))
+                parametros.Add("apellido", txtApellido.Text);
+            if (!String.IsNullOrEmpty(txtEmail.Text))
+                parametros.Add("email", txtEmail.Text);
+            if (!String.IsNullOrEmpty(txtTelefono.Text))
+                parametros.Add("telefono", txtTelefono.Text);
 
-                lista = contactoService.ObtenerContactos(parametros);
-            }
+            lista = contactoService.ObtenerContactos(parametros);
 
             dgvTabla.DataSource = lista;
 
             //Resetea botones borrar/editar
             btnBorrar.Enabled = false;
             btnEditar.Enabled = false;
-        }
-
-        private void chkTodos_CheckedChanged(object sender, EventArgs e)
-        {
-            txtNombre.Enabled = !txtNombre.Enabled;
-            txtApellido.Enabled = !txtApellido.Enabled;
-            txtEmail.Enabled = !txtEmail.Enabled;
-            txtTelefono.Enabled = !txtTelefono.Enabled;
         }
 
         private void dgvTabla_CellClick(object sender, DataGridViewCellEventArgs e)
