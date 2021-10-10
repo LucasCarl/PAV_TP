@@ -134,6 +134,7 @@ namespace TP_PAV.Interfaz.Consultas
             this.Controls.Add(this.btnAccion);
             this.Name = "frmABMProyecto";
             this.Text = "frmABMProyecto";
+            this.Load += new System.EventHandler(this.frmABMProyecto_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

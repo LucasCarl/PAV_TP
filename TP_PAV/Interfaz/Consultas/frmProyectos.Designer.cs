@@ -40,10 +40,10 @@ namespace TP_PAV.Interfaz.Consultas
             this.lblAlcance = new System.Windows.Forms.Label();
             this.lblProducto = new System.Windows.Forms.Label();
             this.cbxProductos = new System.Windows.Forms.ComboBox();
-            this.txtResponsable = new System.Windows.Forms.TextBox();
             this.lblResponsable = new System.Windows.Forms.Label();
             this.txtVersion = new System.Windows.Forms.TextBox();
             this.lblVersion = new System.Windows.Forms.Label();
+            this.cbxResponsable = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTabla)).BeginInit();
             this.SuspendLayout();
             // 
@@ -56,6 +56,7 @@ namespace TP_PAV.Interfaz.Consultas
             this.btnBorrar.TabIndex = 26;
             this.btnBorrar.Text = "Borrar";
             this.btnBorrar.UseVisualStyleBackColor = true;
+            this.btnBorrar.Click += new System.EventHandler(this.btnBorrar_Click);
             // 
             // btnEditar
             // 
@@ -66,6 +67,7 @@ namespace TP_PAV.Interfaz.Consultas
             this.btnEditar.TabIndex = 25;
             this.btnEditar.Text = "Editar";
             this.btnEditar.UseVisualStyleBackColor = true;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // btnNuevo
             // 
@@ -75,6 +77,7 @@ namespace TP_PAV.Interfaz.Consultas
             this.btnNuevo.TabIndex = 24;
             this.btnNuevo.Text = "Nuevo";
             this.btnNuevo.UseVisualStyleBackColor = true;
+            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
             // dgvTabla
             // 
@@ -88,6 +91,7 @@ namespace TP_PAV.Interfaz.Consultas
             this.dgvTabla.RowTemplate.Height = 25;
             this.dgvTabla.Size = new System.Drawing.Size(389, 174);
             this.dgvTabla.TabIndex = 23;
+            this.dgvTabla.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTabla_CellClick);
             // 
             // btnConsultar
             // 
@@ -97,6 +101,7 @@ namespace TP_PAV.Interfaz.Consultas
             this.btnConsultar.TabIndex = 22;
             this.btnConsultar.Text = "Consultar";
             this.btnConsultar.UseVisualStyleBackColor = true;
+            this.btnConsultar.Click += new System.EventHandler(this.btnConsultar_Click);
             // 
             // lblDescripcion
             // 
@@ -144,15 +149,8 @@ namespace TP_PAV.Interfaz.Consultas
             this.cbxProductos.FormattingEnabled = true;
             this.cbxProductos.Location = new System.Drawing.Point(81, 17);
             this.cbxProductos.Name = "cbxProductos";
-            this.cbxProductos.Size = new System.Drawing.Size(121, 21);
+            this.cbxProductos.Size = new System.Drawing.Size(196, 21);
             this.cbxProductos.TabIndex = 32;
-            // 
-            // txtResponsable
-            // 
-            this.txtResponsable.Location = new System.Drawing.Point(283, 79);
-            this.txtResponsable.Name = "txtResponsable";
-            this.txtResponsable.Size = new System.Drawing.Size(100, 20);
-            this.txtResponsable.TabIndex = 36;
             // 
             // lblResponsable
             // 
@@ -165,7 +163,7 @@ namespace TP_PAV.Interfaz.Consultas
             // 
             // txtVersion
             // 
-            this.txtVersion.Location = new System.Drawing.Point(274, 44);
+            this.txtVersion.Location = new System.Drawing.Point(283, 44);
             this.txtVersion.Name = "txtVersion";
             this.txtVersion.Size = new System.Drawing.Size(100, 20);
             this.txtVersion.TabIndex = 34;
@@ -179,12 +177,20 @@ namespace TP_PAV.Interfaz.Consultas
             this.lblVersion.TabIndex = 33;
             this.lblVersion.Text = "Version";
             // 
+            // cbxResponsable
+            // 
+            this.cbxResponsable.FormattingEnabled = true;
+            this.cbxResponsable.Location = new System.Drawing.Point(280, 78);
+            this.cbxResponsable.Name = "cbxResponsable";
+            this.cbxResponsable.Size = new System.Drawing.Size(121, 21);
+            this.cbxResponsable.TabIndex = 36;
+            // 
             // frmProyectos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(422, 344);
-            this.Controls.Add(this.txtResponsable);
+            this.Controls.Add(this.cbxResponsable);
             this.Controls.Add(this.lblResponsable);
             this.Controls.Add(this.txtVersion);
             this.Controls.Add(this.lblVersion);
@@ -200,7 +206,8 @@ namespace TP_PAV.Interfaz.Consultas
             this.Controls.Add(this.dgvTabla);
             this.Controls.Add(this.btnConsultar);
             this.Name = "frmProyectos";
-            this.Text = "frmProyectos";
+            this.Text = "Proyectos";
+            this.Load += new System.EventHandler(this.frmProyectos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvTabla)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -220,9 +227,9 @@ namespace TP_PAV.Interfaz.Consultas
         private System.Windows.Forms.Label lblAlcance;
         private System.Windows.Forms.Label lblProducto;
         private System.Windows.Forms.ComboBox cbxProductos;
-        private System.Windows.Forms.TextBox txtResponsable;
         private System.Windows.Forms.Label lblResponsable;
         private System.Windows.Forms.TextBox txtVersion;
         private System.Windows.Forms.Label lblVersion;
+        private System.Windows.Forms.ComboBox cbxResponsable;
     }
 }

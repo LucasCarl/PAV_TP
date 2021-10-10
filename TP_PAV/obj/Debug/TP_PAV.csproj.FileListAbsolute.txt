@@ -23,3 +23,5 @@ F:\Proyectos Visual Studio\PAV I\PAV_TP\TP_PAV\obj\Debug\TP_PAV.pdb
 F:\Proyectos Visual Studio\PAV I\PAV_TP\TP_PAV\obj\Debug\TP_PAV.Interfaz.Consultas.frmContactos.resources
 F:\Proyectos Visual Studio\PAV I\PAV_TP\TP_PAV\obj\Debug\TP_PAV.Interfaz.Consultas.frmCliente.resources
 F:\Proyectos Visual Studio\PAV I\PAV_TP\TP_PAV\obj\Debug\TP_PAV.Interfaz.Consultas.frmProyectos.resources
+F:\Proyectos Visual Studio\PAV I\PAV_TP\TP_PAV\obj\Debug\TP_PAV.Interfaz.Consultas.frmABMCliente.resources
+F:\Proyectos Visual Studio\PAV I\PAV_TP\TP_PAV\obj\Debug\TP_PAV.Interfaz.Consultas.frmABMProyecto.resources
