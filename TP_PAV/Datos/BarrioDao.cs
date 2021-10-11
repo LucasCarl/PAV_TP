@@ -72,7 +72,7 @@ namespace TP_PAV.Datos
 
         public bool ModificarBarrio(Barrio barrio, int id)
         {
-            string sqlComando = "UPDATE Barrios SET nombre = @nombre, borrado = 0 WHERE id_barrio = @idBarrio";
+            string sqlComando = "UPDATE Barrios SET nombre = @nombre WHERE id_barrio = @idBarrio";
             Dictionary<string, object> parametros = new Dictionary<string, object>();
             parametros.Add("idBarrio", id);
             parametros.Add("nombre", barrio.Nombre);

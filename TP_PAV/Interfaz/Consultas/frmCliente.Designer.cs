@@ -44,72 +44,86 @@ namespace TP_PAV.Interfaz.Consultas
             this.lblNumero = new System.Windows.Forms.Label();
             this.lblFechaDesde = new System.Windows.Forms.Label();
             this.lblBarrio = new System.Windows.Forms.Label();
-            this.lblContacto = new System.Windows.Forms.Label();
             this.dtpFechaDesde = new System.Windows.Forms.DateTimePicker();
             this.cbxBarrio = new System.Windows.Forms.ComboBox();
-            this.txtContacto = new System.Windows.Forms.TextBox();
             this.gbxFechaAlta = new System.Windows.Forms.GroupBox();
             this.lblFechaHasta = new System.Windows.Forms.Label();
             this.dtpFechaHasta = new System.Windows.Forms.DateTimePicker();
+            this.chkFecha = new System.Windows.Forms.CheckBox();
+            this.gbxContacto = new System.Windows.Forms.GroupBox();
+            this.txtNombreC = new System.Windows.Forms.TextBox();
+            this.lblNombre = new System.Windows.Forms.Label();
+            this.txtApellidoC = new System.Windows.Forms.TextBox();
+            this.lblApellido = new System.Windows.Forms.Label();
+            this.txtEmailC = new System.Windows.Forms.TextBox();
+            this.lblEmail = new System.Windows.Forms.Label();
+            this.txtTelefonoC = new System.Windows.Forms.TextBox();
+            this.lblTelefono = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTabla)).BeginInit();
             this.gbxFechaAlta.SuspendLayout();
+            this.gbxContacto.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnBorrar
             // 
             this.btnBorrar.Enabled = false;
-            this.btnBorrar.Location = new System.Drawing.Point(150, 365);
+            this.btnBorrar.Location = new System.Drawing.Point(150, 375);
             this.btnBorrar.Name = "btnBorrar";
             this.btnBorrar.Size = new System.Drawing.Size(64, 20);
             this.btnBorrar.TabIndex = 21;
             this.btnBorrar.Text = "Borrar";
             this.btnBorrar.UseVisualStyleBackColor = true;
+            this.btnBorrar.Click += new System.EventHandler(this.btnBorrar_Click);
             // 
             // btnEditar
             // 
             this.btnEditar.Enabled = false;
-            this.btnEditar.Location = new System.Drawing.Point(81, 365);
+            this.btnEditar.Location = new System.Drawing.Point(81, 375);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(64, 20);
             this.btnEditar.TabIndex = 20;
             this.btnEditar.Text = "Editar";
             this.btnEditar.UseVisualStyleBackColor = true;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // btnNuevo
             // 
-            this.btnNuevo.Location = new System.Drawing.Point(11, 365);
+            this.btnNuevo.Location = new System.Drawing.Point(11, 375);
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.Size = new System.Drawing.Size(64, 20);
             this.btnNuevo.TabIndex = 19;
             this.btnNuevo.Text = "Nuevo";
             this.btnNuevo.UseVisualStyleBackColor = true;
+            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
             // dgvTabla
             // 
             this.dgvTabla.AllowUserToAddRows = false;
             this.dgvTabla.AllowUserToDeleteRows = false;
             this.dgvTabla.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvTabla.Location = new System.Drawing.Point(12, 186);
+            this.dgvTabla.Location = new System.Drawing.Point(12, 196);
             this.dgvTabla.MultiSelect = false;
             this.dgvTabla.Name = "dgvTabla";
             this.dgvTabla.ReadOnly = true;
             this.dgvTabla.RowTemplate.Height = 25;
-            this.dgvTabla.Size = new System.Drawing.Size(389, 174);
+            this.dgvTabla.Size = new System.Drawing.Size(525, 174);
             this.dgvTabla.TabIndex = 18;
+            this.dgvTabla.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTabla_CellClick);
             // 
             // btnConsultar
             // 
-            this.btnConsultar.Location = new System.Drawing.Point(12, 160);
+            this.btnConsultar.Location = new System.Drawing.Point(12, 170);
             this.btnConsultar.Name = "btnConsultar";
             this.btnConsultar.Size = new System.Drawing.Size(64, 20);
             this.btnConsultar.TabIndex = 17;
             this.btnConsultar.Text = "Consultar";
             this.btnConsultar.UseVisualStyleBackColor = true;
+            this.btnConsultar.Click += new System.EventHandler(this.btnConsultar_Click);
             // 
             // lblCuit
             // 
             this.lblCuit.AutoSize = true;
-            this.lblCuit.Location = new System.Drawing.Point(11, 22);
+            this.lblCuit.Location = new System.Drawing.Point(17, 22);
             this.lblCuit.Name = "lblCuit";
             this.lblCuit.Size = new System.Drawing.Size(32, 13);
             this.lblCuit.TabIndex = 22;
@@ -117,14 +131,14 @@ namespace TP_PAV.Interfaz.Consultas
             // 
             // txtCuit
             // 
-            this.txtCuit.Location = new System.Drawing.Point(81, 19);
+            this.txtCuit.Location = new System.Drawing.Point(88, 19);
             this.txtCuit.Name = "txtCuit";
             this.txtCuit.Size = new System.Drawing.Size(100, 20);
             this.txtCuit.TabIndex = 23;
             // 
             // txtRazon
             // 
-            this.txtRazon.Location = new System.Drawing.Point(81, 45);
+            this.txtRazon.Location = new System.Drawing.Point(88, 45);
             this.txtRazon.Name = "txtRazon";
             this.txtRazon.Size = new System.Drawing.Size(100, 20);
             this.txtRazon.TabIndex = 25;
@@ -132,7 +146,7 @@ namespace TP_PAV.Interfaz.Consultas
             // lblRazon
             // 
             this.lblRazon.AutoSize = true;
-            this.lblRazon.Location = new System.Drawing.Point(11, 48);
+            this.lblRazon.Location = new System.Drawing.Point(17, 48);
             this.lblRazon.Name = "lblRazon";
             this.lblRazon.Size = new System.Drawing.Size(70, 13);
             this.lblRazon.TabIndex = 24;
@@ -140,7 +154,7 @@ namespace TP_PAV.Interfaz.Consultas
             // 
             // txtCalle
             // 
-            this.txtCalle.Location = new System.Drawing.Point(274, 19);
+            this.txtCalle.Location = new System.Drawing.Point(254, 19);
             this.txtCalle.Name = "txtCalle";
             this.txtCalle.Size = new System.Drawing.Size(100, 20);
             this.txtCalle.TabIndex = 27;
@@ -148,7 +162,7 @@ namespace TP_PAV.Interfaz.Consultas
             // lblCalle
             // 
             this.lblCalle.AutoSize = true;
-            this.lblCalle.Location = new System.Drawing.Point(224, 22);
+            this.lblCalle.Location = new System.Drawing.Point(204, 22);
             this.lblCalle.Name = "lblCalle";
             this.lblCalle.Size = new System.Drawing.Size(30, 13);
             this.lblCalle.TabIndex = 26;
@@ -156,7 +170,7 @@ namespace TP_PAV.Interfaz.Consultas
             // 
             // txtNumero
             // 
-            this.txtNumero.Location = new System.Drawing.Point(274, 45);
+            this.txtNumero.Location = new System.Drawing.Point(254, 45);
             this.txtNumero.Name = "txtNumero";
             this.txtNumero.Size = new System.Drawing.Size(100, 20);
             this.txtNumero.TabIndex = 29;
@@ -164,7 +178,7 @@ namespace TP_PAV.Interfaz.Consultas
             // lblNumero
             // 
             this.lblNumero.AutoSize = true;
-            this.lblNumero.Location = new System.Drawing.Point(224, 48);
+            this.lblNumero.Location = new System.Drawing.Point(204, 48);
             this.lblNumero.Name = "lblNumero";
             this.lblNumero.Size = new System.Drawing.Size(44, 13);
             this.lblNumero.TabIndex = 28;
@@ -173,7 +187,8 @@ namespace TP_PAV.Interfaz.Consultas
             // lblFechaDesde
             // 
             this.lblFechaDesde.AutoSize = true;
-            this.lblFechaDesde.Location = new System.Drawing.Point(6, 25);
+            this.lblFechaDesde.Enabled = false;
+            this.lblFechaDesde.Location = new System.Drawing.Point(6, 23);
             this.lblFechaDesde.Name = "lblFechaDesde";
             this.lblFechaDesde.Size = new System.Drawing.Size(38, 13);
             this.lblFechaDesde.TabIndex = 30;
@@ -182,23 +197,15 @@ namespace TP_PAV.Interfaz.Consultas
             // lblBarrio
             // 
             this.lblBarrio.AutoSize = true;
-            this.lblBarrio.Location = new System.Drawing.Point(224, 74);
+            this.lblBarrio.Location = new System.Drawing.Point(204, 74);
             this.lblBarrio.Name = "lblBarrio";
             this.lblBarrio.Size = new System.Drawing.Size(34, 13);
             this.lblBarrio.TabIndex = 31;
             this.lblBarrio.Text = "Barrio";
             // 
-            // lblContacto
-            // 
-            this.lblContacto.AutoSize = true;
-            this.lblContacto.Location = new System.Drawing.Point(12, 74);
-            this.lblContacto.Name = "lblContacto";
-            this.lblContacto.Size = new System.Drawing.Size(50, 13);
-            this.lblContacto.TabIndex = 32;
-            this.lblContacto.Text = "Contacto";
-            // 
             // dtpFechaDesde
             // 
+            this.dtpFechaDesde.Enabled = false;
             this.dtpFechaDesde.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpFechaDesde.Location = new System.Drawing.Point(53, 19);
             this.dtpFechaDesde.Name = "dtpFechaDesde";
@@ -208,27 +215,21 @@ namespace TP_PAV.Interfaz.Consultas
             // cbxBarrio
             // 
             this.cbxBarrio.FormattingEnabled = true;
-            this.cbxBarrio.Location = new System.Drawing.Point(274, 74);
+            this.cbxBarrio.Location = new System.Drawing.Point(254, 74);
             this.cbxBarrio.Name = "cbxBarrio";
             this.cbxBarrio.Size = new System.Drawing.Size(100, 21);
             this.cbxBarrio.TabIndex = 34;
             // 
-            // txtContacto
-            // 
-            this.txtContacto.Location = new System.Drawing.Point(82, 74);
-            this.txtContacto.Name = "txtContacto";
-            this.txtContacto.Size = new System.Drawing.Size(100, 20);
-            this.txtContacto.TabIndex = 35;
-            // 
             // gbxFechaAlta
             // 
+            this.gbxFechaAlta.Controls.Add(this.chkFecha);
             this.gbxFechaAlta.Controls.Add(this.lblFechaHasta);
             this.gbxFechaAlta.Controls.Add(this.dtpFechaHasta);
             this.gbxFechaAlta.Controls.Add(this.lblFechaDesde);
             this.gbxFechaAlta.Controls.Add(this.dtpFechaDesde);
-            this.gbxFechaAlta.Location = new System.Drawing.Point(15, 101);
+            this.gbxFechaAlta.Location = new System.Drawing.Point(11, 74);
             this.gbxFechaAlta.Name = "gbxFechaAlta";
-            this.gbxFechaAlta.Size = new System.Drawing.Size(359, 53);
+            this.gbxFechaAlta.Size = new System.Drawing.Size(177, 83);
             this.gbxFechaAlta.TabIndex = 36;
             this.gbxFechaAlta.TabStop = false;
             this.gbxFechaAlta.Text = "Fecha Alta";
@@ -236,7 +237,8 @@ namespace TP_PAV.Interfaz.Consultas
             // lblFechaHasta
             // 
             this.lblFechaHasta.AutoSize = true;
-            this.lblFechaHasta.Location = new System.Drawing.Point(165, 24);
+            this.lblFechaHasta.Enabled = false;
+            this.lblFechaHasta.Location = new System.Drawing.Point(6, 51);
             this.lblFechaHasta.Name = "lblFechaHasta";
             this.lblFechaHasta.Size = new System.Drawing.Size(35, 13);
             this.lblFechaHasta.TabIndex = 34;
@@ -244,21 +246,112 @@ namespace TP_PAV.Interfaz.Consultas
             // 
             // dtpFechaHasta
             // 
+            this.dtpFechaHasta.Enabled = false;
             this.dtpFechaHasta.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpFechaHasta.Location = new System.Drawing.Point(212, 18);
+            this.dtpFechaHasta.Location = new System.Drawing.Point(53, 47);
             this.dtpFechaHasta.Name = "dtpFechaHasta";
             this.dtpFechaHasta.Size = new System.Drawing.Size(100, 20);
             this.dtpFechaHasta.TabIndex = 35;
+            // 
+            // chkFecha
+            // 
+            this.chkFecha.AutoSize = true;
+            this.chkFecha.Location = new System.Drawing.Point(77, 0);
+            this.chkFecha.Name = "chkFecha";
+            this.chkFecha.Size = new System.Drawing.Size(15, 14);
+            this.chkFecha.TabIndex = 36;
+            this.chkFecha.UseVisualStyleBackColor = true;
+            this.chkFecha.CheckedChanged += new System.EventHandler(this.chkFecha_CheckedChanged);
+            // 
+            // gbxContacto
+            // 
+            this.gbxContacto.Controls.Add(this.txtTelefonoC);
+            this.gbxContacto.Controls.Add(this.lblTelefono);
+            this.gbxContacto.Controls.Add(this.txtEmailC);
+            this.gbxContacto.Controls.Add(this.lblEmail);
+            this.gbxContacto.Controls.Add(this.txtApellidoC);
+            this.gbxContacto.Controls.Add(this.lblApellido);
+            this.gbxContacto.Controls.Add(this.txtNombreC);
+            this.gbxContacto.Controls.Add(this.lblNombre);
+            this.gbxContacto.Location = new System.Drawing.Point(360, 19);
+            this.gbxContacto.Name = "gbxContacto";
+            this.gbxContacto.Size = new System.Drawing.Size(177, 138);
+            this.gbxContacto.TabIndex = 37;
+            this.gbxContacto.TabStop = false;
+            this.gbxContacto.Text = "Contacto";
+            // 
+            // txtNombreC
+            // 
+            this.txtNombreC.Location = new System.Drawing.Point(63, 19);
+            this.txtNombreC.Name = "txtNombreC";
+            this.txtNombreC.Size = new System.Drawing.Size(100, 20);
+            this.txtNombreC.TabIndex = 39;
+            // 
+            // lblNombre
+            // 
+            this.lblNombre.AutoSize = true;
+            this.lblNombre.Location = new System.Drawing.Point(13, 22);
+            this.lblNombre.Name = "lblNombre";
+            this.lblNombre.Size = new System.Drawing.Size(44, 13);
+            this.lblNombre.TabIndex = 38;
+            this.lblNombre.Text = "Nombre";
+            // 
+            // txtApellidoC
+            // 
+            this.txtApellidoC.Location = new System.Drawing.Point(63, 45);
+            this.txtApellidoC.Name = "txtApellidoC";
+            this.txtApellidoC.Size = new System.Drawing.Size(100, 20);
+            this.txtApellidoC.TabIndex = 41;
+            // 
+            // lblApellido
+            // 
+            this.lblApellido.AutoSize = true;
+            this.lblApellido.Location = new System.Drawing.Point(13, 48);
+            this.lblApellido.Name = "lblApellido";
+            this.lblApellido.Size = new System.Drawing.Size(44, 13);
+            this.lblApellido.TabIndex = 40;
+            this.lblApellido.Text = "Apellido";
+            // 
+            // txtEmailC
+            // 
+            this.txtEmailC.Location = new System.Drawing.Point(63, 71);
+            this.txtEmailC.Name = "txtEmailC";
+            this.txtEmailC.Size = new System.Drawing.Size(100, 20);
+            this.txtEmailC.TabIndex = 43;
+            // 
+            // lblEmail
+            // 
+            this.lblEmail.AutoSize = true;
+            this.lblEmail.Location = new System.Drawing.Point(13, 74);
+            this.lblEmail.Name = "lblEmail";
+            this.lblEmail.Size = new System.Drawing.Size(32, 13);
+            this.lblEmail.TabIndex = 42;
+            this.lblEmail.Text = "Email";
+            // 
+            // txtTelefonoC
+            // 
+            this.txtTelefonoC.Location = new System.Drawing.Point(63, 97);
+            this.txtTelefonoC.Name = "txtTelefonoC";
+            this.txtTelefonoC.Size = new System.Drawing.Size(100, 20);
+            this.txtTelefonoC.TabIndex = 45;
+            // 
+            // lblTelefono
+            // 
+            this.lblTelefono.AutoSize = true;
+            this.lblTelefono.Location = new System.Drawing.Point(13, 100);
+            this.lblTelefono.Name = "lblTelefono";
+            this.lblTelefono.Size = new System.Drawing.Size(49, 13);
+            this.lblTelefono.TabIndex = 44;
+            this.lblTelefono.Text = "Teléfono";
             // 
             // frmCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(422, 397);
+            this.ClientSize = new System.Drawing.Size(547, 401);
+            this.Controls.Add(this.gbxContacto);
             this.Controls.Add(this.gbxFechaAlta);
-            this.Controls.Add(this.txtContacto);
             this.Controls.Add(this.cbxBarrio);
-            this.Controls.Add(this.lblContacto);
             this.Controls.Add(this.lblBarrio);
             this.Controls.Add(this.txtNumero);
             this.Controls.Add(this.lblNumero);
@@ -275,9 +368,12 @@ namespace TP_PAV.Interfaz.Consultas
             this.Controls.Add(this.btnConsultar);
             this.Name = "frmCliente";
             this.Text = "Clientes";
+            this.Load += new System.EventHandler(this.frmCliente_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvTabla)).EndInit();
             this.gbxFechaAlta.ResumeLayout(false);
             this.gbxFechaAlta.PerformLayout();
+            this.gbxContacto.ResumeLayout(false);
+            this.gbxContacto.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -300,12 +396,20 @@ namespace TP_PAV.Interfaz.Consultas
         private System.Windows.Forms.Label lblNumero;
         private System.Windows.Forms.Label lblFechaDesde;
         private System.Windows.Forms.Label lblBarrio;
-        private System.Windows.Forms.Label lblContacto;
         private System.Windows.Forms.DateTimePicker dtpFechaDesde;
         private System.Windows.Forms.ComboBox cbxBarrio;
-        private System.Windows.Forms.TextBox txtContacto;
         private System.Windows.Forms.GroupBox gbxFechaAlta;
         private System.Windows.Forms.Label lblFechaHasta;
         private System.Windows.Forms.DateTimePicker dtpFechaHasta;
+        private System.Windows.Forms.CheckBox chkFecha;
+        private System.Windows.Forms.GroupBox gbxContacto;
+        private System.Windows.Forms.TextBox txtTelefonoC;
+        private System.Windows.Forms.Label lblTelefono;
+        private System.Windows.Forms.TextBox txtEmailC;
+        private System.Windows.Forms.Label lblEmail;
+        private System.Windows.Forms.TextBox txtApellidoC;
+        private System.Windows.Forms.Label lblApellido;
+        private System.Windows.Forms.TextBox txtNombreC;
+        private System.Windows.Forms.Label lblNombre;
     }
 }

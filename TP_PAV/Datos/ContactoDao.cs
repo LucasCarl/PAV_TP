@@ -93,7 +93,7 @@ namespace TP_PAV.Datos
 
         public bool ModificarContacto(Contacto contactoModif, int id)
         {
-            string comandoSql = "UPDATE Contactos SET nombre = @nombre, apellido = @apellido, email = @email, telefono = @telefono, borrado=0 WHERE id_contacto = @idContacto";
+            string comandoSql = "UPDATE Contactos SET nombre = @nombre, apellido = @apellido, email = @email, telefono = @telefono WHERE id_contacto = @idContacto";
 
             Dictionary<string, object> parametros = new Dictionary<string, object>();
             parametros.Add("idContacto", id);
@@ -106,7 +106,7 @@ namespace TP_PAV.Datos
         }
         public bool EliminarContacto(Contacto contactoBorrar)
         {
-            string comandoSql = "UPDATE Contactos SET borrado=1 WHERE id_contacto = @idContacto";
+            string comandoSql = "UPDATE Contactos SET borrado = 1 WHERE id_contacto = @idContacto";
             Dictionary<string, object> parametros = new Dictionary<string, object>();
             parametros.Add("idContacto", contactoBorrar.IdContacto);
 

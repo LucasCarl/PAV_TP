@@ -36,13 +36,17 @@ namespace TP_PAV.Interfaz
             this.clienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.proyectoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lblUsuario = new System.Windows.Forms.Label();
+            this.transaccionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.reportesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.soporteToolStripMenuItem});
+            this.soporteToolStripMenuItem,
+            this.transaccionesToolStripMenuItem,
+            this.reportesToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
@@ -64,28 +68,28 @@ namespace TP_PAV.Interfaz
             // contactoToolStripMenuItem
             // 
             this.contactoToolStripMenuItem.Name = "contactoToolStripMenuItem";
-            this.contactoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.contactoToolStripMenuItem.Size = new System.Drawing.Size(123, 22);
             this.contactoToolStripMenuItem.Text = "Contacto";
             this.contactoToolStripMenuItem.Click += new System.EventHandler(this.contactoToolStripMenuItem_Click);
             // 
             // barrioToolStripMenuItem
             // 
             this.barrioToolStripMenuItem.Name = "barrioToolStripMenuItem";
-            this.barrioToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.barrioToolStripMenuItem.Size = new System.Drawing.Size(123, 22);
             this.barrioToolStripMenuItem.Text = "Barrio";
             this.barrioToolStripMenuItem.Click += new System.EventHandler(this.barrioToolStripMenuItem_Click);
             // 
             // clienteToolStripMenuItem
             // 
             this.clienteToolStripMenuItem.Name = "clienteToolStripMenuItem";
-            this.clienteToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.clienteToolStripMenuItem.Size = new System.Drawing.Size(123, 22);
             this.clienteToolStripMenuItem.Text = "Cliente";
             this.clienteToolStripMenuItem.Click += new System.EventHandler(this.clienteToolStripMenuItem_Click);
             // 
             // proyectoToolStripMenuItem
             // 
             this.proyectoToolStripMenuItem.Name = "proyectoToolStripMenuItem";
-            this.proyectoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.proyectoToolStripMenuItem.Size = new System.Drawing.Size(123, 22);
             this.proyectoToolStripMenuItem.Text = "Proyecto";
             this.proyectoToolStripMenuItem.Click += new System.EventHandler(this.proyectoToolStripMenuItem_Click);
             // 
@@ -99,6 +103,18 @@ namespace TP_PAV.Interfaz
             this.lblUsuario.TabIndex = 1;
             this.lblUsuario.Text = "Usuario: ";
             this.lblUsuario.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // transaccionesToolStripMenuItem
+            // 
+            this.transaccionesToolStripMenuItem.Name = "transaccionesToolStripMenuItem";
+            this.transaccionesToolStripMenuItem.Size = new System.Drawing.Size(92, 20);
+            this.transaccionesToolStripMenuItem.Text = "Transacciones";
+            // 
+            // reportesToolStripMenuItem
+            // 
+            this.reportesToolStripMenuItem.Name = "reportesToolStripMenuItem";
+            this.reportesToolStripMenuItem.Size = new System.Drawing.Size(65, 20);
+            this.reportesToolStripMenuItem.Text = "Reportes";
             // 
             // frmPrincipal
             // 
@@ -127,5 +143,7 @@ namespace TP_PAV.Interfaz
         private System.Windows.Forms.ToolStripMenuItem barrioToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem clienteToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem proyectoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem transaccionesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem reportesToolStripMenuItem;
     }
 }

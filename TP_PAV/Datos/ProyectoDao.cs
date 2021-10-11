@@ -104,7 +104,7 @@ namespace TP_PAV.Datos
         public bool ModificarProyecto(Proyecto proyectoModif, int id)
         {
             string sqlComando = string.Concat("UPDATE Proyectos SET id_producto = @idProducto, descripcion = @descripcion, alcance = @alcance, ",
-                                              "version = @version, id_responsable = @idResponsable, borrado = 0 WHERE id_proyecto = @idProyecto");
+                                              "version = @version, id_responsable = @idResponsable WHERE id_proyecto = @idProyecto");
 
             Dictionary<string, object> parametros = new Dictionary<string, object>();
             parametros.Add("idProyecto", id);

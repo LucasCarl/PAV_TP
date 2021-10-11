@@ -50,7 +50,7 @@ namespace TP_PAV.Interfaz.Consultas
             //Comprueba filtros
             Dictionary<string, object> parametros = new Dictionary<string, object>();
             if (!string.IsNullOrEmpty(cbxProductos.Text))
-                parametros.Add("idProducto", cbxProductos.SelectedIndex + 1);
+                parametros.Add("idProducto", cbxProductos.SelectedValue);
             if (!string.IsNullOrEmpty(txtDescripcion.Text))
                 parametros.Add("descripcion", txtDescripcion.Text);
             if (!string.IsNullOrEmpty(txtVersion.Text))
