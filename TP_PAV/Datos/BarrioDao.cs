@@ -88,5 +88,12 @@ namespace TP_PAV.Datos
 
             return (DataManager.Instancia().EjecutarSQL(sqlComando, parametros) == 1);
         }
+
+        public Barrio TomarBarrio(int id)
+        {
+            string sqlComando = "SELECT id_barrio AS 'ID', nombre AS 'Nombre' FROM Barrios WHERE id_barrio = " + id;
+            var resultadoConsulta = (DataRowCollection)DataManager.Instancia().ConsultaSQL(sqlComando).Rows;
+            return MapeoBarrio(resultadoConsulta[0]);
+        }
     }
 }

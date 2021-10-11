@@ -54,12 +54,12 @@ namespace TP_PAV.Interfaz.Consultas
             switch (modo)
             {
                 case FormMode.nuevo:
-                    this.Text = "Nuevo Contacto";
+                    this.Text = "Nuevo Proyecto";
                     btnAccion.Text = "Añadir";
                     break;
 
                 case FormMode.eliminar:
-                    this.Text = "Borrar Contacto";
+                    this.Text = "Borrar Proyecto";
                     btnAccion.Text = "Eliminar";
                     MostrarDatos();
                     cbxProductos.Enabled = false;
@@ -70,7 +70,7 @@ namespace TP_PAV.Interfaz.Consultas
                     break;
 
                 case FormMode.modificar:
-                    this.Text = "Modificar Contacto";
+                    this.Text = "Modificar Proyecto";
                     btnAccion.Text = "Modificar";
                     MostrarDatos();
                     break;

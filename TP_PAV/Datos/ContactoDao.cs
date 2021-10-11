@@ -112,5 +112,14 @@ namespace TP_PAV.Datos
 
             return (DataManager.Instancia().EjecutarSQL(comandoSql, parametros) == 1);
         }
+
+        public Contacto TomarContacto(int id)
+        {
+            String sqlComando = String.Concat("SELECT C.id_contacto AS 'ID', C.nombre AS Nombre, ",
+                                                "C.apellido AS Apellido, C.email AS 'E-Mail', C.telefono AS Telefono ",
+                                                "FROM Contactos C WHERE C.id_contacto = " + id);
+            var resultadoConsulta = (DataRowCollection)DataManager.Instancia().ConsultaSQL(sqlComando).Rows;
+            return ObjectMapping(resultadoConsulta[0]);
+        }
     }
 }

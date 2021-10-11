@@ -21,6 +21,11 @@ namespace TP_PAV.Negocio
             return (parametros != null) ? contactoDao.ObtenerContactosFiltros(parametros) : contactoDao.ObtenerTodos();
         }
 
+        public Contacto TomarContacto(int id)
+        {
+            return contactoDao.TomarContacto(id);
+        }
+
         public bool NuevoContacto(Contacto contacto)
         {
             return contactoDao.NuevoContacto(contacto);

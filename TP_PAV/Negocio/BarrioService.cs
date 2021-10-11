@@ -22,6 +22,11 @@ namespace TP_PAV.Negocio
             return (parametros != null) ? barrioDao.ObtenerBarriosFiltros(parametros) : barrioDao.ObtenerTodos();
         }
 
+        public Barrio TomarBarrio(int id)
+        {
+            return barrioDao.TomarBarrio(id);
+        }
+
         public bool NuevoBarrio(Barrio barrio)
         {
             return barrioDao.NuevoBarrio(barrio);

@@ -20,5 +20,18 @@ namespace TP_PAV.Negocio
         {
             return (parametros != null) ? clienteDao.ObtenerClienteFiltro(parametros) : clienteDao.ObtenerTodos();
         }
+
+        public bool NuevoCliente(Cliente nuevoCliente)
+        {
+            return clienteDao.NuevoCliente(nuevoCliente);
+        }
+        public bool ModificarCliente(Cliente clienteModif, int id)
+        {
+            return clienteDao.ModificarCliente(clienteModif, id);
+        }
+        public bool EliminarCliente(Cliente borrarCliente)
+        {
+            return clienteDao.EliminarCliente(borrarCliente);
+        }
     }
 }

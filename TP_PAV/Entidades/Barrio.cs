@@ -10,5 +10,10 @@ namespace TP_PAV.Entidades
     {
         public int IdBarrio { get; set; }
         public string Nombre { get; set; }
+
+        public override string ToString()
+        {
+            return Nombre;
+        }
     }
 }

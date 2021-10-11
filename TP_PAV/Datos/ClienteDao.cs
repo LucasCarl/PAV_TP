@@ -65,7 +65,7 @@ namespace TP_PAV.Datos
             if (parametros.ContainsKey("cuit"))
                 sqlComando += " AND C.cuit LIKE '%' + @cuit + '%' ";
             if (parametros.ContainsKey("razon"))
-                sqlComando += " AND C.razon_social LIKE '%' + @razon + '%' "; ;
+                sqlComando += " AND C.razon_social LIKE '%' + @razon + '%' ";
             if (parametros.ContainsKey("fechaDesde"))
                 sqlComando += " AND C.fecha_alta > @fechaDesde ";
             if (parametros.ContainsKey("fechaHasta"))
@@ -85,11 +85,11 @@ namespace TP_PAV.Datos
             if (parametros.ContainsKey("telefono"))
                 sqlComando += " AND CO.telefono LIKE '%' + @telefonoContacto + '%' ";
 
-            var resultadoConsulta = DataManager.Instancia().ConsultaSQL(sqlComando).Rows;
+            var resultadoConsulta = DataManager.Instancia().ConsultaSQL(sqlComando, parametros).Rows;
 
             foreach (DataRow fila in resultadoConsulta)
             {
-                MapeoCliente(fila);
+                listadoClientes.Add(MapeoCliente(fila));
             }
 
             return listadoClientes;
