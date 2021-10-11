@@ -38,20 +38,23 @@ namespace TP_PAV.Interfaz.Consultas
             this.lblDescripcion = new System.Windows.Forms.Label();
             this.lblProducto = new System.Windows.Forms.Label();
             this.cbxProductos = new System.Windows.Forms.ComboBox();
+            this.cbxResponsable = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnAccion
             // 
-            this.btnAccion.Location = new System.Drawing.Point(182, 177);
+            this.btnAccion.Location = new System.Drawing.Point(182, 210);
             this.btnAccion.Name = "btnAccion";
             this.btnAccion.Size = new System.Drawing.Size(64, 20);
             this.btnAccion.TabIndex = 9;
             this.btnAccion.Text = "Accion";
             this.btnAccion.UseVisualStyleBackColor = true;
+            this.btnAccion.Click += new System.EventHandler(this.btnAccion_Click);
             // 
             // txtAlcance
             // 
-            this.txtAlcance.Location = new System.Drawing.Point(76, 139);
+            this.txtAlcance.Location = new System.Drawing.Point(91, 142);
             this.txtAlcance.MaxLength = 50;
             this.txtAlcance.Name = "txtAlcance";
             this.txtAlcance.Size = new System.Drawing.Size(103, 20);
@@ -68,7 +71,7 @@ namespace TP_PAV.Interfaz.Consultas
             // 
             // txtVersion
             // 
-            this.txtVersion.Location = new System.Drawing.Point(76, 99);
+            this.txtVersion.Location = new System.Drawing.Point(91, 102);
             this.txtVersion.MaxLength = 50;
             this.txtVersion.Name = "txtVersion";
             this.txtVersion.Size = new System.Drawing.Size(68, 20);
@@ -85,8 +88,8 @@ namespace TP_PAV.Interfaz.Consultas
             // 
             // txtDescripcion
             // 
-            this.txtDescripcion.BackColor = System.Drawing.Color.White;
-            this.txtDescripcion.Location = new System.Drawing.Point(76, 59);
+            this.txtDescripcion.BackColor = System.Drawing.SystemColors.Window;
+            this.txtDescripcion.Location = new System.Drawing.Point(91, 62);
             this.txtDescripcion.MaxLength = 50;
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.Size = new System.Drawing.Size(103, 20);
@@ -113,16 +116,35 @@ namespace TP_PAV.Interfaz.Consultas
             // cbxProductos
             // 
             this.cbxProductos.FormattingEnabled = true;
-            this.cbxProductos.Location = new System.Drawing.Point(76, 17);
+            this.cbxProductos.Location = new System.Drawing.Point(91, 20);
             this.cbxProductos.Name = "cbxProductos";
-            this.cbxProductos.Size = new System.Drawing.Size(121, 21);
+            this.cbxProductos.Size = new System.Drawing.Size(155, 21);
             this.cbxProductos.TabIndex = 18;
+            // 
+            // cbxResponsable
+            // 
+            this.cbxResponsable.FormattingEnabled = true;
+            this.cbxResponsable.Location = new System.Drawing.Point(91, 177);
+            this.cbxResponsable.Name = "cbxResponsable";
+            this.cbxResponsable.Size = new System.Drawing.Size(121, 21);
+            this.cbxResponsable.TabIndex = 20;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(16, 177);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(69, 26);
+            this.label1.TabIndex = 19;
+            this.label1.Text = "Usuario\r\nResponsable\r\n";
             // 
             // frmABMProyecto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(258, 209);
+            this.ClientSize = new System.Drawing.Size(258, 242);
+            this.Controls.Add(this.cbxResponsable);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.cbxProductos);
             this.Controls.Add(this.txtAlcance);
             this.Controls.Add(this.lblAlcance);
@@ -151,5 +173,7 @@ namespace TP_PAV.Interfaz.Consultas
         private System.Windows.Forms.Label lblDescripcion;
         private System.Windows.Forms.Label lblProducto;
         private System.Windows.Forms.ComboBox cbxProductos;
+        private System.Windows.Forms.ComboBox cbxResponsable;
+        private System.Windows.Forms.Label label1;
     }
 }

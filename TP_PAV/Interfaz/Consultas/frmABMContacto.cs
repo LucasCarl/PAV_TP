@@ -83,40 +83,40 @@ namespace TP_PAV.Interfaz.Consultas
             {
                 case FormMode.nuevo:
 
-                    if (contactoService.NuevoContacto(NuevoContacto()))
+                    if (contactoService.NuevoContacto(CargarContacto()))
                     {
-                        MessageBox.Show("Contacto Creado", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Contacto creado", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                     else
                     {
-                        MessageBox.Show("Error al crear Contacto", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Error al crear contacto", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                     break;
 
                 case FormMode.eliminar:
 
-                    if (MessageBox.Show("Seguro que desea eliminar el Contacto?", "Aviso", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
+                    if (MessageBox.Show("Seguro que desea eliminar el contacto?", "Aviso", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
                     {
                         if (contactoService.EliminarContacto(oContacto))
                         {
-                            MessageBox.Show("Contacto Eliminado", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            MessageBox.Show("Contacto eliminado", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
                         else
                         {
-                            MessageBox.Show("Error al eliminar contacto", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            MessageBox.Show("Error al eliminar contacto", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
                     }
                     break;
 
                 case FormMode.modificar:
 
-                    if (contactoService.ModificarContacto(NuevoContacto(), oContacto.IdContacto))
+                    if (contactoService.ModificarContacto(CargarContacto(), oContacto.IdContacto))
                     {
-                        MessageBox.Show("Contacto Modificado", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Contacto Modificado", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                     else
                     {
-                        MessageBox.Show("Error al modificar Contacto", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Error al modificar contacto", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                     break;
             }
@@ -124,7 +124,7 @@ namespace TP_PAV.Interfaz.Consultas
             this.Close();
         }
 
-        private Contacto NuevoContacto()
+        private Contacto CargarContacto()
         {
             Contacto newContacto = new Contacto();
             newContacto.Nombre = txtNombre.Text;

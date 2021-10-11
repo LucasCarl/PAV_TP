@@ -77,38 +77,38 @@ namespace TP_PAV.Datos
             return contacto;
         }
 
-        public bool NuevoContacto(Contacto contacto)
+        public bool NuevoContacto(Contacto contactoNuevo)
         {
             string comandoSql = string.Concat("INSERT INTO Contactos (nombre, apellido, email, telefono, borrado) ",
                                                 "VALUES (@nombre, @apellido, @email, @telefono, 0)");
 
             Dictionary<string, object> parametros = new Dictionary<string, object>();
-            parametros.Add("nombre", contacto.Nombre);
-            parametros.Add("apellido", contacto.Apellido);
-            parametros.Add("email", contacto.Email);
-            parametros.Add("Telefono", contacto.Telefono);
+            parametros.Add("nombre", contactoNuevo.Nombre);
+            parametros.Add("apellido", contactoNuevo.Apellido);
+            parametros.Add("email", contactoNuevo.Email);
+            parametros.Add("Telefono", contactoNuevo.Telefono);
 
             return (DataManager.Instancia().EjecutarSQL(comandoSql, parametros) == 1);
         }
 
-        public bool ModificarContacto(Contacto contacto, int id)
+        public bool ModificarContacto(Contacto contactoModif, int id)
         {
             string comandoSql = "UPDATE Contactos SET nombre = @nombre, apellido = @apellido, email = @email, telefono = @telefono, borrado=0 WHERE id_contacto = @idContacto";
 
             Dictionary<string, object> parametros = new Dictionary<string, object>();
             parametros.Add("idContacto", id);
-            parametros.Add("nombre", contacto.Nombre);
-            parametros.Add("apellido", contacto.Apellido);
-            parametros.Add("email", contacto.Email);
-            parametros.Add("Telefono", contacto.Telefono);
+            parametros.Add("nombre", contactoModif.Nombre);
+            parametros.Add("apellido", contactoModif.Apellido);
+            parametros.Add("email", contactoModif.Email);
+            parametros.Add("Telefono", contactoModif.Telefono);
 
             return (DataManager.Instancia().EjecutarSQL(comandoSql, parametros) == 1);
         }
-        public bool EliminarContacto(Contacto contacto)
+        public bool EliminarContacto(Contacto contactoBorrar)
         {
             string comandoSql = "UPDATE Contactos SET borrado=1 WHERE id_contacto = @idContacto";
             Dictionary<string, object> parametros = new Dictionary<string, object>();
-            parametros.Add("idContacto", contacto.IdContacto);
+            parametros.Add("idContacto", contactoBorrar.IdContacto);
 
             return (DataManager.Instancia().EjecutarSQL(comandoSql, parametros) == 1);
         }

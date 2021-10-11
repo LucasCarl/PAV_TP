@@ -21,5 +21,18 @@ namespace TP_PAV.Negocio
         {
             return (parametros != null) ? proyectoDao.ObtenerProyectoFiltro(parametros) : proyectoDao.ObtenerTodos();
         }
+
+        public bool NuevoProyecto(Proyecto proyectoNuevo)
+        {
+            return proyectoDao.NuevoProyecto(proyectoNuevo);
+        }
+        public bool ModificarProyecto(Proyecto proyectoModif, int id)
+        {
+            return proyectoDao.ModificarProyecto(proyectoModif, id);
+        }
+        public bool EliminarProyecto(Proyecto proyectoBorrar)
+        {
+            return proyectoDao.EliminarProyecto(proyectoBorrar);
+        }
     }
 }

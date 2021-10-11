@@ -56,5 +56,30 @@ namespace TP_PAV.Datos
 
             return oUsuario;
         }
+
+        public Usuario ObtenerUsuario(int id)
+        {
+            //Comando SQL
+            String sqlComando = string.Concat(" SELECT id_usuario, ",
+                                          "        usuario, ",
+                                          "        email, ",
+                                          "        password, ",
+                                          "        p.id_perfil, ",
+                                          "        p.nombre perfil ",
+                                          "   FROM Usuarios u",
+                                          "  INNER JOIN Perfiles p ON u.id_perfil= p.id_perfil ",
+                                          "  WHERE id_usuario = @idUsuario");
+            var parametros = new Dictionary<string, object>();
+            parametros.Add("idUsuario", id);
+
+            DataTable resultado = DataManager.Instancia().ConsultaSQL(sqlComando, parametros);
+            //Validar que resultado tenga al menos 1 fila
+            if (resultado.Rows.Count > 0)
+            {
+                return ObjectMapping(resultado.Rows[0]);
+            }
+
+            return null;    //Si no encuentra ningun usuario devuelve null
+        }
     }
 }

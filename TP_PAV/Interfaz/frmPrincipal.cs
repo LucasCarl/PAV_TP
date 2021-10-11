@@ -22,7 +22,7 @@ namespace TP_PAV.Interfaz
         {
             frmLogin login = new frmLogin();
             login.ShowDialog();
-            lblUsuario.Text += login.usr;
+            lblUsuario.Text += Program.usuarioActual.NombreUsuario;
         }
 
         private void contactoToolStripMenuItem_Click(object sender, EventArgs e)

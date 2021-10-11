@@ -7,7 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using TP_PAV.Datos;
 using TP_PAV.Entidades;
 using TP_PAV.Negocio;
 
@@ -23,9 +22,12 @@ namespace TP_PAV.Interfaz.Consultas
 
         private void frmProyectos_Load(object sender, EventArgs e)
         {
+            ProductoService productoService = new ProductoService();
+            UsuarioService usuarioService = new UsuarioService();
+
             //Llenar ComboBox
-            LlenarCombobox(cbxProductos, DataManager.Instancia().ConsultaSQL("SELECT * FROM Productos WHERE borrado = 0"), "nombre", "id_producto");
-            LlenarCombobox(cbxResponsable, DataManager.Instancia().ConsultaSQL("SELECT * FROM Usuarios WHERE borrado = 0"), "usuario", "id_usuario");
+            LlenarCombobox(cbxProductos, productoService.ListaProductos(), "nombre", "id_producto");
+            LlenarCombobox(cbxResponsable, usuarioService.ListaUsuarios(), "usuario", "id_usuario");
         }
 
         private void LlenarCombobox(ComboBox cbx, object source, string mostrar, string valor)
@@ -48,13 +50,15 @@ namespace TP_PAV.Interfaz.Consultas
             //Comprueba filtros
             Dictionary<string, object> parametros = new Dictionary<string, object>();
             if (!string.IsNullOrEmpty(cbxProductos.Text))
-                parametros.Add("idProducto", cbxProductos.SelectedIndex);
+                parametros.Add("idProducto", cbxProductos.SelectedIndex + 1);
             if (!string.IsNullOrEmpty(txtDescripcion.Text))
                 parametros.Add("descripcion", txtDescripcion.Text);
             if (!string.IsNullOrEmpty(txtVersion.Text))
                 parametros.Add("version", txtVersion.Text);
             if (!string.IsNullOrEmpty(txtAlcance.Text))
                 parametros.Add("alcance", txtAlcance.Text);
+            if (!string.IsNullOrEmpty(cbxResponsable.Text))
+                parametros.Add("responsable", cbxResponsable.Text);
 
             lista = proyectoService.ObtenerProyectos(parametros);
 
