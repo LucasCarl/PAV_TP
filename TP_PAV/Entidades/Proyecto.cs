@@ -14,5 +14,10 @@ namespace TP_PAV.Entidades
         public string Version { get; set; }
         public string Alcance { get; set; }
         public Usuario Responsable { get; set; }
+
+        public string MostrarDescripcion()
+        {
+            return Descripcion;
+        }
     }
 }

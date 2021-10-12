@@ -50,6 +50,7 @@
     <Compile Include="Datos\ClienteDao.cs" />
     <Compile Include="Datos\ContactoDao.cs" />
     <Compile Include="Datos\DataManager.cs" />
+    <Compile Include="Datos\FacturaDao.cs" />
     <Compile Include="Datos\ProyectoDao.cs" />
     <Compile Include="Datos\UsuarioDao.cs" />
     <Compile Include="Entidades\Barrio.cs" />
@@ -111,6 +112,12 @@
     <Compile Include="Interfaz\Consultas\frmProyectos.Designer.cs">
       <DependentUpon>frmProyectos.cs</DependentUpon>
     </Compile>
+    <Compile Include="Interfaz\frmFactura.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interfaz\frmFactura.Designer.cs">
+      <DependentUpon>frmFactura.cs</DependentUpon>
+    </Compile>
     <Compile Include="Interfaz\frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -126,6 +133,7 @@
     <Compile Include="Negocio\BarrioService.cs" />
     <Compile Include="Negocio\ClienteService.cs" />
     <Compile Include="Negocio\ContactoService.cs" />
+    <Compile Include="Negocio\FacturaService.cs" />
     <Compile Include="Negocio\ProductoService.cs" />
     <Compile Include="Negocio\ProyectoService.cs" />
     <Compile Include="Negocio\UsuarioService.cs" />
@@ -151,6 +159,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Interfaz\Consultas\frmProyectos.resx">
       <DependentUpon>frmProyectos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interfaz\frmFactura.resx">
+      <DependentUpon>frmFactura.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Interfaz\frmPrincipal.resx">
       <DependentUpon>frmPrincipal.cs</DependentUpon>

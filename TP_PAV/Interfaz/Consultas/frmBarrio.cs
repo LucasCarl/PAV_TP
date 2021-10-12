@@ -48,6 +48,7 @@ namespace TP_PAV.Interfaz.Consultas
             frmABMBarrio abmBarrio = new frmABMBarrio();
             abmBarrio.IniciarFormulario(frmABMBarrio.FormMode.nuevo);
             abmBarrio.ShowDialog();
+            btnConsultar_Click(sender, e);
         }
 
         private void btnEditar_Click(object sender, EventArgs e)
@@ -55,6 +56,7 @@ namespace TP_PAV.Interfaz.Consultas
             frmABMBarrio aBMBarrio = new frmABMBarrio();
             aBMBarrio.IniciarFormulario(frmABMBarrio.FormMode.modificar, (Barrio)dgvTabla.CurrentRow.DataBoundItem);
             aBMBarrio.ShowDialog();
+            btnConsultar_Click(sender, e);
         }
 
         private void btnBorrar_Click(object sender, EventArgs e)
@@ -62,6 +64,7 @@ namespace TP_PAV.Interfaz.Consultas
             frmABMBarrio aBMBarrio = new frmABMBarrio();
             aBMBarrio.IniciarFormulario(frmABMBarrio.FormMode.eliminar, (Barrio)dgvTabla.CurrentRow.DataBoundItem);
             aBMBarrio.ShowDialog();
+            btnConsultar_Click(sender, e);
         }
     }
 }

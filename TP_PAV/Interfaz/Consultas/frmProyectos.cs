@@ -73,6 +73,7 @@ namespace TP_PAV.Interfaz.Consultas
             frmABMProyecto abmProyecto = new frmABMProyecto();
             abmProyecto.IniciarFormulario(frmABMProyecto.FormMode.nuevo);
             abmProyecto.ShowDialog();
+            btnConsultar_Click(sender, e);
         }
 
         private void btnEditar_Click(object sender, EventArgs e)
@@ -80,6 +81,7 @@ namespace TP_PAV.Interfaz.Consultas
             frmABMProyecto abmProyecto = new frmABMProyecto();
             abmProyecto.IniciarFormulario(frmABMProyecto.FormMode.modificar, (Proyecto)dgvTabla.CurrentRow.DataBoundItem);
             abmProyecto.ShowDialog();
+            btnConsultar_Click(sender, e);
         }
 
         private void btnBorrar_Click(object sender, EventArgs e)
@@ -87,6 +89,7 @@ namespace TP_PAV.Interfaz.Consultas
             frmABMProyecto abmProyecto = new frmABMProyecto();
             abmProyecto.IniciarFormulario(frmABMProyecto.FormMode.eliminar, (Proyecto)dgvTabla.CurrentRow.DataBoundItem);
             abmProyecto.ShowDialog();
+            btnConsultar_Click(sender, e);
         }
     }
 }

@@ -20,8 +20,6 @@ namespace TP_PAV.Interfaz
 
         private void frmPrincipal_Load(object sender, EventArgs e)
         {
-            frmLogin login = new frmLogin();
-            login.ShowDialog();
             lblUsuario.Text += Program.usuarioActual.NombreUsuario;
         }
 
@@ -47,6 +45,12 @@ namespace TP_PAV.Interfaz
         {
             frmProyectos proyectos = new frmProyectos();
             proyectos.Show();
+        }
+
+        private void generarFacturaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmFactura factura = new frmFactura();
+            factura.ShowDialog();
         }
     }
 }

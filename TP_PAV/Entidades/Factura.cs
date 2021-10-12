@@ -10,6 +10,7 @@ namespace TP_PAV.Entidades
     {
         public int IdFactura { get; set; }
         public string NumeroFactura { get; set; }
+        public IList<DetalleFactura> ListadoDetalles { get; set; }
         public Cliente Cliente { get; set; }
         public DateTime FechaAlta { get; set; }
         public Usuario UsuarioCreador { get; set; }

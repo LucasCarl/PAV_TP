@@ -42,11 +42,11 @@ namespace TP_PAV.Datos
                                               "B.nombre AS 'Barrio', CO.nombre, CO.apellido, CO.email, CO.telefono ,B.id_barrio, CO.id_contacto ",
                                               "FROM Clientes C LEFT JOIN Barrios B ON C.id_barrio = B.id_barrio ",
                                               "LEFT JOIN Contactos CO ON C.id_contacto = CO.id_contacto ",
-                                              "WHERE C.borrado = 0");
+                                              "WHERE C.borrado = 0 ");
             var resultadoConsulta = DataManager.Instancia().ConsultaSQL(sqlComando).Rows;
             foreach (DataRow fila in resultadoConsulta)
             {
-                MapeoCliente(fila);
+                listadoClientes.Add(MapeoCliente(fila));
             }
 
             return listadoClientes;
@@ -137,6 +137,18 @@ namespace TP_PAV.Datos
             parametros.Add("idCliente", clienteBorrar.IdCliente);
 
             return (DataManager.Instancia().EjecutarSQL(sqlComando, parametros) == 1);
+        }
+
+        public Cliente TomarCliente(int id)
+        {
+            string sqlComando = string.Concat("SELECT C.id_cliente, C.razon_social, C.cuit, C.fecha_alta, C.calle, C.numero, ",
+                                              "B.nombre AS 'Barrio', CO.nombre, CO.apellido, CO.email, CO.telefono ,B.id_barrio, CO.id_contacto ",
+                                              "FROM Clientes C LEFT JOIN Barrios B ON C.id_barrio = B.id_barrio ",
+                                              "LEFT JOIN Contactos CO ON C.id_contacto = CO.id_contacto ",
+                                              "WHERE C.borrado = 0 ");
+
+            var resultadoConsulta = DataManager.Instancia().ConsultaSQL(sqlComando).Rows;
+            return MapeoCliente(resultadoConsulta[0]);
         }
     }
 }
