@@ -75,41 +75,41 @@ namespace TP_PAV.Interfaz.Consultas
             {
                 case FormMode.nuevo:
 
+                    if(barrioService.ExisteBarrio(txtNombre.Text))
+                    {
+                        MessageBox.Show("El barrio ya existe", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        return;
+                    }
+
                     if (barrioService.NuevoBarrio(NuevoBarrio()))
-                    {
-                        MessageBox.Show("Barrio Creado", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    }
+                        MessageBox.Show("Barrio creado", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     else
-                    {
-                        MessageBox.Show("Error al crear Barrio", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    }
+                        MessageBox.Show("Error al crear barrio", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     break;
 
                 case FormMode.eliminar:
 
-                    if (MessageBox.Show("Seguro que desea eliminar el Contacto?", "Aviso", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
+                    if (MessageBox.Show("Seguro que desea eliminar el barrio?", "Aviso", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
                     {
                         if (barrioService.EliminarBarrio(oBarrio))
-                        {
-                            MessageBox.Show("Barrio Eliminado", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        }
+                            MessageBox.Show("Barrio eliminado", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         else
-                        {
-                            MessageBox.Show("Error al eliminar Barrio", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        }
+                            MessageBox.Show("Error al eliminar barrio", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                     break;
 
                 case FormMode.modificar:
 
+                    if (barrioService.ExisteBarrio(txtNombre.Text))
+                    {
+                        MessageBox.Show("El barrio ya existe", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        return;
+                    }
+
                     if (barrioService.ModificarBarrio(NuevoBarrio(), oBarrio.IdBarrio))
-                    {
-                        MessageBox.Show("Barrio Modificado", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    }
+                        MessageBox.Show("Barrio modificado", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     else
-                    {
-                        MessageBox.Show("Error al modificar Barrio", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    }
+                        MessageBox.Show("Error al modificar barrio", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     break;
             }
 

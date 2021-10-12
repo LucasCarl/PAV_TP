@@ -95,5 +95,12 @@ namespace TP_PAV.Datos
             var resultadoConsulta = (DataRowCollection)DataManager.Instancia().ConsultaSQL(sqlComando).Rows;
             return MapeoBarrio(resultadoConsulta[0]);
         }
+
+        public bool ExisteBarrio(string nombre)
+        {
+            string sqlComando = "SELECT nombre FROM Barrios WHERE borrado = 0 AND nombre = '" + nombre + "'";
+            int resultadoConsulta = DataManager.Instancia().ConsultaSQL(sqlComando).Rows.Count;
+            return resultadoConsulta > 0;
+        }
     }
 }

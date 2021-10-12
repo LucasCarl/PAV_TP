@@ -54,10 +54,6 @@ namespace TP_PAV.Interfaz
             this.txtFecha = new System.Windows.Forms.TextBox();
             this.txtTotal = new System.Windows.Forms.TextBox();
             this.btnGenerar = new System.Windows.Forms.Button();
-            this.NroOrden = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Tipo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDetalles)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -75,7 +71,7 @@ namespace TP_PAV.Interfaz
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(253, 18);
+            this.label2.Location = new System.Drawing.Point(416, 18);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(37, 13);
             this.label2.TabIndex = 1;
@@ -92,7 +88,7 @@ namespace TP_PAV.Interfaz
             this.groupBox1.Controls.Add(this.cbxCliente);
             this.groupBox1.Location = new System.Drawing.Point(15, 41);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(381, 100);
+            this.groupBox1.Size = new System.Drawing.Size(544, 73);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Cliente";
@@ -100,7 +96,7 @@ namespace TP_PAV.Interfaz
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(174, 39);
+            this.label7.Location = new System.Drawing.Point(361, 39);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(52, 13);
             this.label7.TabIndex = 12;
@@ -109,7 +105,7 @@ namespace TP_PAV.Interfaz
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(11, 65);
+            this.label6.Location = new System.Drawing.Point(189, 30);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(38, 26);
             this.label6.TabIndex = 11;
@@ -127,7 +123,7 @@ namespace TP_PAV.Interfaz
             // txtDireccion
             // 
             this.txtDireccion.Enabled = false;
-            this.txtDireccion.Location = new System.Drawing.Point(232, 36);
+            this.txtDireccion.Location = new System.Drawing.Point(419, 36);
             this.txtDireccion.Name = "txtDireccion";
             this.txtDireccion.Size = new System.Drawing.Size(119, 20);
             this.txtDireccion.TabIndex = 10;
@@ -135,7 +131,7 @@ namespace TP_PAV.Interfaz
             // txtRazon
             // 
             this.txtRazon.Enabled = false;
-            this.txtRazon.Location = new System.Drawing.Point(55, 71);
+            this.txtRazon.Location = new System.Drawing.Point(233, 36);
             this.txtRazon.Name = "txtRazon";
             this.txtRazon.Size = new System.Drawing.Size(100, 20);
             this.txtRazon.TabIndex = 9;
@@ -158,17 +154,13 @@ namespace TP_PAV.Interfaz
             // 
             // dgvDetalles
             // 
+            this.dgvDetalles.AllowUserToAddRows = false;
             this.dgvDetalles.AllowUserToDeleteRows = false;
             this.dgvDetalles.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvDetalles.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.NroOrden,
-            this.Tipo,
-            this.Descripcion,
-            this.Precio});
-            this.dgvDetalles.Location = new System.Drawing.Point(16, 254);
+            this.dgvDetalles.Location = new System.Drawing.Point(15, 227);
             this.dgvDetalles.Name = "dgvDetalles";
             this.dgvDetalles.ReadOnly = true;
-            this.dgvDetalles.Size = new System.Drawing.Size(544, 150);
+            this.dgvDetalles.Size = new System.Drawing.Size(544, 179);
             this.dgvDetalles.TabIndex = 3;
             // 
             // groupBox2
@@ -181,16 +173,16 @@ namespace TP_PAV.Interfaz
             this.groupBox2.Controls.Add(this.cbxProducto);
             this.groupBox2.Controls.Add(this.rdbProyecto);
             this.groupBox2.Controls.Add(this.rdbProducto);
-            this.groupBox2.Location = new System.Drawing.Point(16, 147);
+            this.groupBox2.Location = new System.Drawing.Point(15, 120);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(381, 101);
+            this.groupBox2.Size = new System.Drawing.Size(545, 101);
             this.groupBox2.TabIndex = 4;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Añadir";
             // 
             // btnSacar
             // 
-            this.btnSacar.Location = new System.Drawing.Point(200, 72);
+            this.btnSacar.Location = new System.Drawing.Point(281, 62);
             this.btnSacar.Name = "btnSacar";
             this.btnSacar.Size = new System.Drawing.Size(75, 23);
             this.btnSacar.TabIndex = 15;
@@ -199,7 +191,7 @@ namespace TP_PAV.Interfaz
             // 
             // btnAgregar
             // 
-            this.btnAgregar.Location = new System.Drawing.Point(113, 72);
+            this.btnAgregar.Location = new System.Drawing.Point(281, 20);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(75, 23);
             this.btnAgregar.TabIndex = 13;
@@ -209,15 +201,15 @@ namespace TP_PAV.Interfaz
             // 
             // txtPrecio
             // 
-            this.txtPrecio.Location = new System.Drawing.Point(272, 31);
+            this.txtPrecio.Location = new System.Drawing.Point(94, 69);
             this.txtPrecio.Name = "txtPrecio";
-            this.txtPrecio.Size = new System.Drawing.Size(100, 20);
+            this.txtPrecio.Size = new System.Drawing.Size(121, 20);
             this.txtPrecio.TabIndex = 9;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(229, 34);
+            this.label4.Location = new System.Drawing.Point(51, 72);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(37, 13);
             this.label4.TabIndex = 8;
@@ -268,7 +260,7 @@ namespace TP_PAV.Interfaz
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(259, 417);
+            this.label3.Location = new System.Drawing.Point(422, 416);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(31, 13);
             this.label3.TabIndex = 5;
@@ -286,7 +278,7 @@ namespace TP_PAV.Interfaz
             // txtFecha
             // 
             this.txtFecha.Enabled = false;
-            this.txtFecha.Location = new System.Drawing.Point(296, 15);
+            this.txtFecha.Location = new System.Drawing.Point(459, 15);
             this.txtFecha.Name = "txtFecha";
             this.txtFecha.Size = new System.Drawing.Size(100, 20);
             this.txtFecha.TabIndex = 7;
@@ -294,55 +286,26 @@ namespace TP_PAV.Interfaz
             // txtTotal
             // 
             this.txtTotal.Enabled = false;
-            this.txtTotal.Location = new System.Drawing.Point(296, 410);
+            this.txtTotal.Location = new System.Drawing.Point(459, 409);
             this.txtTotal.Name = "txtTotal";
             this.txtTotal.Size = new System.Drawing.Size(100, 20);
             this.txtTotal.TabIndex = 13;
             // 
             // btnGenerar
             // 
-            this.btnGenerar.Location = new System.Drawing.Point(109, 412);
+            this.btnGenerar.Location = new System.Drawing.Point(15, 412);
             this.btnGenerar.Name = "btnGenerar";
             this.btnGenerar.Size = new System.Drawing.Size(75, 23);
             this.btnGenerar.TabIndex = 14;
             this.btnGenerar.Text = "Generar";
             this.btnGenerar.UseVisualStyleBackColor = true;
-            // 
-            // NroOrden
-            // 
-            this.NroOrden.DataPropertyName = "nroOrden";
-            this.NroOrden.HeaderText = "Nº Orden";
-            this.NroOrden.Name = "NroOrden";
-            this.NroOrden.ReadOnly = true;
-            this.NroOrden.Width = 50;
-            // 
-            // Tipo
-            // 
-            this.Tipo.DataPropertyName = "tipo";
-            this.Tipo.HeaderText = "Tipo";
-            this.Tipo.Name = "Tipo";
-            this.Tipo.ReadOnly = true;
-            // 
-            // Descripcion
-            // 
-            this.Descripcion.DataPropertyName = "descripcion";
-            this.Descripcion.HeaderText = "Descripcion";
-            this.Descripcion.Name = "Descripcion";
-            this.Descripcion.ReadOnly = true;
-            this.Descripcion.Width = 250;
-            // 
-            // Precio
-            // 
-            this.Precio.DataPropertyName = "precio";
-            this.Precio.HeaderText = "Precio";
-            this.Precio.Name = "Precio";
-            this.Precio.ReadOnly = true;
+            this.btnGenerar.Click += new System.EventHandler(this.btnGenerar_Click);
             // 
             // frmFactura
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(665, 441);
+            this.ClientSize = new System.Drawing.Size(572, 441);
             this.Controls.Add(this.btnGenerar);
             this.Controls.Add(this.txtTotal);
             this.Controls.Add(this.txtFecha);
@@ -393,9 +356,5 @@ namespace TP_PAV.Interfaz
         private System.Windows.Forms.ComboBox cbxProducto;
         private System.Windows.Forms.TextBox txtTotal;
         private System.Windows.Forms.Button btnGenerar;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NroOrden;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Tipo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Descripcion;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Precio;
     }
 }

@@ -41,5 +41,10 @@ namespace TP_PAV.Negocio
         {
             return barrioDao.EliminarBarrio(barrio);
         }
+
+        public bool ExisteBarrio(string nombre)
+        {
+            return barrioDao.ExisteBarrio(nombre);
+        }
     }
 }

@@ -15,7 +15,7 @@ namespace TP_PAV.Entidades
         public string Alcance { get; set; }
         public Usuario Responsable { get; set; }
 
-        public string MostrarDescripcion()
+        public override string ToString()
         {
             return Descripcion;
         }

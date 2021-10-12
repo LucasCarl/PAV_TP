@@ -17,5 +17,9 @@ namespace TP_PAV.Negocio
             return facturaDao.UltimaFactura();
         }
 
+        public bool CargarFactura(Factura factura)
+        {
+            return facturaDao.CargarFactura(factura);
+        }
     }
 }

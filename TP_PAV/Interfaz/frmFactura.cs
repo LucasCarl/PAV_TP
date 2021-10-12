@@ -38,10 +38,10 @@ namespace TP_PAV.Interfaz
 
         private void frmFactura_Load(object sender, EventArgs e)
         {
-            this.dgvDetalles.AllowUserToAddRows = false;
+            //this.dgvDetalles.AllowUserToAddRows = false;
             //Carga Fecha y NumFactura
             factura = new Factura();
-            factura.NumeroFactura = facturaService.UltimaFactura().ToString();
+            factura.NumeroFactura = (facturaService.UltimaFactura() + 1).ToString();
             factura.FechaAlta = DateTime.Today;
 
             txtFecha.Text = factura.FechaAlta.ToShortDateString();
@@ -88,9 +88,30 @@ namespace TP_PAV.Interfaz
 
             //Producto o Proyecto
             if (rdbProducto.Checked)
-                detalle.Producto = productoService.ObtenerProducto(Convert.ToInt32(cbxProducto.SelectedValue));
+            {
+                if (cbxProducto.SelectedIndex >= 0)
+                    detalle.Producto = productoService.ObtenerProducto(Convert.ToInt32(cbxProducto.SelectedValue));
+                else
+                {
+                    MessageBox.Show("Seleccione un producto", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    return;
+                }
+            }
             else if (rdbProyecto.Checked)
-                detalle.Proyecto = (Proyecto)cbxProyecto.SelectedItem;
+            {
+                if (cbxProyecto.SelectedIndex >= 0)
+                    detalle.Proyecto = (Proyecto)cbxProyecto.SelectedItem;
+                else
+                {
+                    MessageBox.Show("Seleccione un proyecto", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    return;
+                }
+            }
+            else
+            {
+                MessageBox.Show("Seleccione un producto o proyecto", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
 
             //Checkea Precio
             if (string.IsNullOrEmpty(txtPrecio.Text))
@@ -105,7 +126,7 @@ namespace TP_PAV.Interfaz
 
             MostrarDetalles();
             ActualizarTotal();
-
+            LimpiarCampos();
 
         }
 
@@ -120,9 +141,19 @@ namespace TP_PAV.Interfaz
             txtTotal.Text = total.ToString();
         }
 
+        private void LimpiarCampos()
+        {
+            rdbProducto.Checked = false;
+            rdbProyecto.Checked = false;
+            txtPrecio.Text = "";
+        }
+
         private void MostrarDetalles()
         {
+            dgvDetalles.DataSource = null;
             dgvDetalles.DataSource = factura.ListadoDetalles;
+            dgvDetalles.Update();
+            /*
             for (int i = 0; i < dgvDetalles.RowCount; i++)
             {
                 dgvDetalles.Rows[i].Cells["NroOrden"].Value = factura.ListadoDetalles[i].NumeroOrden;
@@ -139,6 +170,34 @@ namespace TP_PAV.Interfaz
                     dgvDetalles.Rows[i].Cells["Descripcion"].Value = factura.ListadoDetalles[i].Proyecto.MostrarDescripcion();
                 }
             }
+            */
+        }
+
+        private void btnGenerar_Click(object sender, EventArgs e)
+        {
+            //Controlar que haya cliente
+            if (cbxCliente.SelectedIndex < 0)
+            {
+                MessageBox.Show("Debe seleccionar un cliente", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+            //Controlar que haya al menos 1 detalle
+            if (factura.ListadoDetalles.Count == 0)
+            {
+                MessageBox.Show("Debe ingresar al menos un producto o proyecto", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+
+            //Agrega datos faltantes a factura(cliente y usuario)
+            factura.Cliente = clienteSeleccionado;
+            factura.UsuarioCreador = Program.usuarioActual;
+
+            if (facturaService.CargarFactura(factura))
+                MessageBox.Show("Factura generada con exito", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            else
+                MessageBox.Show("Error al generar factura", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            this.Close();
         }
     }
 }
