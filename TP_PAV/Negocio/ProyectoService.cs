@@ -34,5 +34,10 @@ namespace TP_PAV.Negocio
         {
             return proyectoDao.EliminarProyecto(proyectoBorrar);
         }
+
+        public bool ExisteProyecto(int idProducto, string descripcion)
+        {
+            return proyectoDao.ExisteProyecto(idProducto, descripcion);
+        }
     }
 }

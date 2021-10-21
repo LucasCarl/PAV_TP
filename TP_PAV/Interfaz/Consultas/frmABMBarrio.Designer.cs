@@ -29,6 +29,7 @@ namespace TP_PAV.Interfaz.Consultas
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmABMBarrio));
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.lblNombre = new System.Windows.Forms.Label();
             this.btnAccion = new System.Windows.Forms.Button();
@@ -69,6 +70,7 @@ namespace TP_PAV.Interfaz.Consultas
             this.Controls.Add(this.btnAccion);
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.lblNombre);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(212, 130);
             this.MinimizeBox = false;

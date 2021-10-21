@@ -83,6 +83,12 @@ namespace TP_PAV.Interfaz.Consultas
             {
                 case FormMode.nuevo:
 
+                    if (contactoService.ExisteContacto(txtNombre.Text, txtApellido.Text))
+                    {
+                        MessageBox.Show("Ya existe un contacto con el nombre y apellido ingresados", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        return;
+                    }
+
                     if (contactoService.NuevoContacto(CargarContacto()))
                     {
                         MessageBox.Show("Contacto creado", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -109,6 +115,12 @@ namespace TP_PAV.Interfaz.Consultas
                     break;
 
                 case FormMode.modificar:
+
+                    if (contactoService.ExisteContacto(txtNombre.Text, txtApellido.Text))
+                    {
+                        MessageBox.Show("Ya existe un contacto con el nombre y apellido ingresados", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        return;
+                    }
 
                     if (contactoService.ModificarContacto(CargarContacto(), oContacto.IdContacto))
                     {

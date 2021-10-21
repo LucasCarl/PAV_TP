@@ -29,6 +29,7 @@ namespace TP_PAV.Interfaz.Consultas
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmContactos));
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.lblNombre = new System.Windows.Forms.Label();
             this.txtApellido = new System.Windows.Forms.TextBox();
@@ -183,6 +184,7 @@ namespace TP_PAV.Interfaz.Consultas
             this.Controls.Add(this.lblApellido);
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.lblNombre);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimumSize = new System.Drawing.Size(427, 380);
             this.Name = "frmContactos";
             this.Text = "Contactos";

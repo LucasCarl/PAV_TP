@@ -33,6 +33,24 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -112,11 +130,11 @@
     <Compile Include="Interfaz\Consultas\frmProyectos.Designer.cs">
       <DependentUpon>frmProyectos.cs</DependentUpon>
     </Compile>
-    <Compile Include="Interfaz\frmFactura.cs">
+    <Compile Include="Interfaz\frmGenerarFactura.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Interfaz\frmFactura.Designer.cs">
-      <DependentUpon>frmFactura.cs</DependentUpon>
+    <Compile Include="Interfaz\frmGenerarFactura.Designer.cs">
+      <DependentUpon>frmGenerarFactura.cs</DependentUpon>
     </Compile>
     <Compile Include="Interfaz\frmLogin.cs">
       <SubType>Form</SubType>
@@ -130,6 +148,12 @@
     <Compile Include="Interfaz\frmPrincipal.Designer.cs">
       <DependentUpon>frmPrincipal.cs</DependentUpon>
     </Compile>
+    <Compile Include="Interfaz\Reportes\frmReporteFactura.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interfaz\Reportes\frmReporteFactura.Designer.cs">
+      <DependentUpon>frmReporteFactura.cs</DependentUpon>
+    </Compile>
     <Compile Include="Negocio\BarrioService.cs" />
     <Compile Include="Negocio\ClienteService.cs" />
     <Compile Include="Negocio\ContactoService.cs" />
@@ -139,11 +163,15 @@
     <Compile Include="Negocio\UsuarioService.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SqlServerTypes\Loader.cs" />
     <EmbeddedResource Include="Interfaz\Consultas\frmABMBarrio.resx">
       <DependentUpon>frmABMBarrio.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Interfaz\Consultas\frmABMCliente.resx">
       <DependentUpon>frmABMCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interfaz\Consultas\frmABMContacto.resx">
+      <DependentUpon>frmABMContacto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Interfaz\Consultas\frmABMProyecto.resx">
       <DependentUpon>frmABMProyecto.cs</DependentUpon>
@@ -160,12 +188,19 @@
     <EmbeddedResource Include="Interfaz\Consultas\frmProyectos.resx">
       <DependentUpon>frmProyectos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Interfaz\frmFactura.resx">
-      <DependentUpon>frmFactura.cs</DependentUpon>
+    <EmbeddedResource Include="Interfaz\frmGenerarFactura.resx">
+      <DependentUpon>frmGenerarFactura.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interfaz\frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Interfaz\frmPrincipal.resx">
       <DependentUpon>frmPrincipal.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Interfaz\Reportes\frmReporteFactura.resx">
+      <DependentUpon>frmReporteFactura.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interfaz\Reportes\rptFactura.rdlc" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -175,6 +210,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -188,6 +224,23 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Imagenes\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -29,6 +29,7 @@ namespace TP_PAV.Interfaz
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPrincipal));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.soporteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contactoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -133,6 +134,7 @@ namespace TP_PAV.Interfaz
             this.ClientSize = new System.Drawing.Size(483, 390);
             this.Controls.Add(this.lblUsuario);
             this.Controls.Add(this.menuStrip1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "frmPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

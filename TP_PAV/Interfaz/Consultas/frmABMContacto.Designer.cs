@@ -29,6 +29,7 @@ namespace TP_PAV.Interfaz.Consultas
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmABMContacto));
             this.lblNombre = new System.Windows.Forms.Label();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.txtApellido = new System.Windows.Forms.TextBox();
@@ -43,78 +44,78 @@ namespace TP_PAV.Interfaz.Consultas
             // lblNombre
             // 
             this.lblNombre.AutoSize = true;
-            this.lblNombre.Location = new System.Drawing.Point(20, 27);
+            this.lblNombre.Location = new System.Drawing.Point(17, 23);
             this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(51, 15);
+            this.lblNombre.Size = new System.Drawing.Size(44, 13);
             this.lblNombre.TabIndex = 0;
             this.lblNombre.Text = "Nombre";
             // 
             // txtNombre
             // 
             this.txtNombre.BackColor = System.Drawing.SystemColors.Window;
-            this.txtNombre.Location = new System.Drawing.Point(79, 24);
+            this.txtNombre.Location = new System.Drawing.Point(68, 21);
             this.txtNombre.MaxLength = 50;
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(120, 23);
+            this.txtNombre.Size = new System.Drawing.Size(103, 20);
             this.txtNombre.TabIndex = 1;
             // 
             // txtApellido
             // 
             this.txtApellido.BackColor = System.Drawing.Color.White;
-            this.txtApellido.Location = new System.Drawing.Point(79, 72);
+            this.txtApellido.Location = new System.Drawing.Point(68, 62);
             this.txtApellido.MaxLength = 50;
             this.txtApellido.Name = "txtApellido";
-            this.txtApellido.Size = new System.Drawing.Size(120, 23);
+            this.txtApellido.Size = new System.Drawing.Size(103, 20);
             this.txtApellido.TabIndex = 3;
             // 
             // lblApellido
             // 
             this.lblApellido.AutoSize = true;
-            this.lblApellido.Location = new System.Drawing.Point(20, 75);
+            this.lblApellido.Location = new System.Drawing.Point(17, 65);
             this.lblApellido.Name = "lblApellido";
-            this.lblApellido.Size = new System.Drawing.Size(51, 15);
+            this.lblApellido.Size = new System.Drawing.Size(44, 13);
             this.lblApellido.TabIndex = 2;
             this.lblApellido.Text = "Apellido";
             // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(79, 118);
+            this.txtEmail.Location = new System.Drawing.Point(68, 102);
             this.txtEmail.MaxLength = 50;
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(200, 23);
+            this.txtEmail.Size = new System.Drawing.Size(172, 20);
             this.txtEmail.TabIndex = 5;
             // 
             // lblEmail
             // 
             this.lblEmail.AutoSize = true;
-            this.lblEmail.Location = new System.Drawing.Point(20, 121);
+            this.lblEmail.Location = new System.Drawing.Point(17, 105);
             this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(41, 15);
+            this.lblEmail.Size = new System.Drawing.Size(35, 13);
             this.lblEmail.TabIndex = 4;
             this.lblEmail.Text = "E-mail";
             // 
             // txtTelefono
             // 
-            this.txtTelefono.Location = new System.Drawing.Point(79, 164);
+            this.txtTelefono.Location = new System.Drawing.Point(68, 142);
             this.txtTelefono.MaxLength = 50;
             this.txtTelefono.Name = "txtTelefono";
-            this.txtTelefono.Size = new System.Drawing.Size(120, 23);
+            this.txtTelefono.Size = new System.Drawing.Size(103, 20);
             this.txtTelefono.TabIndex = 7;
             // 
             // lblTelefono
             // 
             this.lblTelefono.AutoSize = true;
-            this.lblTelefono.Location = new System.Drawing.Point(20, 167);
+            this.lblTelefono.Location = new System.Drawing.Point(17, 145);
             this.lblTelefono.Name = "lblTelefono";
-            this.lblTelefono.Size = new System.Drawing.Size(52, 15);
+            this.lblTelefono.Size = new System.Drawing.Size(49, 13);
             this.lblTelefono.TabIndex = 6;
             this.lblTelefono.Text = "Telefono";
             // 
             // btnAccion
             // 
-            this.btnAccion.Location = new System.Drawing.Point(218, 207);
+            this.btnAccion.Location = new System.Drawing.Point(187, 179);
             this.btnAccion.Name = "btnAccion";
-            this.btnAccion.Size = new System.Drawing.Size(75, 23);
+            this.btnAccion.Size = new System.Drawing.Size(64, 20);
             this.btnAccion.TabIndex = 8;
             this.btnAccion.Text = "Accion";
             this.btnAccion.UseVisualStyleBackColor = true;
@@ -122,9 +123,9 @@ namespace TP_PAV.Interfaz.Consultas
             // 
             // frmABMContacto
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(301, 241);
+            this.ClientSize = new System.Drawing.Size(258, 209);
             this.Controls.Add(this.btnAccion);
             this.Controls.Add(this.txtTelefono);
             this.Controls.Add(this.lblTelefono);
@@ -134,6 +135,7 @@ namespace TP_PAV.Interfaz.Consultas
             this.Controls.Add(this.lblApellido);
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.lblNombre);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmABMContacto";
             this.Text = "ABMContacto";
             this.Load += new System.EventHandler(this.frmABMContacto_Load);

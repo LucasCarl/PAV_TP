@@ -29,6 +29,7 @@ namespace TP_PAV.Interfaz.Consultas
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmProyectos));
             this.btnBorrar = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnNuevo = new System.Windows.Forms.Button();
@@ -205,6 +206,7 @@ namespace TP_PAV.Interfaz.Consultas
             this.Controls.Add(this.btnNuevo);
             this.Controls.Add(this.dgvTabla);
             this.Controls.Add(this.btnConsultar);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmProyectos";
             this.Text = "Proyectos";
             this.Load += new System.EventHandler(this.frmProyectos_Load);

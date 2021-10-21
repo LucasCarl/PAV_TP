@@ -40,5 +40,10 @@ namespace TP_PAV.Negocio
         {
             return contactoDao.EliminarContacto(contacto);
         }
+
+        public bool ExisteContacto(string nombre, string apellido)
+        {
+            return contactoDao.ExisteContacto(nombre, apellido);
+        }
     }
 }

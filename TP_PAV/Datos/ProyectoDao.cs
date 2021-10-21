@@ -126,5 +126,12 @@ namespace TP_PAV.Datos
 
             return (DataManager.Instancia().EjecutarSQL(sqlComando, parametros) == 1);
         }
+
+        public bool ExisteProyecto(int producto, string descripcion)
+        {
+            string sqlComando = "SELECT descripcion FROM Proyectos WHERE borrado = 0 AND id_producto = '" + producto + "' AND descripcion = '" + descripcion + "'";
+            int resultadoConsulta = DataManager.Instancia().ConsultaSQL(sqlComando).Rows.Count;
+            return resultadoConsulta > 0;
+        }
     }
 }

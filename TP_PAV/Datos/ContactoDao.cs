@@ -121,5 +121,12 @@ namespace TP_PAV.Datos
             var resultadoConsulta = (DataRowCollection)DataManager.Instancia().ConsultaSQL(sqlComando).Rows;
             return ObjectMapping(resultadoConsulta[0]);
         }
+
+        public bool ExisteContacto (string nombre, string apellido)
+        {
+            string sqlComando = "SELECT nombre FROM Contactos WHERE borrado = 0 AND nombre = '" + nombre + "' AND apellido = '" + apellido + "'";
+            int resultadoConsulta = DataManager.Instancia().ConsultaSQL(sqlComando).Rows.Count;
+            return resultadoConsulta > 0;
+        }
     }
 }

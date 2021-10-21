@@ -44,5 +44,10 @@ namespace TP_PAV.Negocio
         {
             return DataManager.Instancia().ConsultaSQL("SELECT * FROM Clientes WHERE borrado = 0");
         }
+
+        public bool ExisteCliente(string cuit)
+        {
+            return clienteDao.ExisteCliente(cuit);
+        }
     }
 }

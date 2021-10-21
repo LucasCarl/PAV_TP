@@ -14,7 +14,7 @@ namespace TP_PAV.Interfaz.Consultas
 {
     public partial class frmABMCliente : Form
     {
-        public enum FormMode { nuevo, eliminar, modificar };
+        public enum FormMode { nuevo, eliminar, modificar, mostrar };
         private FormMode modo = FormMode.nuevo;
         private Cliente oCliente;
         private ClienteService clienteService = new ClienteService();
@@ -71,6 +71,18 @@ namespace TP_PAV.Interfaz.Consultas
                     btnAccion.Text = "Modificar";
                     MostrarDatos();
                     break;
+
+                case FormMode.mostrar:
+                    this.Text = "Datos Cliente";
+                    btnAccion.Text = "Cerrar";
+                    MostrarDatos();
+                    txtCuit.Enabled = false;
+                    txtRazon.Enabled = false;
+                    txtCalle.Enabled = false;
+                    txtNumero.Enabled = false;
+                    cbxBarrio.Enabled = false;
+                    cbxContacto.Enabled = false;
+                    break;
             }
         }
 
@@ -99,6 +111,12 @@ namespace TP_PAV.Interfaz.Consultas
             switch (modo)
             {
                 case FormMode.nuevo:
+                    if (clienteService.ExisteCliente(txtCuit.Text))
+                    {
+                        MessageBox.Show("Ya existe un cliente con el CUIT ingresado", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        return;
+                    }
+
                     if (clienteService.NuevoCliente(CargarCliente()))
                         MessageBox.Show("Cliente creado", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     else
@@ -116,10 +134,20 @@ namespace TP_PAV.Interfaz.Consultas
                     break;
 
                 case FormMode.modificar:
+                    if (clienteService.ExisteCliente(txtCuit.Text))
+                    {
+                        MessageBox.Show("Ya existe un cliente con el CUIT ingresado", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        return;
+                    }
+
                     if (clienteService.ModificarCliente(CargarCliente(), oCliente.IdCliente))
                         MessageBox.Show("Cliente modificado", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     else
                         MessageBox.Show("Error al modificar cliente", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    break;
+
+                case FormMode.mostrar:
+                    this.Close();
                     break;
             }
 

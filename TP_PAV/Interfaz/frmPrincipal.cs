@@ -49,7 +49,7 @@ namespace TP_PAV.Interfaz
 
         private void generarFacturaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmFactura factura = new frmFactura();
+            frmGenerarFactura factura = new frmGenerarFactura();
             factura.ShowDialog();
         }
     }

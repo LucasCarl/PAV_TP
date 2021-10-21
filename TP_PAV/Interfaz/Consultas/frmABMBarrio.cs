@@ -77,7 +77,7 @@ namespace TP_PAV.Interfaz.Consultas
 
                     if(barrioService.ExisteBarrio(txtNombre.Text))
                     {
-                        MessageBox.Show("El barrio ya existe", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Ya existe un barrio con el nombre ingresado", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         return;
                     }
 
@@ -102,7 +102,7 @@ namespace TP_PAV.Interfaz.Consultas
 
                     if (barrioService.ExisteBarrio(txtNombre.Text))
                     {
-                        MessageBox.Show("El barrio ya existe", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Ya existe un barrio con el nombre ingresado", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         return;
                     }
 

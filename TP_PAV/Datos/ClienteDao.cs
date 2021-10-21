@@ -150,5 +150,12 @@ namespace TP_PAV.Datos
             var resultadoConsulta = DataManager.Instancia().ConsultaSQL(sqlComando).Rows;
             return MapeoCliente(resultadoConsulta[0]);
         }
+
+        public bool ExisteCliente (string cuit)
+        {
+            string sqlComando = "SELECT cuit FROM Clientes WHERE borrado = 0 AND cuit = '" + cuit + "'";
+            int resultadoConsulta = DataManager.Instancia().ConsultaSQL(sqlComando).Rows.Count;
+            return resultadoConsulta > 0;
+        }
     }
 }

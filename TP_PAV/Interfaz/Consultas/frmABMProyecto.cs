@@ -101,7 +101,13 @@ namespace TP_PAV.Interfaz.Consultas
             switch (modo)
             {
                 case FormMode.nuevo:
-                    if(proyectoService.NuevoProyecto(CargarProyecto()))
+                    if (proyectoService.ExisteProyecto((int)cbxProductos.SelectedValue, txtDescripcion.Text))
+                    {
+                        MessageBox.Show("Ya existe un proyecto con el producto y descripcion ingresados", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        return;
+                    }
+
+                    if (proyectoService.NuevoProyecto(CargarProyecto()))
                         MessageBox.Show("Proyecto creado", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     else
                         MessageBox.Show("Error al crear proyecto", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -118,7 +124,13 @@ namespace TP_PAV.Interfaz.Consultas
                     break;
 
                 case FormMode.modificar:
-                    if(proyectoService.ModificarProyecto(CargarProyecto(), oProyecto.IdProyecto))
+                    if (proyectoService.ExisteProyecto((int)cbxProductos.SelectedValue, txtDescripcion.Text))
+                    {
+                        MessageBox.Show("Ya existe un proyecto con el producto y descripcion ingresados", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        return;
+                    }
+
+                    if (proyectoService.ModificarProyecto(CargarProyecto(), oProyecto.IdProyecto))
                         MessageBox.Show("Proyecto Modificado", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     else
                         MessageBox.Show("Error al modificar proyecto", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);

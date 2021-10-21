@@ -29,6 +29,7 @@ namespace TP_PAV.Interfaz.Consultas
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmABMCliente));
             this.lblCuit = new System.Windows.Forms.Label();
             this.txtCuit = new System.Windows.Forms.TextBox();
             this.txtRazon = new System.Windows.Forms.TextBox();
@@ -170,6 +171,7 @@ namespace TP_PAV.Interfaz.Consultas
             this.Controls.Add(this.lblRazon);
             this.Controls.Add(this.txtCuit);
             this.Controls.Add(this.lblCuit);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmABMCliente";
             this.Text = "frmABMCliente";
             this.Load += new System.EventHandler(this.frmABMCliente_Load);
