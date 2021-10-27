@@ -14,7 +14,7 @@ namespace TP_PAV.Interfaz.Consultas
 {
     public partial class frmABMContacto : Form
     {
-        public enum FormMode { nuevo, eliminar, modificar };
+        public enum FormMode { nuevo, eliminar, modificar, mostrar };
         private FormMode modo = FormMode.nuevo;
         private ContactoService contactoService;
         private Contacto oContacto;
@@ -55,6 +55,16 @@ namespace TP_PAV.Interfaz.Consultas
                     this.Text = "Modificar Contacto";
                     btnAccion.Text = "Modificar";
                     MostrarDatos();
+                    break;
+
+                case FormMode.mostrar:
+                    this.Text = "Datos Contacto";
+                    btnAccion.Text = "Cerrar";
+                    MostrarDatos();
+                    txtTelefono.Enabled = false;
+                    txtNombre.Enabled = false;
+                    txtEmail.Enabled = false;
+                    txtApellido.Enabled = false;
                     break;
             }
         }
@@ -130,6 +140,10 @@ namespace TP_PAV.Interfaz.Consultas
                     {
                         MessageBox.Show("Error al modificar contacto", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
+                    break;
+
+                case FormMode.mostrar:
+                    this.Close();
                     break;
             }
 

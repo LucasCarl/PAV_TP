@@ -43,6 +43,10 @@ namespace TP_PAV.Interfaz.Consultas
             this.btnNuevo = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnBorrar = new System.Windows.Forms.Button();
+            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Apellido = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Telefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTabla)).BeginInit();
             this.SuspendLayout();
             // 
@@ -125,10 +129,16 @@ namespace TP_PAV.Interfaz.Consultas
             this.dgvTabla.AllowUserToAddRows = false;
             this.dgvTabla.AllowUserToDeleteRows = false;
             this.dgvTabla.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvTabla.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Nombre,
+            this.Apellido,
+            this.Email,
+            this.Telefono});
             this.dgvTabla.Location = new System.Drawing.Point(11, 133);
             this.dgvTabla.MultiSelect = false;
             this.dgvTabla.Name = "dgvTabla";
             this.dgvTabla.ReadOnly = true;
+            this.dgvTabla.RowHeadersWidth = 20;
             this.dgvTabla.RowTemplate.Height = 25;
             this.dgvTabla.Size = new System.Drawing.Size(389, 174);
             this.dgvTabla.TabIndex = 12;
@@ -165,6 +175,42 @@ namespace TP_PAV.Interfaz.Consultas
             this.btnBorrar.Text = "Borrar";
             this.btnBorrar.UseVisualStyleBackColor = true;
             this.btnBorrar.Click += new System.EventHandler(this.btnBorrar_Click);
+            // 
+            // Nombre
+            // 
+            this.Nombre.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Nombre.DataPropertyName = "Nombre";
+            this.Nombre.HeaderText = "Nombre";
+            this.Nombre.Name = "Nombre";
+            this.Nombre.ReadOnly = true;
+            this.Nombre.Width = 69;
+            // 
+            // Apellido
+            // 
+            this.Apellido.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Apellido.DataPropertyName = "Apellido";
+            this.Apellido.HeaderText = "Apellido";
+            this.Apellido.Name = "Apellido";
+            this.Apellido.ReadOnly = true;
+            this.Apellido.Width = 69;
+            // 
+            // Email
+            // 
+            this.Email.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Email.DataPropertyName = "email";
+            this.Email.HeaderText = "Email";
+            this.Email.Name = "Email";
+            this.Email.ReadOnly = true;
+            this.Email.Width = 57;
+            // 
+            // Telefono
+            // 
+            this.Telefono.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Telefono.DataPropertyName = "telefono";
+            this.Telefono.HeaderText = "Telefono";
+            this.Telefono.Name = "Telefono";
+            this.Telefono.ReadOnly = true;
+            this.Telefono.Width = 74;
             // 
             // frmContactos
             // 
@@ -208,5 +254,9 @@ namespace TP_PAV.Interfaz.Consultas
         private System.Windows.Forms.Button btnNuevo;
         private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.Button btnBorrar;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Apellido;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Email;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Telefono;
     }
 }

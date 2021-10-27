@@ -18,6 +18,20 @@ namespace TP_PAV.Interfaz.Consultas
         public frmProyectos()
         {
             InitializeComponent();
+            InicializarDataGridView();
+        }
+
+        private void InicializarDataGridView()
+        {
+            //No permite generar columnas nuevas
+            dgvTabla.AutoGenerateColumns = false;
+
+            //Estilo celda de Headers
+            DataGridViewCellStyle headerStyle = new DataGridViewCellStyle();
+            headerStyle.BackColor = Color.Aquamarine;
+            headerStyle.ForeColor = Color.Aquamarine;
+            headerStyle.Font = new Font("Tahoma", 8, FontStyle.Bold);
+            dgvTabla.ColumnHeadersDefaultCellStyle = headerStyle;
         }
 
         private void frmProyectos_Load(object sender, EventArgs e)
@@ -26,7 +40,7 @@ namespace TP_PAV.Interfaz.Consultas
             UsuarioService usuarioService = new UsuarioService();
 
             //Llenar ComboBox
-            LlenarCombobox(cbxProductos, productoService.ListaProductos(), "nombre", "id_producto");
+            LlenarCombobox(cbxProductos, productoService.ListaProductos(), "nombre", "idProducto");
             LlenarCombobox(cbxResponsable, usuarioService.ListaUsuarios(), "usuario", "id_usuario");
         }
 
@@ -40,8 +54,11 @@ namespace TP_PAV.Interfaz.Consultas
 
         private void dgvTabla_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            btnBorrar.Enabled = true;
-            btnEditar.Enabled = true;
+            if(e.RowIndex >= 0)
+            {
+                btnBorrar.Enabled = true;
+                btnEditar.Enabled = true;
+            }
         }
 
         private void btnConsultar_Click(object sender, EventArgs e)

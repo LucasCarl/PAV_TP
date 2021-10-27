@@ -148,6 +148,11 @@
     <Compile Include="Interfaz\frmPrincipal.Designer.cs">
       <DependentUpon>frmPrincipal.cs</DependentUpon>
     </Compile>
+    <Compile Include="Interfaz\Reportes\dsFacturas.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsFacturas.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Interfaz\Reportes\frmReporteFactura.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -210,6 +215,17 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="Interfaz\Reportes\dsFacturas.xsc">
+      <DependentUpon>dsFacturas.xsd</DependentUpon>
+    </None>
+    <None Include="Interfaz\Reportes\dsFacturas.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsFacturas.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Interfaz\Reportes\dsFacturas.xss">
+      <DependentUpon>dsFacturas.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

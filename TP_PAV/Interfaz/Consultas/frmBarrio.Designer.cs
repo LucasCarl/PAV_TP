@@ -34,6 +34,7 @@ namespace TP_PAV.Interfaz.Consultas
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnNuevo = new System.Windows.Forms.Button();
             this.dgvTabla = new System.Windows.Forms.DataGridView();
+            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnConsultar = new System.Windows.Forms.Button();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.lblNombre = new System.Windows.Forms.Label();
@@ -77,14 +78,26 @@ namespace TP_PAV.Interfaz.Consultas
             this.dgvTabla.AllowUserToAddRows = false;
             this.dgvTabla.AllowUserToDeleteRows = false;
             this.dgvTabla.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvTabla.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Nombre});
             this.dgvTabla.Location = new System.Drawing.Point(10, 86);
             this.dgvTabla.MultiSelect = false;
             this.dgvTabla.Name = "dgvTabla";
             this.dgvTabla.ReadOnly = true;
+            this.dgvTabla.RowHeadersVisible = false;
             this.dgvTabla.RowTemplate.Height = 25;
             this.dgvTabla.Size = new System.Drawing.Size(243, 174);
             this.dgvTabla.TabIndex = 18;
             this.dgvTabla.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTabla_CellClick);
+            // 
+            // Nombre
+            // 
+            this.Nombre.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Nombre.DataPropertyName = "Nombre";
+            this.Nombre.HeaderText = "Nombre";
+            this.Nombre.Name = "Nombre";
+            this.Nombre.ReadOnly = true;
+            this.Nombre.Width = 69;
             // 
             // btnConsultar
             // 
@@ -117,6 +130,7 @@ namespace TP_PAV.Interfaz.Consultas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(263, 291);
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.lblNombre);
@@ -146,5 +160,6 @@ namespace TP_PAV.Interfaz.Consultas
         private System.Windows.Forms.Button btnConsultar;
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.Label lblNombre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
     }
 }

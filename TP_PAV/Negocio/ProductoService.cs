@@ -11,18 +11,31 @@ namespace TP_PAV.Negocio
 {
     class ProductoService
     {
-        public DataTable ListaProductos()
+        public IList<Producto> ListaProductos()
         {
-            return DataManager.Instancia().ConsultaSQL("SELECT * FROM Productos WHERE borrado = 0");
+            var resultadoConsulta = DataManager.Instancia().ConsultaSQL("SELECT * FROM Productos WHERE borrado = 0").Rows;
+
+            List<Producto> listadoProductos = new List<Producto>();
+            foreach (DataRow fila in resultadoConsulta)
+            {
+                listadoProductos.Add(MapeoProducto(fila));
+            }
+
+            return listadoProductos;
         }
 
         public Producto ObtenerProducto(int id)
         {
             var resultado = DataManager.Instancia().ConsultaSQL("SELECT id_producto, nombre FROM Productos WHERE id_producto = " + id);
 
+            return MapeoProducto(resultado.Rows[0]);
+        }
+
+        private Producto MapeoProducto(DataRow fila)
+        {
             Producto producto = new Producto();
-            producto.IdProducto = Convert.ToInt32(resultado.Rows[0]["id_producto"].ToString());
-            producto.Nombre = resultado.Rows[0]["nombre"].ToString();
+            producto.IdProducto = Convert.ToInt32(fila["id_producto"].ToString());
+            producto.Nombre = fila["nombre"].ToString();
 
             return producto;
         }

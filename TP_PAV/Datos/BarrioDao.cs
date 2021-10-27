@@ -25,7 +25,7 @@ namespace TP_PAV.Datos
             List<Barrio> listadoBarrios = new List<Barrio>();
 
             //Consulta SQL
-            string sqlComando = "SELECT B.id_barrio AS 'ID', B.nombre AS 'Nombre' FROM Barrios B WHERE B.borrado = 0";
+            string sqlComando = "SELECT B.id_barrio AS 'ID', B.nombre AS 'Nombre' FROM Barrios B WHERE B.borrado = 0 ORDER BY B.nombre";
 
             var resultadoConsulta = (DataRowCollection)DataManager.Instancia().ConsultaSQL(sqlComando).Rows;
 
@@ -49,6 +49,7 @@ namespace TP_PAV.Datos
             if (parametros.ContainsKey("nombre"))
                 sqlComando += " AND nombre LIKE '%' + @nombre + '%' ";
 
+            sqlComando += " ORDER BY B.nombre";
             var resultadoConsulta = (DataRowCollection)DataManager.Instancia().ConsultaSQL(sqlComando, parametros).Rows;
 
             //Transforma filas en Barrios

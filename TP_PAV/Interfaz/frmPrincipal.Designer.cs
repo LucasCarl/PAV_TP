@@ -45,6 +45,7 @@ namespace TP_PAV.Interfaz
             // 
             // menuStrip1
             // 
+            this.menuStrip1.BackColor = System.Drawing.SystemColors.Control;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.soporteToolStripMenuItem,
             this.transaccionesToolStripMenuItem,
@@ -52,7 +53,7 @@ namespace TP_PAV.Interfaz
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(483, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(583, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -119,7 +120,7 @@ namespace TP_PAV.Interfaz
             // lblUsuario
             // 
             this.lblUsuario.AutoSize = true;
-            this.lblUsuario.Location = new System.Drawing.Point(422, 9);
+            this.lblUsuario.Location = new System.Drawing.Point(522, 9);
             this.lblUsuario.Name = "lblUsuario";
             this.lblUsuario.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lblUsuario.Size = new System.Drawing.Size(49, 13);
@@ -131,7 +132,9 @@ namespace TP_PAV.Interfaz
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(483, 390);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(583, 390);
             this.Controls.Add(this.lblUsuario);
             this.Controls.Add(this.menuStrip1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));

@@ -42,7 +42,7 @@ namespace TP_PAV.Datos
                                               "B.nombre AS 'Barrio', CO.nombre, CO.apellido, CO.email, CO.telefono ,B.id_barrio, CO.id_contacto ",
                                               "FROM Clientes C LEFT JOIN Barrios B ON C.id_barrio = B.id_barrio ",
                                               "LEFT JOIN Contactos CO ON C.id_contacto = CO.id_contacto ",
-                                              "WHERE C.borrado = 0 ");
+                                              "WHERE C.borrado = 0 ORDER BY C.razon_social");
             var resultadoConsulta = DataManager.Instancia().ConsultaSQL(sqlComando).Rows;
             foreach (DataRow fila in resultadoConsulta)
             {
@@ -85,6 +85,7 @@ namespace TP_PAV.Datos
             if (parametros.ContainsKey("telefono"))
                 sqlComando += " AND CO.telefono LIKE '%' + @telefonoContacto + '%' ";
 
+            sqlComando += " ORDER BY C.razon_social";
             var resultadoConsulta = DataManager.Instancia().ConsultaSQL(sqlComando, parametros).Rows;
 
             foreach (DataRow fila in resultadoConsulta)

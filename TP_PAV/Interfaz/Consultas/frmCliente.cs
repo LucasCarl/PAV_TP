@@ -20,6 +20,28 @@ namespace TP_PAV.Interfaz.Consultas
         public frmCliente()
         {
             InitializeComponent();
+            InicializarDataGridView();
+        }
+
+        private void InicializarDataGridView()
+        {
+            //No permite generar columnas nuevas
+            dgvTabla.AutoGenerateColumns = false;
+
+            //Agregar columna con botones para mostrar los datos de los contactos
+            DataGridViewButtonColumn btnColumn = new DataGridViewButtonColumn();
+            btnColumn.Name = "Botones";
+            btnColumn.Text = "Mostrar Datos";
+            btnColumn.UseColumnTextForButtonValue = true;
+            dgvTabla.Columns.Add(btnColumn);
+
+            //Estilo celda de Headers
+            DataGridViewCellStyle headerStyle = new DataGridViewCellStyle();
+            headerStyle.BackColor = Color.Aquamarine;
+            headerStyle.ForeColor = Color.Aquamarine;
+            headerStyle.Font = new Font("Tahoma", 8, FontStyle.Bold);
+            dgvTabla.ColumnHeadersDefaultCellStyle = headerStyle;
+
         }
 
         private void chkFecha_CheckedChanged(object sender, EventArgs e)
@@ -32,8 +54,21 @@ namespace TP_PAV.Interfaz.Consultas
 
         private void dgvTabla_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            btnBorrar.Enabled = true;
-            btnEditar.Enabled = true;
+            if (e.RowIndex >= 0)
+            {
+                btnBorrar.Enabled = true;
+                btnEditar.Enabled = true;
+
+                //Detecta si se apreto la columna de botones
+                if (e.ColumnIndex == dgvTabla.Columns.Count - 1)
+                {
+                    int fila = e.RowIndex;
+                    Cliente cliente = (Cliente)dgvTabla.Rows[fila].DataBoundItem;
+                    frmABMContacto abmContacto = new frmABMContacto();
+                    abmContacto.IniciarFormulario(frmABMContacto.FormMode.mostrar, cliente.Contacto);
+                    abmContacto.ShowDialog();
+                }
+            }
         }
 
         private void frmCliente_Load(object sender, EventArgs e)

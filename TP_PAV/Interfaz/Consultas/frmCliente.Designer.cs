@@ -60,6 +60,13 @@ namespace TP_PAV.Interfaz.Consultas
             this.lblApellido = new System.Windows.Forms.Label();
             this.txtNombreC = new System.Windows.Forms.TextBox();
             this.lblNombre = new System.Windows.Forms.Label();
+            this.RazonSocial = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Cuit = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FechaAlta = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Calle = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Numero = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Barrio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Contacto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTabla)).BeginInit();
             this.gbxFechaAlta.SuspendLayout();
             this.gbxContacto.SuspendLayout();
@@ -102,10 +109,19 @@ namespace TP_PAV.Interfaz.Consultas
             this.dgvTabla.AllowUserToAddRows = false;
             this.dgvTabla.AllowUserToDeleteRows = false;
             this.dgvTabla.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvTabla.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.RazonSocial,
+            this.Cuit,
+            this.FechaAlta,
+            this.Calle,
+            this.Numero,
+            this.Barrio,
+            this.Contacto});
             this.dgvTabla.Location = new System.Drawing.Point(12, 196);
             this.dgvTabla.MultiSelect = false;
             this.dgvTabla.Name = "dgvTabla";
             this.dgvTabla.ReadOnly = true;
+            this.dgvTabla.RowHeadersWidth = 20;
             this.dgvTabla.RowTemplate.Height = 25;
             this.dgvTabla.Size = new System.Drawing.Size(525, 174);
             this.dgvTabla.TabIndex = 18;
@@ -345,6 +361,69 @@ namespace TP_PAV.Interfaz.Consultas
             this.lblNombre.TabIndex = 38;
             this.lblNombre.Text = "Nombre";
             // 
+            // RazonSocial
+            // 
+            this.RazonSocial.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.RazonSocial.DataPropertyName = "razonSocial";
+            this.RazonSocial.HeaderText = "Razon Social";
+            this.RazonSocial.Name = "RazonSocial";
+            this.RazonSocial.ReadOnly = true;
+            this.RazonSocial.Width = 95;
+            // 
+            // Cuit
+            // 
+            this.Cuit.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Cuit.DataPropertyName = "cuit";
+            this.Cuit.HeaderText = "CUIT";
+            this.Cuit.Name = "Cuit";
+            this.Cuit.ReadOnly = true;
+            this.Cuit.Width = 57;
+            // 
+            // FechaAlta
+            // 
+            this.FechaAlta.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.FechaAlta.DataPropertyName = "fechaAlta";
+            this.FechaAlta.HeaderText = "Fecha Alta";
+            this.FechaAlta.Name = "FechaAlta";
+            this.FechaAlta.ReadOnly = true;
+            this.FechaAlta.Width = 83;
+            // 
+            // Calle
+            // 
+            this.Calle.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Calle.DataPropertyName = "calle";
+            this.Calle.HeaderText = "Calle";
+            this.Calle.Name = "Calle";
+            this.Calle.ReadOnly = true;
+            this.Calle.Width = 55;
+            // 
+            // Numero
+            // 
+            this.Numero.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Numero.DataPropertyName = "numero";
+            this.Numero.HeaderText = "Numero";
+            this.Numero.Name = "Numero";
+            this.Numero.ReadOnly = true;
+            this.Numero.Width = 69;
+            // 
+            // Barrio
+            // 
+            this.Barrio.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Barrio.DataPropertyName = "barrio";
+            this.Barrio.HeaderText = "Barrio";
+            this.Barrio.Name = "Barrio";
+            this.Barrio.ReadOnly = true;
+            this.Barrio.Width = 59;
+            // 
+            // Contacto
+            // 
+            this.Contacto.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Contacto.DataPropertyName = "contacto";
+            this.Contacto.HeaderText = "Contacto";
+            this.Contacto.Name = "Contacto";
+            this.Contacto.ReadOnly = true;
+            this.Contacto.Width = 75;
+            // 
             // frmCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -413,5 +492,12 @@ namespace TP_PAV.Interfaz.Consultas
         private System.Windows.Forms.Label lblApellido;
         private System.Windows.Forms.TextBox txtNombreC;
         private System.Windows.Forms.Label lblNombre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn RazonSocial;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Cuit;
+        private System.Windows.Forms.DataGridViewTextBoxColumn FechaAlta;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Calle;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Numero;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Barrio;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Contacto;
     }
 }

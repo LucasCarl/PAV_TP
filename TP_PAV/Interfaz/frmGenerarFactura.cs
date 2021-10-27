@@ -23,6 +23,11 @@ namespace TP_PAV.Interfaz
 
         private Cliente clienteSeleccionado = new Cliente();
 
+        private IList<Producto> listaProductos;
+        private IList<Producto> listadoProductosDisponibles;
+        private IList<Proyecto> listaProyectos;
+        private IList<Proyecto> listadoProyectosDisponibles;
+
         public frmGenerarFactura()
         {
             InitializeComponent();
@@ -30,6 +35,7 @@ namespace TP_PAV.Interfaz
 
         private void LlenarCombobox(ComboBox cbx, object source, string mostrar, string valor)
         {
+            cbx.DataSource = null;
             cbx.DataSource = source;        //Origen de datos
             cbx.DisplayMember = mostrar;    //Propiedad a mostrar
             cbx.ValueMember = valor;        //Ruta de acceso a propiedad
@@ -46,10 +52,16 @@ namespace TP_PAV.Interfaz
             dtpFecha.Value = DateTime.Today;
             txtNumero.Text = factura.NumeroFactura;
 
+            //Genera listas de productos y proyectos
+            listaProductos = productoService.ListaProductos();
+            listadoProductosDisponibles = new List<Producto>(listaProductos);
+            listaProyectos = proyectoService.ObtenerProyectos();
+            listadoProyectosDisponibles = new List<Proyecto>(listaProyectos);
+
             //Llena comboboxes
             LlenarCombobox(cbxCliente, clienteService.ObtenerClientes(), "razonSocial", "idCliente");
-            LlenarCombobox(cbxProducto, productoService.ListaProductos(), "nombre", "id_producto");
-            LlenarCombobox(cbxProyecto, proyectoService.ObtenerProyectos(), "descripcion", "idProyecto");
+            LlenarCombobox(cbxProducto, listaProductos, "nombre", "idProducto");
+            LlenarCombobox(cbxProyecto, listadoProyectosDisponibles, "descripcion", "idProyecto");
 
             //Añade el evento de Mostrar datos del cliente
             this.cbxCliente.SelectedValueChanged += new EventHandler(this.cbxCliente_SelectedValueChanged);
@@ -102,7 +114,10 @@ namespace TP_PAV.Interfaz
             if (rdbProducto.Checked)
             {
                 if (cbxProducto.SelectedIndex >= 0)
-                    detalle.Producto = productoService.ObtenerProducto(Convert.ToInt32(cbxProducto.SelectedValue));
+                {
+                    detalle.Producto = (Producto)cbxProducto.SelectedItem;
+                    listadoProductosDisponibles.Remove(detalle.Producto);
+                }
                 else
                 {
                     MessageBox.Show("Seleccione un producto", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
@@ -112,7 +127,10 @@ namespace TP_PAV.Interfaz
             else if (rdbProyecto.Checked)
             {
                 if (cbxProyecto.SelectedIndex >= 0)
+                {
                     detalle.Proyecto = (Proyecto)cbxProyecto.SelectedItem;
+                    listadoProyectosDisponibles.Remove(detalle.Proyecto);
+                }
                 else
                 {
                     MessageBox.Show("Seleccione un proyecto", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
@@ -126,23 +144,41 @@ namespace TP_PAV.Interfaz
             }
 
             //Checkea Precio
-            if (nudPrecio.Value <= 0)//(string.IsNullOrEmpty(txtPrecio.Text))
+            if (nudPrecio.Value <= 0)
             {
                 MessageBox.Show("Debe ingresar un precio mayor a 0", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
             else
-                detalle.Precio = (float)nudPrecio.Value; //Convert.ToInt32(txtPrecio.Text);
+                detalle.Precio = (float)nudPrecio.Value;
 
             factura.ListadoDetalles.Add(detalle);
 
             ActualizarDetalles();
-            LimpiarCampos();
         }
         ///Click en boton sacar detalle
         private void btnSacar_Click(object sender, EventArgs e)
         {
             DetalleFactura detalleBorrar = (DetalleFactura)dgvDetalles.CurrentRow.DataBoundItem;
+            //Agregar de vuelta producto/proyecto a cbx
+
+            if(detalleBorrar.Producto != null)
+            {
+                int i = listaProductos.IndexOf(detalleBorrar.Producto);
+                if (i < listadoProductosDisponibles.Count)
+                    listadoProductosDisponibles.Insert(i, listaProductos[i]); 
+                else
+                    listadoProductosDisponibles.Add(listaProductos[i]);
+            }
+            else
+            {
+                int i = listaProyectos.IndexOf(detalleBorrar.Proyecto);
+                if (i < listadoProyectosDisponibles.Count)
+                    listadoProyectosDisponibles.Insert(i, listaProyectos[i]);
+                else
+                    listadoProyectosDisponibles.Add(listaProyectos[i]);
+
+            }
             factura.ListadoDetalles.Remove(detalleBorrar);
 
             ActualizarDetalles();
@@ -165,10 +201,12 @@ namespace TP_PAV.Interfaz
             }
 
             txtTotal.Text = total.ToString();
-        }
-        ///Limpia comboboxes
-        private void LimpiarCampos()
-        {
+
+            //Actualiza comboboxes producto/proyecto
+            LlenarCombobox(cbxProducto, listadoProductosDisponibles, "nombre", "idProducto");
+            LlenarCombobox(cbxProyecto, listadoProyectosDisponibles, "descripcion", "idProyecto");
+
+            //Limpia Comboboxes y precio
             rdbProducto.Checked = false;
             rdbProyecto.Checked = false;
             nudPrecio.Value = 0;

@@ -38,7 +38,7 @@ namespace TP_PAV.Datos
             string sqlComando = string.Concat("SELECT P.id_proyecto, P.id_producto, PR.nombre AS 'Producto', P.descripcion, P.alcance, P.version, U.usuario ",
                                               "FROM Proyectos P LEFT JOIN Productos PR ON P.id_producto = PR.id_producto ",
                                               "LEFT JOIN Usuarios U ON P.id_responsable = U.id_usuario ",
-                                              "WHERE P.borrado = 0");
+                                              "WHERE P.borrado = 0 ORDER BY P.descripcion");
             var resultadoConsulta = DataManager.Instancia().ConsultaSQL(sqlComando).Rows;
 
             foreach (DataRow resultado in resultadoConsulta)
@@ -76,6 +76,7 @@ namespace TP_PAV.Datos
                     i = -1;
                 sqlComando += " AND p.id_responsable = " + i;
             }
+            sqlComando += " ORDER BY P.descripcion";
             var resultadoConsulta = DataManager.Instancia().ConsultaSQL(sqlComando, parametros).Rows;
 
             foreach (DataRow resultado in resultadoConsulta)

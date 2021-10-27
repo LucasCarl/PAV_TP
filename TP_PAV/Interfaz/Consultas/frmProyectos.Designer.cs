@@ -45,6 +45,11 @@ namespace TP_PAV.Interfaz.Consultas
             this.txtVersion = new System.Windows.Forms.TextBox();
             this.lblVersion = new System.Windows.Forms.Label();
             this.cbxResponsable = new System.Windows.Forms.ComboBox();
+            this.Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Producto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Alcance = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Version = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Responsable = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTabla)).BeginInit();
             this.SuspendLayout();
             // 
@@ -85,10 +90,17 @@ namespace TP_PAV.Interfaz.Consultas
             this.dgvTabla.AllowUserToAddRows = false;
             this.dgvTabla.AllowUserToDeleteRows = false;
             this.dgvTabla.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvTabla.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Descripcion,
+            this.Producto,
+            this.Alcance,
+            this.Version,
+            this.Responsable});
             this.dgvTabla.Location = new System.Drawing.Point(12, 138);
             this.dgvTabla.MultiSelect = false;
             this.dgvTabla.Name = "dgvTabla";
             this.dgvTabla.ReadOnly = true;
+            this.dgvTabla.RowHeadersWidth = 20;
             this.dgvTabla.RowTemplate.Height = 25;
             this.dgvTabla.Size = new System.Drawing.Size(389, 174);
             this.dgvTabla.TabIndex = 23;
@@ -186,6 +198,51 @@ namespace TP_PAV.Interfaz.Consultas
             this.cbxResponsable.Size = new System.Drawing.Size(121, 21);
             this.cbxResponsable.TabIndex = 36;
             // 
+            // Descripcion
+            // 
+            this.Descripcion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Descripcion.DataPropertyName = "descripcion";
+            this.Descripcion.HeaderText = "Descripcion";
+            this.Descripcion.Name = "Descripcion";
+            this.Descripcion.ReadOnly = true;
+            this.Descripcion.Width = 88;
+            // 
+            // Producto
+            // 
+            this.Producto.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Producto.DataPropertyName = "producto";
+            this.Producto.HeaderText = "Producto";
+            this.Producto.Name = "Producto";
+            this.Producto.ReadOnly = true;
+            this.Producto.Width = 75;
+            // 
+            // Alcance
+            // 
+            this.Alcance.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Alcance.DataPropertyName = "alcance";
+            this.Alcance.HeaderText = "Alcance";
+            this.Alcance.Name = "Alcance";
+            this.Alcance.ReadOnly = true;
+            this.Alcance.Width = 71;
+            // 
+            // Version
+            // 
+            this.Version.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Version.DataPropertyName = "version";
+            this.Version.HeaderText = "Version";
+            this.Version.Name = "Version";
+            this.Version.ReadOnly = true;
+            this.Version.Width = 67;
+            // 
+            // Responsable
+            // 
+            this.Responsable.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Responsable.DataPropertyName = "responsable";
+            this.Responsable.HeaderText = "Responsable";
+            this.Responsable.Name = "Responsable";
+            this.Responsable.ReadOnly = true;
+            this.Responsable.Width = 94;
+            // 
             // frmProyectos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -233,5 +290,10 @@ namespace TP_PAV.Interfaz.Consultas
         private System.Windows.Forms.TextBox txtVersion;
         private System.Windows.Forms.Label lblVersion;
         private System.Windows.Forms.ComboBox cbxResponsable;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Descripcion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Producto;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Alcance;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Version;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Responsable;
     }
 }
