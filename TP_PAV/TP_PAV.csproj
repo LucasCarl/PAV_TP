@@ -124,6 +124,12 @@
     <Compile Include="Interfaz\Consultas\frmContactos.Designer.cs">
       <DependentUpon>frmContactos.cs</DependentUpon>
     </Compile>
+    <Compile Include="Interfaz\Consultas\frmConsultaFacturas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interfaz\Consultas\frmConsultaFacturas.Designer.cs">
+      <DependentUpon>frmConsultaFacturas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Interfaz\Consultas\frmProyectos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -189,6 +195,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Interfaz\Consultas\frmContactos.resx">
       <DependentUpon>frmContactos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interfaz\Consultas\frmConsultaFacturas.resx">
+      <DependentUpon>frmConsultaFacturas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Interfaz\Consultas\frmProyectos.resx">
       <DependentUpon>frmProyectos.cs</DependentUpon>

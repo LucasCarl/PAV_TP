@@ -52,5 +52,11 @@ namespace TP_PAV.Interfaz
             frmGenerarFactura factura = new frmGenerarFactura();
             factura.ShowDialog();
         }
+
+        private void consultarFacturasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmConsultaFacturas consultaFacturas = new frmConsultaFacturas();
+            consultaFacturas.ShowDialog();
+        }
     }
 }

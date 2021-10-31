@@ -21,5 +21,10 @@ namespace TP_PAV.Negocio
         {
             return facturaDao.CargarFactura(factura);
         }
+
+        public IList<Factura> ObtenerFacturas()
+        {
+            return facturaDao.ObtenerTodas();
+        }
     }
 }

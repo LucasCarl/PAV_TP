@@ -12,7 +12,6 @@ namespace TP_PAV.Entidades
         public int NumeroOrden { get; set; }
         public Producto Producto { get; set; }
         public Proyecto Proyecto { get; set; }
-        //public CiclioPrueba CicloPrueba { get; set; }
         public float Precio { get; set; }
     }
 }

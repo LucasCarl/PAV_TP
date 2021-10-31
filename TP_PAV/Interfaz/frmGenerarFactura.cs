@@ -31,6 +31,21 @@ namespace TP_PAV.Interfaz
         public frmGenerarFactura()
         {
             InitializeComponent();
+            InicializarDataGridView();
+        }
+
+        private void InicializarDataGridView()
+        {
+            //No permite generar columnas nuevas
+            //dgvDetalles.AutoGenerateColumns = false;
+
+            //Estilo celda de Headers
+            DataGridViewCellStyle headerStyle = new DataGridViewCellStyle();
+            headerStyle.BackColor = Color.Aquamarine;
+            headerStyle.ForeColor = Color.Aquamarine;
+            headerStyle.Font = new Font("Tahoma", 8, FontStyle.Bold);
+            dgvDetalles.ColumnHeadersDefaultCellStyle = headerStyle;
+
         }
 
         private void LlenarCombobox(ComboBox cbx, object source, string mostrar, string valor)
@@ -187,19 +202,38 @@ namespace TP_PAV.Interfaz
         ///Muestra detalles y el precio total
         private void ActualizarDetalles()
         {
+            //IList<DetalleTabla> datosTabla = new List<DetalleTabla>();
+            float total = 0;
+            foreach (DetalleFactura detalle in factura.ListadoDetalles)
+            {
+                //Calcula el total
+                total += detalle.Precio;
+
+                /*
+                //Carga detalle a lista de detalles para mostrar a tabla
+                DetalleTabla dato = new DetalleTabla();
+                dato.NumeroOrden = detalle.NumeroOrden;
+                dato.Precio = detalle.Precio;
+                if(detalle.Producto != null)
+                {
+                    dato.Tipo = "Producto";
+                    dato.Descripcion = detalle.Producto.Nombre;
+                }
+                else
+                {
+                    dato.Tipo = "Proyecto";
+                    dato.Descripcion = detalle.Proyecto.Descripcion;
+                }
+                datosTabla.Add(dato);
+                */
+            }
+
             //Muestra los detalles en la tabla
             btnSacar.Enabled = false;
             dgvDetalles.DataSource = null;
             dgvDetalles.DataSource = factura.ListadoDetalles;
             dgvDetalles.Update();
-
-            //Calcula el total
-            float total = 0;
-            foreach (DetalleFactura detalle in factura.ListadoDetalles)
-            {
-                total += detalle.Precio;
-            }
-
+            //Muestra total en tabla
             txtTotal.Text = total.ToString();
 
             //Actualiza comboboxes producto/proyecto
@@ -250,6 +284,14 @@ namespace TP_PAV.Interfaz
             Consultas.frmABMCliente frmCliente = new Consultas.frmABMCliente();
             frmCliente.IniciarFormulario(Consultas.frmABMCliente.FormMode.mostrar, (Cliente)cbxCliente.SelectedItem);
             frmCliente.ShowDialog();
+        }
+
+        class DetalleTabla
+        {
+            public int NumeroOrden { get; set; }
+            public string Tipo { get; set; }
+            public string Descripcion { get; set; }
+            public float Precio { get; set; }
         }
     }
 }

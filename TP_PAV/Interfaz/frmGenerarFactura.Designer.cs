@@ -33,6 +33,7 @@ namespace TP_PAV.Interfaz
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnMostrar = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -55,7 +56,10 @@ namespace TP_PAV.Interfaz
             this.txtTotal = new System.Windows.Forms.TextBox();
             this.btnGenerar = new System.Windows.Forms.Button();
             this.dtpFecha = new System.Windows.Forms.DateTimePicker();
-            this.btnMostrar = new System.Windows.Forms.Button();
+            this.NroOrden = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Tipo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDetalles)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -96,6 +100,16 @@ namespace TP_PAV.Interfaz
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Cliente";
+            // 
+            // btnMostrar
+            // 
+            this.btnMostrar.Location = new System.Drawing.Point(468, 26);
+            this.btnMostrar.Name = "btnMostrar";
+            this.btnMostrar.Size = new System.Drawing.Size(56, 38);
+            this.btnMostrar.TabIndex = 13;
+            this.btnMostrar.Text = "Mostrar\r\nDatos";
+            this.btnMostrar.UseVisualStyleBackColor = true;
+            this.btnMostrar.Click += new System.EventHandler(this.btnMostrar_Click);
             // 
             // label7
             // 
@@ -161,9 +175,15 @@ namespace TP_PAV.Interfaz
             this.dgvDetalles.AllowUserToAddRows = false;
             this.dgvDetalles.AllowUserToDeleteRows = false;
             this.dgvDetalles.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDetalles.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.NroOrden,
+            this.Tipo,
+            this.Descripcion,
+            this.Precio});
             this.dgvDetalles.Location = new System.Drawing.Point(15, 227);
             this.dgvDetalles.Name = "dgvDetalles";
             this.dgvDetalles.ReadOnly = true;
+            this.dgvDetalles.RowHeadersWidth = 20;
             this.dgvDetalles.Size = new System.Drawing.Size(544, 179);
             this.dgvDetalles.TabIndex = 3;
             this.dgvDetalles.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDetalles_CellClick);
@@ -315,15 +335,39 @@ namespace TP_PAV.Interfaz
             this.dtpFecha.TabIndex = 15;
             this.dtpFecha.ValueChanged += new System.EventHandler(this.dtpFecha_ValueChanged);
             // 
-            // btnMostrar
+            // NroOrden
             // 
-            this.btnMostrar.Location = new System.Drawing.Point(468, 26);
-            this.btnMostrar.Name = "btnMostrar";
-            this.btnMostrar.Size = new System.Drawing.Size(56, 38);
-            this.btnMostrar.TabIndex = 13;
-            this.btnMostrar.Text = "Mostrar\r\nDatos";
-            this.btnMostrar.UseVisualStyleBackColor = true;
-            this.btnMostrar.Click += new System.EventHandler(this.btnMostrar_Click);
+            this.NroOrden.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.NroOrden.DataPropertyName = "numeroOrden";
+            this.NroOrden.HeaderText = "Nro. Orden";
+            this.NroOrden.Name = "NroOrden";
+            this.NroOrden.ReadOnly = true;
+            this.NroOrden.Width = 84;
+            // 
+            // Tipo
+            // 
+            this.Tipo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Tipo.HeaderText = "Tipo";
+            this.Tipo.Name = "Tipo";
+            this.Tipo.ReadOnly = true;
+            this.Tipo.Width = 53;
+            // 
+            // Descripcion
+            // 
+            this.Descripcion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Descripcion.HeaderText = "Descripcion";
+            this.Descripcion.Name = "Descripcion";
+            this.Descripcion.ReadOnly = true;
+            this.Descripcion.Width = 88;
+            // 
+            // Precio
+            // 
+            this.Precio.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Precio.DataPropertyName = "Precio";
+            this.Precio.HeaderText = "Precio";
+            this.Precio.Name = "Precio";
+            this.Precio.ReadOnly = true;
+            this.Precio.Width = 62;
             // 
             // frmGenerarFactura
             // 
@@ -383,5 +427,9 @@ namespace TP_PAV.Interfaz
         private System.Windows.Forms.NumericUpDown nudPrecio;
         private System.Windows.Forms.DateTimePicker dtpFecha;
         private System.Windows.Forms.Button btnMostrar;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NroOrden;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Tipo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Descripcion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Precio;
     }
 }
