@@ -24,12 +24,20 @@ namespace TP_PAV.Interfaz.Reportes
 
         private void frmReporteFactura_Load(object sender, EventArgs e)
         {
+            //Datos Factura
+            ReportParameter nroFacturaParametro = new ReportParameter("prNroFactura", factura.NumeroFactura);
+            ReportParameter fechaParametro = new ReportParameter("prFechaEmision", factura.FechaAlta.ToShortDateString());
+            ReportParameter clienteCuitParametro = new ReportParameter("prClienteCuit", factura.Cliente.Cuit);
+            ReportParameter clienteRazonParametro = new ReportParameter("prClienteRazon", factura.Cliente.RazonSocial);
+            ReportParameter clienteDireccionParametro = new ReportParameter("prClienteDireccion", factura.Cliente.Direccion());
+            rpvFactura.LocalReport.SetParameters(new ReportParameter[] { nroFacturaParametro, fechaParametro, clienteCuitParametro, clienteDireccionParametro, clienteRazonParametro });
+
             //Tabla de detalles
             DataTable tablaDetalles = new DataTable();
             tablaDetalles.Columns.Add("nroOrden");
             tablaDetalles.Columns.Add("tipo");
             tablaDetalles.Columns.Add("descripcion");
-            tablaDetalles.Columns.Add("precio");
+            tablaDetalles.Columns.Add("precio", typeof(float));
 
             for (int i = 0; i < factura.ListadoDetalles.Count; i++)
             {

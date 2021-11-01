@@ -14,5 +14,15 @@ namespace TP_PAV.Entidades
         public Cliente Cliente { get; set; }
         public DateTime FechaAlta { get; set; }
         public Usuario UsuarioCreador { get; set; }
+
+        public float TotalPrecio()
+        {
+            float total = 0;
+            foreach(DetalleFactura detalle in ListadoDetalles)
+            {
+                total += detalle.Precio;
+            }
+            return total;
+        }
     }
 }

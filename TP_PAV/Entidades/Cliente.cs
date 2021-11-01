@@ -16,5 +16,11 @@ namespace TP_PAV.Entidades
         public string Numero { get; set; }
         public Barrio Barrio { get; set; }
         public Contacto Contacto { get; set; }
+
+        public string Direccion()
+        {
+            string dir = Calle + " " + Numero;
+            return dir;
+        }
     }
 }

@@ -267,7 +267,14 @@ namespace TP_PAV.Interfaz
             factura.UsuarioCreador = Program.usuarioActual;
 
             if (facturaService.CargarFactura(factura))
-                MessageBox.Show("Factura generada con exito", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            {
+                DialogResult mostrar = MessageBox.Show("Factura generada con exito.\nDesea imprimir la factura?", "Información", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+                if(mostrar == DialogResult.Yes)
+                {
+                    Reportes.frmReporteFactura reporteFactura = new Reportes.frmReporteFactura(factura);
+                    reporteFactura.ShowDialog();
+                }
+            }
             else
                 MessageBox.Show("Error al generar factura", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
