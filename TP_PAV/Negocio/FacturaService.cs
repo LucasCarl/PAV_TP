@@ -22,9 +22,9 @@ namespace TP_PAV.Negocio
             return facturaDao.CargarFactura(factura);
         }
 
-        public IList<Factura> ObtenerFacturas()
+        public IList<Factura> ObtenerFacturas(Dictionary<string, object> parametros = null)
         {
-            return facturaDao.ObtenerTodas();
+            return (parametros != null) ? facturaDao.ObtenerFacturasFiltros(parametros) : facturaDao.ObtenerTodas();
         }
     }
 }

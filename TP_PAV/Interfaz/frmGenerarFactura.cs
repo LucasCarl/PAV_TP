@@ -37,7 +37,7 @@ namespace TP_PAV.Interfaz
         private void InicializarDataGridView()
         {
             //No permite generar columnas nuevas
-            //dgvDetalles.AutoGenerateColumns = false;
+            dgvDetalles.AutoGenerateColumns = false;
 
             //Estilo celda de Headers
             DataGridViewCellStyle headerStyle = new DataGridViewCellStyle();
@@ -123,7 +123,7 @@ namespace TP_PAV.Interfaz
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             DetalleFactura detalle = new DetalleFactura();
-            detalle.NumeroOrden = factura.ListadoDetalles.Count + 1;
+            //detalle.NumeroOrden = factura.ListadoDetalles.Count + 1;
 
             //Producto o Proyecto
             if (rdbProducto.Checked)
@@ -174,9 +174,10 @@ namespace TP_PAV.Interfaz
         ///Click en boton sacar detalle
         private void btnSacar_Click(object sender, EventArgs e)
         {
-            DetalleFactura detalleBorrar = (DetalleFactura)dgvDetalles.CurrentRow.DataBoundItem;
-            //Agregar de vuelta producto/proyecto a cbx
+            DatoTabla datoTabla = (DatoTabla)dgvDetalles.CurrentRow.DataBoundItem;
+            DetalleFactura detalleBorrar = datoTabla.DetalleFactura;
 
+            //Agregar de vuelta producto/proyecto a cbx
             if(detalleBorrar.Producto != null)
             {
                 int i = listaProductos.IndexOf(detalleBorrar.Producto);
@@ -202,16 +203,19 @@ namespace TP_PAV.Interfaz
         ///Muestra detalles y el precio total
         private void ActualizarDetalles()
         {
-            //IList<DetalleTabla> datosTabla = new List<DetalleTabla>();
+            IList<DatoTabla> datosTabla = new List<DatoTabla>();
             float total = 0;
-            foreach (DetalleFactura detalle in factura.ListadoDetalles)
+            for (int i = 0; i < factura.ListadoDetalles.Count; i++)
             {
+                DetalleFactura detalle = factura.ListadoDetalles[i];
                 //Calcula el total
                 total += detalle.Precio;
-
-                /*
+                //Actualiza numero orden
+                detalle.NumeroOrden = i + 1;
+                
                 //Carga detalle a lista de detalles para mostrar a tabla
-                DetalleTabla dato = new DetalleTabla();
+                DatoTabla dato = new DatoTabla();
+                dato.DetalleFactura = detalle;
                 dato.NumeroOrden = detalle.NumeroOrden;
                 dato.Precio = detalle.Precio;
                 if(detalle.Producto != null)
@@ -225,13 +229,13 @@ namespace TP_PAV.Interfaz
                     dato.Descripcion = detalle.Proyecto.Descripcion;
                 }
                 datosTabla.Add(dato);
-                */
+                
             }
 
             //Muestra los detalles en la tabla
             btnSacar.Enabled = false;
             dgvDetalles.DataSource = null;
-            dgvDetalles.DataSource = factura.ListadoDetalles;
+            dgvDetalles.DataSource = datosTabla;
             dgvDetalles.Update();
             //Muestra total en tabla
             txtTotal.Text = total.ToString();
@@ -293,8 +297,9 @@ namespace TP_PAV.Interfaz
             frmCliente.ShowDialog();
         }
 
-        class DetalleTabla
+        class DatoTabla
         {
+            public DetalleFactura DetalleFactura { get; set; }
             public int NumeroOrden { get; set; }
             public string Tipo { get; set; }
             public string Descripcion { get; set; }

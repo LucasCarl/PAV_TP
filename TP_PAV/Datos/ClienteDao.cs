@@ -146,10 +146,13 @@ namespace TP_PAV.Datos
                                               "B.nombre AS 'Barrio', CO.nombre, CO.apellido, CO.email, CO.telefono ,B.id_barrio, CO.id_contacto ",
                                               "FROM Clientes C LEFT JOIN Barrios B ON C.id_barrio = B.id_barrio ",
                                               "LEFT JOIN Contactos CO ON C.id_contacto = CO.id_contacto ",
-                                              "WHERE C.borrado = 0 ");
+                                              "WHERE C.borrado = 0 AND C.id_cliente = " + id);
 
             var resultadoConsulta = DataManager.Instancia().ConsultaSQL(sqlComando).Rows;
-            return MapeoCliente(resultadoConsulta[0]);
+            if (resultadoConsulta.Count > 0)
+                return MapeoCliente(resultadoConsulta[0]);
+
+            return null;
         }
 
         public bool ExisteCliente (string cuit)

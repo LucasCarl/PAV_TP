@@ -22,5 +22,10 @@ namespace TP_PAV.Entidades
             string dir = Calle + " " + Numero;
             return dir;
         }
+
+        public override string ToString()
+        {
+            return RazonSocial;
+        }
     }
 }

@@ -20,6 +20,20 @@ namespace TP_PAV.Interfaz.Consultas
         public frmConsultaFacturas()
         {
             InitializeComponent();
+            InicializarDataGridView();
+        }
+
+        private void InicializarDataGridView()
+        {
+            //No permite generar columnas nuevas
+            dgvFacturas.AutoGenerateColumns = false;
+
+            //Estilo celda de Headers
+            DataGridViewCellStyle headerStyle = new DataGridViewCellStyle();
+            headerStyle.BackColor = Color.Aquamarine;
+            headerStyle.ForeColor = Color.Aquamarine;
+            headerStyle.Font = new Font("Tahoma", 8, FontStyle.Bold);
+            dgvFacturas.ColumnHeadersDefaultCellStyle = headerStyle;
         }
 
         private void dgvTabla_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -32,7 +46,19 @@ namespace TP_PAV.Interfaz.Consultas
 
         private void frmFacturas_Load(object sender, EventArgs e)
         {
-            dgvFacturas.DataSource = facturaService.ObtenerFacturas();
+            UsuarioService usuarioService = new UsuarioService();
+            LlenarCombobox(cbxUsuario, usuarioService.ListaUsuarios(), "usuario", "id_usuario");
+
+            ClienteService clienteService = new ClienteService();
+            LlenarCombobox(cbxCliente, clienteService.ObtenerClientes(), "razonSocial", "idCliente");
+        }
+
+        private void LlenarCombobox(ComboBox cbx, object source, string mostrar, string valor)
+        {
+            cbx.DataSource = source;        //Origen de datos
+            cbx.DisplayMember = mostrar;    //Propiedad a mostrar
+            cbx.ValueMember = valor;        //Ruta de acceso a propiedad
+            cbx.SelectedIndex = -1;         //Indice para que no este elegido nada
         }
 
         private void btnImprimir_Click(object sender, EventArgs e)
@@ -40,6 +66,33 @@ namespace TP_PAV.Interfaz.Consultas
             Factura factura = (Factura)dgvFacturas.CurrentRow.DataBoundItem;
             frmReporteFactura frmReporteFactura = new frmReporteFactura(factura);
             frmReporteFactura.ShowDialog();
+        }
+
+        private void btnConsultar_Click(object sender, EventArgs e)
+        {
+            //Cargar parametros consulta
+            Dictionary<string, object> parametros = new Dictionary<string, object>();
+            if (nudNroFactura.Value > 0)
+                parametros.Add("nroFactura", nudNroFactura.Value);
+            if (cbxCliente.SelectedIndex >= 0)
+                parametros.Add("idCliente", cbxCliente.SelectedValue);
+            if (cbxUsuario.SelectedIndex >= 0)
+                parametros.Add("idUsuario", cbxUsuario.SelectedValue);
+            if (chkFecha.Checked)
+            {
+                parametros.Add("fechaDesde", dtpFechaDesde.Value);
+                parametros.Add("fechaHasta", dtpFechaHasta.Value);
+            }
+
+            dgvFacturas.DataSource = facturaService.ObtenerFacturas(parametros);
+        }
+
+        private void chkFecha_CheckedChanged(object sender, EventArgs e)
+        {
+            dtpFechaDesde.Enabled = !dtpFechaDesde.Enabled;
+            dtpFechaHasta.Enabled = !dtpFechaHasta.Enabled;
+            lblFechaHasta.Enabled = !lblFechaHasta.Enabled;
+            lblFechaDesde.Enabled = !lblFechaDesde.Enabled;
         }
     }
 }

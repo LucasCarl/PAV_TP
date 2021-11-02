@@ -158,10 +158,37 @@ namespace TP_PAV.Datos
         public IList<Factura> ObtenerTodas()
         {
             IList<Factura> listadoFacturas = new List<Factura>();
-            string sqlComand = string.Concat("SELECT id_factura, numero_factura, id_cliente, fecha, id_usuario_creador ",
+            string sqlComando = string.Concat("SELECT id_factura, numero_factura, id_cliente, fecha, id_usuario_creador ",
                                              "FROM Facturas ORDER BY numero_factura");
 
-            var resultadoConsulta = DataManager.Instancia().ConsultaSQL(sqlComand).Rows;
+            var resultadoConsulta = DataManager.Instancia().ConsultaSQL(sqlComando).Rows;
+
+            foreach (DataRow fila in resultadoConsulta)
+            {
+                listadoFacturas.Add(MapeoFactura(fila));
+            }
+            return listadoFacturas;
+        }
+
+        public IList<Factura> ObtenerFacturasFiltros(Dictionary<string, object> parametros = null)
+        {
+            IList<Factura> listadoFacturas = new List<Factura>();
+            string sqlComando = string.Concat("SELECT id_factura, numero_factura, id_cliente, fecha, id_usuario_creador ",
+                                             "FROM Facturas WHERE 1=1 ");
+            //Parametros
+            if (parametros.ContainsKey("nroFactura"))
+                sqlComando += " AND numero_factura = @nroFactura ";
+            if (parametros.ContainsKey("idCliente"))
+                sqlComando += " AND id_cliente = @idCliente";
+            if (parametros.ContainsKey("idUsuario"))
+                sqlComando += " AND id_usuario_creador = @idUsuario ";
+            if (parametros.ContainsKey("fechaDesde"))
+                sqlComando += " AND fecha > @fechaDesde ";
+            if (parametros.ContainsKey("fechaHasta"))
+                sqlComando += " AND fecha < @fechaHasta ";
+            sqlComando += " ORDER BY numero_factura";
+
+            var resultadoConsulta = DataManager.Instancia().ConsultaSQL(sqlComando, parametros).Rows;
 
             foreach (DataRow fila in resultadoConsulta)
             {
