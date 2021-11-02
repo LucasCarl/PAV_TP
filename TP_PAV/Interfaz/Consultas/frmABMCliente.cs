@@ -134,7 +134,7 @@ namespace TP_PAV.Interfaz.Consultas
                     break;
 
                 case FormMode.modificar:
-                    if (clienteService.ExisteCliente(txtCuit.Text))
+                    if (txtCuit.Text != oCliente.Cuit && clienteService.ExisteCliente(txtCuit.Text))
                     {
                         MessageBox.Show("Ya existe un cliente con el CUIT ingresado", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         return;

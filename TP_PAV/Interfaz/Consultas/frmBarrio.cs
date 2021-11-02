@@ -83,5 +83,10 @@ namespace TP_PAV.Interfaz.Consultas
             aBMBarrio.ShowDialog();
             btnConsultar_Click(sender, e);
         }
+
+        private void frmBarrio_Load(object sender, EventArgs e)
+        {
+            btnConsultar_Click(sender, e);
+        }
     }
 }

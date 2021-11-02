@@ -126,7 +126,7 @@ namespace TP_PAV.Interfaz.Consultas
 
                 case FormMode.modificar:
 
-                    if (contactoService.ExisteContacto(txtNombre.Text, txtApellido.Text))
+                    if ((txtNombre.Text != oContacto.Nombre || txtApellido.Text != oContacto.Apellido) && contactoService.ExisteContacto(txtNombre.Text, txtApellido.Text))
                     {
                         MessageBox.Show("Ya existe un contacto con el nombre y apellido ingresados", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         return;

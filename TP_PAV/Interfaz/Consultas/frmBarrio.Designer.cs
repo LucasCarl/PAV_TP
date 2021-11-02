@@ -130,7 +130,7 @@ namespace TP_PAV.Interfaz.Consultas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.Control;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(199)))), ((int)(((byte)(210)))));
             this.ClientSize = new System.Drawing.Size(263, 291);
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.lblNombre);
@@ -145,6 +145,7 @@ namespace TP_PAV.Interfaz.Consultas
             this.MinimumSize = new System.Drawing.Size(279, 330);
             this.Name = "frmBarrio";
             this.Text = "Barrios";
+            this.Load += new System.EventHandler(this.frmBarrio_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvTabla)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

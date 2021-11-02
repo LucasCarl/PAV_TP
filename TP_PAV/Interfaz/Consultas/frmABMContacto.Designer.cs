@@ -61,7 +61,7 @@ namespace TP_PAV.Interfaz.Consultas
             // 
             // txtApellido
             // 
-            this.txtApellido.BackColor = System.Drawing.Color.White;
+            this.txtApellido.BackColor = System.Drawing.SystemColors.Window;
             this.txtApellido.Location = new System.Drawing.Point(68, 62);
             this.txtApellido.MaxLength = 50;
             this.txtApellido.Name = "txtApellido";
@@ -125,6 +125,7 @@ namespace TP_PAV.Interfaz.Consultas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(199)))), ((int)(((byte)(210)))));
             this.ClientSize = new System.Drawing.Size(258, 209);
             this.Controls.Add(this.btnAccion);
             this.Controls.Add(this.txtTelefono);

@@ -100,7 +100,7 @@ namespace TP_PAV.Interfaz.Consultas
 
                 case FormMode.modificar:
 
-                    if (barrioService.ExisteBarrio(txtNombre.Text))
+                    if (txtNombre.Text != oBarrio.Nombre && barrioService.ExisteBarrio(txtNombre.Text))
                     {
                         MessageBox.Show("Ya existe un barrio con el nombre ingresado", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         return;

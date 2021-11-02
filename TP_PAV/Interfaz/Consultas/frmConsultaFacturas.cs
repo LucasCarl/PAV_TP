@@ -51,6 +51,8 @@ namespace TP_PAV.Interfaz.Consultas
 
             ClienteService clienteService = new ClienteService();
             LlenarCombobox(cbxCliente, clienteService.ObtenerClientes(), "razonSocial", "idCliente");
+
+            btnConsultar_Click(sender, e);
         }
 
         private void LlenarCombobox(ComboBox cbx, object source, string mostrar, string valor)

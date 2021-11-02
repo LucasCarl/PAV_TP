@@ -47,7 +47,7 @@ namespace TP_PAV.Interfaz.Consultas
         private void frmABMProyecto_Load(object sender, EventArgs e)
         {
             //Llenar ComboBox de Productos
-            LlenarCombobox(cbxProductos, productoService.ListaProductos(), "nombre", "id_producto");
+            LlenarCombobox(cbxProductos, productoService.ListaProductos(), "nombre", "idProducto");
             LlenarCombobox(cbxResponsable, usuarioService.ListaUsuarios(), "usuario", "id_usuario");
 
             //Cambia dependiendo del modo
@@ -124,7 +124,7 @@ namespace TP_PAV.Interfaz.Consultas
                     break;
 
                 case FormMode.modificar:
-                    if (proyectoService.ExisteProyecto((int)cbxProductos.SelectedValue, txtDescripcion.Text))
+                    if ((cbxProductos.SelectedItem != oProyecto.Producto || txtDescripcion.Text != oProyecto.Descripcion) && proyectoService.ExisteProyecto((int)cbxProductos.SelectedValue, txtDescripcion.Text))
                     {
                         MessageBox.Show("Ya existe un proyecto con el producto y descripcion ingresados", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         return;
