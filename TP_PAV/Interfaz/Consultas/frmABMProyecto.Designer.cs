@@ -157,6 +157,8 @@ namespace TP_PAV.Interfaz.Consultas
             this.Controls.Add(this.lblProducto);
             this.Controls.Add(this.btnAccion);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximumSize = new System.Drawing.Size(274, 281);
+            this.MinimumSize = new System.Drawing.Size(274, 281);
             this.Name = "frmABMProyecto";
             this.Text = "frmABMProyecto";
             this.Load += new System.EventHandler(this.frmABMProyecto_Load);

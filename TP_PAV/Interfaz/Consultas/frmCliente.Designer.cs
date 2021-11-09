@@ -463,6 +463,8 @@ namespace TP_PAV.Interfaz.Consultas
             this.Controls.Add(this.dgvTabla);
             this.Controls.Add(this.btnConsultar);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximumSize = new System.Drawing.Size(563, 440);
+            this.MinimumSize = new System.Drawing.Size(563, 440);
             this.Name = "frmCliente";
             this.Text = "Clientes";
             this.Load += new System.EventHandler(this.frmCliente_Load);

@@ -245,6 +245,7 @@ namespace TP_PAV.Interfaz.Consultas
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.lblNombre);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximumSize = new System.Drawing.Size(427, 380);
             this.MinimumSize = new System.Drawing.Size(427, 380);
             this.Name = "frmContactos";
             this.Text = "Contactos";

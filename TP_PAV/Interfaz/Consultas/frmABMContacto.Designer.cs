@@ -137,6 +137,8 @@ namespace TP_PAV.Interfaz.Consultas
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.lblNombre);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximumSize = new System.Drawing.Size(274, 248);
+            this.MinimumSize = new System.Drawing.Size(274, 248);
             this.Name = "frmABMContacto";
             this.Text = "ABMContacto";
             this.Load += new System.EventHandler(this.frmABMContacto_Load);

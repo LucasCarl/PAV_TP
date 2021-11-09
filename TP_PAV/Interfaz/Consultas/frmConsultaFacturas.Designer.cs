@@ -272,6 +272,8 @@ namespace TP_PAV.Interfaz.Consultas
             this.Controls.Add(this.btnImprimir);
             this.Controls.Add(this.dgvFacturas);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximumSize = new System.Drawing.Size(467, 386);
+            this.MinimumSize = new System.Drawing.Size(467, 386);
             this.Name = "frmConsultaFacturas";
             this.Text = "Consulta de Facturas";
             this.Load += new System.EventHandler(this.frmFacturas_Load);

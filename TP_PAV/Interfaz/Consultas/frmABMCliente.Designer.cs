@@ -143,7 +143,7 @@ namespace TP_PAV.Interfaz.Consultas
             this.cbxContacto.FormattingEnabled = true;
             this.cbxContacto.Location = new System.Drawing.Point(65, 86);
             this.cbxContacto.Name = "cbxContacto";
-            this.cbxContacto.Size = new System.Drawing.Size(117, 21);
+            this.cbxContacto.Size = new System.Drawing.Size(100, 21);
             this.cbxContacto.TabIndex = 13;
             // 
             // txtCuit
@@ -174,6 +174,8 @@ namespace TP_PAV.Interfaz.Consultas
             this.Controls.Add(this.lblRazon);
             this.Controls.Add(this.lblCuit);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximumSize = new System.Drawing.Size(394, 193);
+            this.MinimumSize = new System.Drawing.Size(394, 193);
             this.Name = "frmABMCliente";
             this.Text = "frmABMCliente";
             this.Load += new System.EventHandler(this.frmABMCliente_Load);

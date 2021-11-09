@@ -44,7 +44,7 @@ namespace TP_PAV.Interfaz.Consultas
         {
             //Llenar ComboBoxes
             LlenarCombobox(cbxBarrio, barrioService.ObtenerBarrios(), "nombre", "idBarrio");
-            LlenarCombobox(cbxContacto, contactoService.ObtenerContactos(), "apellido", "idContacto");
+            LlenarCombobox(cbxContacto, contactoService.ObtenerContactos(), "nombreCompleto", "idContacto");
 
             //Cambiar dependiendo del modo
             switch (modo)
