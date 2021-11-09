@@ -130,7 +130,7 @@ namespace TP_PAV.Interfaz
             // lblUsuario
             // 
             this.lblUsuario.AutoSize = true;
-            this.lblUsuario.Location = new System.Drawing.Point(522, 9);
+            this.lblUsuario.Location = new System.Drawing.Point(12, 45);
             this.lblUsuario.Name = "lblUsuario";
             this.lblUsuario.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lblUsuario.Size = new System.Drawing.Size(49, 13);

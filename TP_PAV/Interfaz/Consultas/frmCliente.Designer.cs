@@ -43,7 +43,6 @@ namespace TP_PAV.Interfaz.Consultas
             this.Contacto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnConsultar = new System.Windows.Forms.Button();
             this.lblCuit = new System.Windows.Forms.Label();
-            this.txtCuit = new System.Windows.Forms.TextBox();
             this.txtRazon = new System.Windows.Forms.TextBox();
             this.lblRazon = new System.Windows.Forms.Label();
             this.txtCalle = new System.Windows.Forms.TextBox();
@@ -67,6 +66,8 @@ namespace TP_PAV.Interfaz.Consultas
             this.lblApellido = new System.Windows.Forms.Label();
             this.txtNombreC = new System.Windows.Forms.TextBox();
             this.lblNombre = new System.Windows.Forms.Label();
+            this.txtCuit = new System.Windows.Forms.MaskedTextBox();
+            this.lblFilas = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTabla)).BeginInit();
             this.gbxFechaAlta.SuspendLayout();
             this.gbxContacto.SuspendLayout();
@@ -208,13 +209,6 @@ namespace TP_PAV.Interfaz.Consultas
             this.lblCuit.Size = new System.Drawing.Size(32, 13);
             this.lblCuit.TabIndex = 22;
             this.lblCuit.Text = "CUIT";
-            // 
-            // txtCuit
-            // 
-            this.txtCuit.Location = new System.Drawing.Point(88, 19);
-            this.txtCuit.Name = "txtCuit";
-            this.txtCuit.Size = new System.Drawing.Size(100, 20);
-            this.txtCuit.TabIndex = 23;
             // 
             // txtRazon
             // 
@@ -424,12 +418,34 @@ namespace TP_PAV.Interfaz.Consultas
             this.lblNombre.TabIndex = 38;
             this.lblNombre.Text = "Nombre";
             // 
+            // txtCuit
+            // 
+            this.txtCuit.Location = new System.Drawing.Point(88, 19);
+            this.txtCuit.Mask = "00-00000000-0";
+            this.txtCuit.Name = "txtCuit";
+            this.txtCuit.Size = new System.Drawing.Size(80, 20);
+            this.txtCuit.TabIndex = 1;
+            this.txtCuit.TextMaskFormat = System.Windows.Forms.MaskFormat.IncludePromptAndLiterals;
+            // 
+            // lblFilas
+            // 
+            this.lblFilas.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblFilas.AutoSize = true;
+            this.lblFilas.Location = new System.Drawing.Point(82, 177);
+            this.lblFilas.Name = "lblFilas";
+            this.lblFilas.Size = new System.Drawing.Size(150, 13);
+            this.lblFilas.TabIndex = 38;
+            this.lblFilas.Text = "Cantidad de Resultados: 0000";
+            this.lblFilas.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
             // frmCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(199)))), ((int)(((byte)(210)))));
             this.ClientSize = new System.Drawing.Size(547, 401);
+            this.Controls.Add(this.lblFilas);
+            this.Controls.Add(this.txtCuit);
             this.Controls.Add(this.gbxContacto);
             this.Controls.Add(this.gbxFechaAlta);
             this.Controls.Add(this.cbxBarrio);
@@ -440,7 +456,6 @@ namespace TP_PAV.Interfaz.Consultas
             this.Controls.Add(this.lblCalle);
             this.Controls.Add(this.txtRazon);
             this.Controls.Add(this.lblRazon);
-            this.Controls.Add(this.txtCuit);
             this.Controls.Add(this.lblCuit);
             this.Controls.Add(this.btnBorrar);
             this.Controls.Add(this.btnEditar);
@@ -469,7 +484,6 @@ namespace TP_PAV.Interfaz.Consultas
         private System.Windows.Forms.DataGridView dgvTabla;
         private System.Windows.Forms.Button btnConsultar;
         private System.Windows.Forms.Label lblCuit;
-        private System.Windows.Forms.TextBox txtCuit;
         private System.Windows.Forms.TextBox txtRazon;
         private System.Windows.Forms.Label lblRazon;
         private System.Windows.Forms.TextBox txtCalle;
@@ -500,5 +514,7 @@ namespace TP_PAV.Interfaz.Consultas
         private System.Windows.Forms.DataGridViewTextBoxColumn Numero;
         private System.Windows.Forms.DataGridViewTextBoxColumn Barrio;
         private System.Windows.Forms.DataGridViewTextBoxColumn Contacto;
+        private System.Windows.Forms.MaskedTextBox txtCuit;
+        private System.Windows.Forms.Label lblFilas;
     }
 }

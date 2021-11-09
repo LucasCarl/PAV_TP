@@ -117,6 +117,8 @@ namespace TP_PAV.Interfaz.Consultas
             //Resetear botones borrar edit
             btnBorrar.Enabled = false;
             btnEditar.Enabled = false;
+            //Muestra cantidad de filas
+            lblFilas.Text = "Cantidad de resultados: " + lista.Count;
         }
 
         private void btnNuevo_Click(object sender, EventArgs e)

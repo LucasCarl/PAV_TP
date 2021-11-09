@@ -97,6 +97,21 @@ namespace TP_PAV.Interfaz
 
         private void dtpFecha_ValueChanged(object sender, EventArgs e)
         {
+            //Chechea que fecha este entre valores 
+            if(dtpFecha.Value > DateTime.Today)
+            {
+                MessageBox.Show("La fecha no puede superar el dia de hoy.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                dtpFecha.Value = DateTime.Today;
+                return;
+            }
+            if(dtpFecha.Value < DateTime.Today.AddMonths(-1))
+            {
+                MessageBox.Show("La fecha no puede ser inferior a un mes antes.\n(La fecha se volvio a colocar al dia de hoy)", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                dtpFecha.Value = DateTime.Today;
+                return;
+            }
+
+            //Agrega valor a factura
             factura.FechaAlta = dtpFecha.Value;
         }
 

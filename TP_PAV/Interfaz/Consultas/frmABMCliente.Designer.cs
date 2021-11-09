@@ -31,7 +31,6 @@ namespace TP_PAV.Interfaz.Consultas
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmABMCliente));
             this.lblCuit = new System.Windows.Forms.Label();
-            this.txtCuit = new System.Windows.Forms.TextBox();
             this.txtRazon = new System.Windows.Forms.TextBox();
             this.lblRazon = new System.Windows.Forms.Label();
             this.txtCalle = new System.Windows.Forms.TextBox();
@@ -43,6 +42,7 @@ namespace TP_PAV.Interfaz.Consultas
             this.cbxBarrio = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.cbxContacto = new System.Windows.Forms.ComboBox();
+            this.txtCuit = new System.Windows.Forms.MaskedTextBox();
             this.SuspendLayout();
             // 
             // lblCuit
@@ -53,13 +53,6 @@ namespace TP_PAV.Interfaz.Consultas
             this.lblCuit.Size = new System.Drawing.Size(32, 13);
             this.lblCuit.TabIndex = 0;
             this.lblCuit.Text = "CUIT";
-            // 
-            // txtCuit
-            // 
-            this.txtCuit.Location = new System.Drawing.Point(65, 17);
-            this.txtCuit.Name = "txtCuit";
-            this.txtCuit.Size = new System.Drawing.Size(100, 20);
-            this.txtCuit.TabIndex = 1;
             // 
             // txtRazon
             // 
@@ -153,12 +146,21 @@ namespace TP_PAV.Interfaz.Consultas
             this.cbxContacto.Size = new System.Drawing.Size(117, 21);
             this.cbxContacto.TabIndex = 13;
             // 
+            // txtCuit
+            // 
+            this.txtCuit.Location = new System.Drawing.Point(65, 17);
+            this.txtCuit.Mask = "00-00000000-0";
+            this.txtCuit.Name = "txtCuit";
+            this.txtCuit.Size = new System.Drawing.Size(80, 20);
+            this.txtCuit.TabIndex = 1;
+            // 
             // frmABMCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(199)))), ((int)(((byte)(210)))));
             this.ClientSize = new System.Drawing.Size(378, 154);
+            this.Controls.Add(this.txtCuit);
             this.Controls.Add(this.cbxContacto);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.cbxBarrio);
@@ -170,7 +172,6 @@ namespace TP_PAV.Interfaz.Consultas
             this.Controls.Add(this.lblCalle);
             this.Controls.Add(this.txtRazon);
             this.Controls.Add(this.lblRazon);
-            this.Controls.Add(this.txtCuit);
             this.Controls.Add(this.lblCuit);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmABMCliente";
@@ -184,7 +185,6 @@ namespace TP_PAV.Interfaz.Consultas
         #endregion
 
         private System.Windows.Forms.Label lblCuit;
-        private System.Windows.Forms.TextBox txtCuit;
         private System.Windows.Forms.TextBox txtRazon;
         private System.Windows.Forms.Label lblRazon;
         private System.Windows.Forms.TextBox txtCalle;
@@ -196,5 +196,6 @@ namespace TP_PAV.Interfaz.Consultas
         private System.Windows.Forms.ComboBox cbxBarrio;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox cbxContacto;
+        private System.Windows.Forms.MaskedTextBox txtCuit;
     }
 }

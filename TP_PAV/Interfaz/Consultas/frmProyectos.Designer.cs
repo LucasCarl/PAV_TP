@@ -50,6 +50,7 @@ namespace TP_PAV.Interfaz.Consultas
             this.txtVersion = new System.Windows.Forms.TextBox();
             this.lblVersion = new System.Windows.Forms.Label();
             this.cbxResponsable = new System.Windows.Forms.ComboBox();
+            this.lblFilas = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTabla)).BeginInit();
             this.SuspendLayout();
             // 
@@ -243,12 +244,24 @@ namespace TP_PAV.Interfaz.Consultas
             this.cbxResponsable.Size = new System.Drawing.Size(121, 21);
             this.cbxResponsable.TabIndex = 36;
             // 
+            // lblFilas
+            // 
+            this.lblFilas.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblFilas.AutoSize = true;
+            this.lblFilas.Location = new System.Drawing.Point(82, 119);
+            this.lblFilas.Name = "lblFilas";
+            this.lblFilas.Size = new System.Drawing.Size(150, 13);
+            this.lblFilas.TabIndex = 37;
+            this.lblFilas.Text = "Cantidad de Resultados: 0000";
+            this.lblFilas.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
             // frmProyectos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(199)))), ((int)(((byte)(210)))));
             this.ClientSize = new System.Drawing.Size(422, 344);
+            this.Controls.Add(this.lblFilas);
             this.Controls.Add(this.cbxResponsable);
             this.Controls.Add(this.lblResponsable);
             this.Controls.Add(this.txtVersion);
@@ -296,5 +309,6 @@ namespace TP_PAV.Interfaz.Consultas
         private System.Windows.Forms.DataGridViewTextBoxColumn Alcance;
         private System.Windows.Forms.DataGridViewTextBoxColumn Version;
         private System.Windows.Forms.DataGridViewTextBoxColumn Responsable;
+        private System.Windows.Forms.Label lblFilas;
     }
 }

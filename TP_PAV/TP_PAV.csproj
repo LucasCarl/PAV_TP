@@ -72,13 +72,11 @@
     <Compile Include="Datos\ProyectoDao.cs" />
     <Compile Include="Datos\UsuarioDao.cs" />
     <Compile Include="Entidades\Barrio.cs" />
-    <Compile Include="Entidades\CiclioPrueba.cs" />
     <Compile Include="Entidades\Cliente.cs" />
     <Compile Include="Entidades\Contacto.cs" />
     <Compile Include="Entidades\DetalleFactura.cs" />
     <Compile Include="Entidades\Factura.cs" />
     <Compile Include="Entidades\Perfil.cs" />
-    <Compile Include="Entidades\PlanPrueba.cs" />
     <Compile Include="Entidades\Producto.cs" />
     <Compile Include="Entidades\Proyecto.cs" />
     <Compile Include="Entidades\Usuario.cs" />

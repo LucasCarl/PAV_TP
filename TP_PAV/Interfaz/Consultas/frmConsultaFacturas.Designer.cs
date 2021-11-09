@@ -29,6 +29,7 @@ namespace TP_PAV.Interfaz.Consultas
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmConsultaFacturas));
             this.dgvFacturas = new System.Windows.Forms.DataGridView();
             this.nroFactura = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -66,7 +67,7 @@ namespace TP_PAV.Interfaz.Consultas
             this.fechaAlta,
             this.monto,
             this.usuarioCreador});
-            this.dgvFacturas.Location = new System.Drawing.Point(12, 152);
+            this.dgvFacturas.Location = new System.Drawing.Point(12, 138);
             this.dgvFacturas.Name = "dgvFacturas";
             this.dgvFacturas.ReadOnly = true;
             this.dgvFacturas.RowHeadersWidth = 20;
@@ -104,6 +105,10 @@ namespace TP_PAV.Interfaz.Consultas
             // 
             this.monto.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.monto.DataPropertyName = "monto";
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle1.Format = "N2";
+            dataGridViewCellStyle1.NullValue = null;
+            this.monto.DefaultCellStyle = dataGridViewCellStyle1;
             this.monto.HeaderText = "Monto";
             this.monto.Name = "monto";
             this.monto.ReadOnly = true;
@@ -120,7 +125,7 @@ namespace TP_PAV.Interfaz.Consultas
             // 
             // btnImprimir
             // 
-            this.btnImprimir.Location = new System.Drawing.Point(181, 330);
+            this.btnImprimir.Location = new System.Drawing.Point(185, 316);
             this.btnImprimir.Name = "btnImprimir";
             this.btnImprimir.Size = new System.Drawing.Size(75, 23);
             this.btnImprimir.TabIndex = 1;
@@ -209,7 +214,7 @@ namespace TP_PAV.Interfaz.Consultas
             // cbxUsuario
             // 
             this.cbxUsuario.FormattingEnabled = true;
-            this.cbxUsuario.Location = new System.Drawing.Point(60, 88);
+            this.cbxUsuario.Location = new System.Drawing.Point(60, 74);
             this.cbxUsuario.Name = "cbxUsuario";
             this.cbxUsuario.Size = new System.Drawing.Size(121, 21);
             this.cbxUsuario.TabIndex = 41;
@@ -217,7 +222,7 @@ namespace TP_PAV.Interfaz.Consultas
             // lblUsuario
             // 
             this.lblUsuario.AutoSize = true;
-            this.lblUsuario.Location = new System.Drawing.Point(12, 83);
+            this.lblUsuario.Location = new System.Drawing.Point(12, 69);
             this.lblUsuario.Name = "lblUsuario";
             this.lblUsuario.Size = new System.Drawing.Size(44, 26);
             this.lblUsuario.TabIndex = 40;
@@ -226,7 +231,7 @@ namespace TP_PAV.Interfaz.Consultas
             // cbxCliente
             // 
             this.cbxCliente.FormattingEnabled = true;
-            this.cbxCliente.Location = new System.Drawing.Point(60, 46);
+            this.cbxCliente.Location = new System.Drawing.Point(60, 44);
             this.cbxCliente.Name = "cbxCliente";
             this.cbxCliente.Size = new System.Drawing.Size(121, 21);
             this.cbxCliente.TabIndex = 42;
@@ -234,7 +239,7 @@ namespace TP_PAV.Interfaz.Consultas
             // lblCliente
             // 
             this.lblCliente.AutoSize = true;
-            this.lblCliente.Location = new System.Drawing.Point(12, 49);
+            this.lblCliente.Location = new System.Drawing.Point(12, 47);
             this.lblCliente.Name = "lblCliente";
             this.lblCliente.Size = new System.Drawing.Size(39, 13);
             this.lblCliente.TabIndex = 43;
@@ -242,7 +247,7 @@ namespace TP_PAV.Interfaz.Consultas
             // 
             // btnConsultar
             // 
-            this.btnConsultar.Location = new System.Drawing.Point(212, 114);
+            this.btnConsultar.Location = new System.Drawing.Point(12, 109);
             this.btnConsultar.Name = "btnConsultar";
             this.btnConsultar.Size = new System.Drawing.Size(75, 23);
             this.btnConsultar.TabIndex = 44;
@@ -255,7 +260,7 @@ namespace TP_PAV.Interfaz.Consultas
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(199)))), ((int)(((byte)(210)))));
-            this.ClientSize = new System.Drawing.Size(451, 361);
+            this.ClientSize = new System.Drawing.Size(451, 347);
             this.Controls.Add(this.btnConsultar);
             this.Controls.Add(this.lblCliente);
             this.Controls.Add(this.cbxCliente);
@@ -283,11 +288,6 @@ namespace TP_PAV.Interfaz.Consultas
 
         private System.Windows.Forms.DataGridView dgvFacturas;
         private System.Windows.Forms.Button btnImprimir;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nroFactura;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cliente;
-        private System.Windows.Forms.DataGridViewTextBoxColumn fechaAlta;
-        private System.Windows.Forms.DataGridViewTextBoxColumn monto;
-        private System.Windows.Forms.DataGridViewTextBoxColumn usuarioCreador;
         private System.Windows.Forms.GroupBox gbxFechaEmision;
         private System.Windows.Forms.CheckBox chkFecha;
         private System.Windows.Forms.Label lblFechaHasta;
@@ -301,5 +301,10 @@ namespace TP_PAV.Interfaz.Consultas
         private System.Windows.Forms.ComboBox cbxCliente;
         private System.Windows.Forms.Label lblCliente;
         private System.Windows.Forms.Button btnConsultar;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nroFactura;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cliente;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fechaAlta;
+        private System.Windows.Forms.DataGridViewTextBoxColumn monto;
+        private System.Windows.Forms.DataGridViewTextBoxColumn usuarioCreador;
     }
 }

@@ -1,3 +1,5 @@
+use [BugTrackerTP]
+
 /** Perfiles **/
 SET IDENTITY_INSERT Perfiles ON 
 INSERT INTO Perfiles (id_perfil, nombre, borrado) VALUES (1, 'Administrador', 0)
@@ -47,16 +49,6 @@ insert into Contactos (id_contacto, nombre, apellido, email, telefono, borrado) 
 insert into Contactos (id_contacto, nombre, apellido, email, telefono, borrado) values (18, 'Lacee', 'Rushman', 'lrushmanh@vimeo.com', '5412675057', 0);
 insert into Contactos (id_contacto, nombre, apellido, email, telefono, borrado) values (19, 'Seana', 'Sabathe', 'ssabathei@webeden.co.uk', '8029780669', 0);
 insert into Contactos (id_contacto, nombre, apellido, email, telefono, borrado) values (20, 'Ivor', 'Vereker', 'iverekerj@abc.net.au', '6274749332', 0);
-insert into Contactos (id_contacto, nombre, apellido, email, telefono, borrado) values (21, 'Laurent', 'Le Breton', 'llebretonk@homestead.com', '4304324488', 0);
-insert into Contactos (id_contacto, nombre, apellido, email, telefono, borrado) values (22, 'Barby', 'Guwer', 'bguwerl@yellowbook.com', '6077773303', 0);
-insert into Contactos (id_contacto, nombre, apellido, email, telefono, borrado) values (23, 'Athene', 'Prinnett', 'aprinnettm@apple.com', '5936268969', 0);
-insert into Contactos (id_contacto, nombre, apellido, email, telefono, borrado) values (24, 'Trace', 'Tolland', 'ttollandn@gravatar.com', '3875091709', 0);
-insert into Contactos (id_contacto, nombre, apellido, email, telefono, borrado) values (25, 'Arri', 'Sarfati', 'asarfatio@51.la', '9963822069', 0);
-insert into Contactos (id_contacto, nombre, apellido, email, telefono, borrado) values (26, 'Paquito', 'Haddon', 'phaddonp@liveinternet.ru', '6974818999', 0);
-insert into Contactos (id_contacto, nombre, apellido, email, telefono, borrado) values (27, 'Hetty', 'Shrubshall', 'hshrubshallq@cocolog-nifty.com', '9043272717', 0);
-insert into Contactos (id_contacto, nombre, apellido, email, telefono, borrado) values (28, 'Maddy', 'Reast', 'mreastr@craigslist.org', '9544033430', 0);
-insert into Contactos (id_contacto, nombre, apellido, email, telefono, borrado) values (29, 'Phebe', 'Fernez', 'pfernezs@discuz.net', '6048255569', 0);
-insert into Contactos (id_contacto, nombre, apellido, email, telefono, borrado) values (30, 'Augie', 'Latliff', 'alatlifft@unicef.org', '9494941773', 0);
 SET IDENTITY_INSERT Contactos OFF
 
 /** Barrios **/
@@ -73,11 +65,3 @@ SET IDENTITY_INSERT Proyectos ON
 INSERT INTO Proyectos (id_proyecto, id_producto, descripcion, alcance, version, id_responsable, borrado) VALUES (1, 2, 'testDesc', 'testAlc', '0.0.0', 4, 0)
 INSERT INTO Proyectos (id_proyecto, id_producto, descripcion, alcance, version, id_responsable, borrado) VALUES (2, 4, 'Probar vulnerabilidades', 'Sin definir', '0.0.1', 6, 0)
 SET IDENTITY_INSERT Proyectos OFF
-
-/** Clientes **/
-
-
-/** Facturas **/
-/** DetalleFacturas **/
-/** CiclosPrueba **/
-/** PlanesPrueba **/

@@ -18,7 +18,7 @@ namespace TP_PAV.Datos
             //Consulta SQL
             String sqlComando = String.Concat("SELECT C.id_contacto AS 'ID', C.nombre AS Nombre, ",
                                                 "C.apellido AS Apellido, C.email AS 'E-Mail', C.telefono AS Telefono ",
-                                                "FROM Contactos C WHERE C.borrado = 0 ORDER BY C.nombre, C.apellido");
+                                                "FROM Contactos C WHERE C.borrado = 0 ORDER BY C.apellido, C.nombre");
 
             var resultadoConsulta = (DataRowCollection)DataManager.Instancia().ConsultaSQL(sqlComando).Rows;
 
@@ -53,7 +53,7 @@ namespace TP_PAV.Datos
             if (parametros.ContainsKey("telefono"))
                 sqlComando += " AND telefono LIKE '%' + @telefono + '%' ";
 
-            sqlComando += " ORDER BY C.nombre, C.apellido";
+            sqlComando += " ORDER BY C.apellido, C.nombre";
             var resultadoConsulta = (DataRowCollection)DataManager.Instancia().ConsultaSQL(sqlComando, parametros).Rows;
 
             //Tranforma filas en Consultas

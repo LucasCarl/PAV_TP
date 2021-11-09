@@ -158,7 +158,7 @@ namespace TP_PAV.Interfaz.Consultas
         {
             bool vacio = false;
 
-            if (string.IsNullOrEmpty(txtCuit.Text))
+            if (!txtCuit.MaskCompleted)
             {
                 txtCuit.BackColor = Color.FromArgb(255, 120, 120);
                 vacio = true;

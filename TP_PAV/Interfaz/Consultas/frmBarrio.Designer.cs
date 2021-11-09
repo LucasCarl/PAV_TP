@@ -38,6 +38,7 @@ namespace TP_PAV.Interfaz.Consultas
             this.btnConsultar = new System.Windows.Forms.Button();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.lblNombre = new System.Windows.Forms.Label();
+            this.lblFilas = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTabla)).BeginInit();
             this.SuspendLayout();
             // 
@@ -126,12 +127,24 @@ namespace TP_PAV.Interfaz.Consultas
             this.lblNombre.TabIndex = 23;
             this.lblNombre.Text = "Nombre";
             // 
+            // lblFilas
+            // 
+            this.lblFilas.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblFilas.AutoSize = true;
+            this.lblFilas.Location = new System.Drawing.Point(80, 67);
+            this.lblFilas.Name = "lblFilas";
+            this.lblFilas.Size = new System.Drawing.Size(150, 13);
+            this.lblFilas.TabIndex = 25;
+            this.lblFilas.Text = "Cantidad de Resultados: 0000";
+            this.lblFilas.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
             // frmBarrio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(199)))), ((int)(((byte)(210)))));
             this.ClientSize = new System.Drawing.Size(263, 291);
+            this.Controls.Add(this.lblFilas);
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.lblNombre);
             this.Controls.Add(this.btnBorrar);
@@ -162,5 +175,6 @@ namespace TP_PAV.Interfaz.Consultas
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
+        private System.Windows.Forms.Label lblFilas;
     }
 }

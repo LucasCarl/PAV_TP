@@ -146,17 +146,14 @@ SET QUOTED_IDENTIFIER ON
 GO
 
 CREATE TABLE [dbo].[FacturasDetalle](
-	[id_detalle_factura] [int] IDENTITY(1,1) NOT NULL,
-	[id_factura] [int] NULL,
-	[numero_orden] [int] NULL,
+	[numero_factura] [int] NOT NULL,
+	[numero_orden_detalle] [int] NOT NULL,
 	[id_producto] [int] NULL,
 	[id_proyecto] [int] NULL,
-	[id_ciclo_prueba] [int] NULL,
-	[precio] [decimal](18, 0) NULL,
-	[borrado] [bit] NOT NULL,
+	[precio] [float] NULL,
  CONSTRAINT [PK_FacturaDetalles] PRIMARY KEY CLUSTERED 
 (
-	[id_detalle_factura] ASC
+	[numero_factura], [numero_orden_detalle] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
@@ -167,54 +164,13 @@ SET QUOTED_IDENTIFIER ON
 GO
 
 CREATE TABLE [dbo].[Facturas](
-	[id_factura] [int] IDENTITY(1,1) NOT NULL,
-	[numero_factura] [varchar](50) NOT NULL,
+	[numero_factura] [int] IDENTITY(1,1) NOT NULL,
 	[id_cliente] [int] NOT NULL,
 	[fecha] [datetime] NOT NULL,
 	[id_usuario_creador] [int] NOT NULL,
-	[borrado] [bit] NOT NULL,
  CONSTRAINT [PK_Factura] PRIMARY KEY CLUSTERED 
 (
-	[id_factura] ASC
-)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
-) ON [PRIMARY]
-GO
-
-SET ANSI_NULLS ON
-GO
-SET QUOTED_IDENTIFIER ON
-GO
-
-CREATE TABLE [dbo].[CiclosPrueba](
-	[id_ciclo_prueba] [int] IDENTITY(1,1) NOT NULL,
-	[fecha_inicio_ejecucion] [datetime] NULL,
-	[fecha_fin_ejecucion] [datetime] NULL,
-	[id_responsable] [int] NULL,
-	[id_plan_prueba] [int] NULL,
-	[aceptado] [bit] NULL,
-	[borrado] [bit] NOT NULL,
- CONSTRAINT [PK_CiclosPrueba] PRIMARY KEY CLUSTERED 
-(
-	[id_ciclo_prueba] ASC
-)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
-) ON [PRIMARY]
-GO
-
-SET ANSI_NULLS ON
-GO
-SET QUOTED_IDENTIFIER ON
-GO
-
-CREATE TABLE [dbo].[PlanesDePrueba](
-	[id_plan_prueba] [int] IDENTITY(1,1) NOT NULL,
-	[id_proyecto] [int] NOT NULL,
-	[nombre] [varchar](50) NULL,
-	[id_responsable] [int] NULL,
-	[descripcion] [varchar](100) NULL,
-	[borrado] [bit] NOT NULL,
- CONSTRAINT [PK_PlanesDePrueba] PRIMARY KEY CLUSTERED 
-(
-	[id_plan_prueba] ASC
+	[numero_factura] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
@@ -273,15 +229,8 @@ GO
 ALTER TABLE [dbo].[Facturas] CHECK CONSTRAINT [FK_Facturas_Usuarios]
 GO
 
-ALTER TABLE [dbo].[FacturasDetalle]  WITH CHECK ADD  CONSTRAINT [FK_FacturasDetalle_CiclosPrueba] FOREIGN KEY([id_ciclo_prueba])
-REFERENCES [dbo].[CiclosPrueba] ([id_ciclo_prueba])
-GO
-
-ALTER TABLE [dbo].[FacturasDetalle] CHECK CONSTRAINT [FK_FacturasDetalle_CiclosPrueba]
-GO
-
-ALTER TABLE [dbo].[FacturasDetalle]  WITH CHECK ADD  CONSTRAINT [FK_FacturasDetalle_Facturas] FOREIGN KEY([id_factura])
-REFERENCES [dbo].[Facturas] ([id_factura])
+ALTER TABLE [dbo].[FacturasDetalle]  WITH CHECK ADD  CONSTRAINT [FK_FacturasDetalle_Facturas] FOREIGN KEY([numero_factura])
+REFERENCES [dbo].[Facturas] ([numero_factura])
 GO
 
 ALTER TABLE [dbo].[FacturasDetalle] CHECK CONSTRAINT [FK_FacturasDetalle_Facturas]
@@ -299,32 +248,4 @@ REFERENCES [dbo].[Proyectos] ([id_proyecto])
 GO
 
 ALTER TABLE [dbo].[FacturasDetalle] CHECK CONSTRAINT [FK_FacturasDetalle_Proyectos]
-GO
-
-ALTER TABLE [dbo].[CiclosPrueba]  WITH CHECK ADD  CONSTRAINT [FK_CiclosPrueba_PlanesDePrueba] FOREIGN KEY([id_plan_prueba])
-REFERENCES [dbo].[PlanesDePrueba] ([id_plan_prueba])
-GO
-
-ALTER TABLE [dbo].[CiclosPrueba] CHECK CONSTRAINT [FK_CiclosPrueba_PlanesDePrueba]
-GO
-
-ALTER TABLE [dbo].[CiclosPrueba]  WITH CHECK ADD  CONSTRAINT [FK_CiclosPrueba_Usuarios] FOREIGN KEY([id_responsable])
-REFERENCES [dbo].[Usuarios] ([id_usuario])
-GO
-
-ALTER TABLE [dbo].[CiclosPrueba] CHECK CONSTRAINT [FK_CiclosPrueba_Usuarios]
-GO
-
-ALTER TABLE [dbo].[PlanesDePrueba]  WITH CHECK ADD  CONSTRAINT [FK_PlanesDePrueba_Proyectos] FOREIGN KEY([id_proyecto])
-REFERENCES [dbo].[Proyectos] ([id_proyecto])
-GO
-
-ALTER TABLE [dbo].[PlanesDePrueba] CHECK CONSTRAINT [FK_PlanesDePrueba_Proyectos]
-GO
-
-ALTER TABLE [dbo].[PlanesDePrueba]  WITH CHECK ADD  CONSTRAINT [FK_PlanesDePrueba_Usuarios] FOREIGN KEY([id_responsable])
-REFERENCES [dbo].[Usuarios] ([id_usuario])
-GO
-
-ALTER TABLE [dbo].[PlanesDePrueba] CHECK CONSTRAINT [FK_PlanesDePrueba_Usuarios]
 GO
