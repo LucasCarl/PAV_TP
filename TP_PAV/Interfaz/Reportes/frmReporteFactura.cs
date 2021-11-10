@@ -61,6 +61,8 @@ namespace TP_PAV.Interfaz.Reportes
             rpvFactura.LocalReport.DataSources.Clear();
             rpvFactura.LocalReport.DataSources.Add(new ReportDataSource("dsFacturas", tablaDetalles));
             rpvFactura.RefreshReport();
+            rpvFactura.SetDisplayMode(DisplayMode.PrintLayout);
+            rpvFactura.ZoomMode = ZoomMode.Percent;
         }
     }
 }

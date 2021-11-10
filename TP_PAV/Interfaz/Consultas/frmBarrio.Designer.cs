@@ -133,9 +133,9 @@ namespace TP_PAV.Interfaz.Consultas
             this.lblFilas.AutoSize = true;
             this.lblFilas.Location = new System.Drawing.Point(80, 67);
             this.lblFilas.Name = "lblFilas";
-            this.lblFilas.Size = new System.Drawing.Size(150, 13);
+            this.lblFilas.Size = new System.Drawing.Size(121, 13);
             this.lblFilas.TabIndex = 25;
-            this.lblFilas.Text = "Cantidad de Resultados: 0000";
+            this.lblFilas.Text = "Cantidad de resultados: ";
             this.lblFilas.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // frmBarrio
@@ -158,7 +158,6 @@ namespace TP_PAV.Interfaz.Consultas
             this.MinimumSize = new System.Drawing.Size(279, 330);
             this.Name = "frmBarrio";
             this.Text = "Barrios";
-            this.Load += new System.EventHandler(this.frmBarrio_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvTabla)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

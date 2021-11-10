@@ -59,17 +59,18 @@ namespace TP_PAV.Interfaz.Reportes
             this.rpvFactura.Location = new System.Drawing.Point(0, 0);
             this.rpvFactura.Name = "rpvFactura";
             this.rpvFactura.ServerReport.BearerToken = null;
-            this.rpvFactura.Size = new System.Drawing.Size(576, 405);
+            this.rpvFactura.Size = new System.Drawing.Size(867, 471);
             this.rpvFactura.TabIndex = 0;
             // 
             // frmReporteFactura
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(576, 405);
+            this.ClientSize = new System.Drawing.Size(867, 471);
             this.Controls.Add(this.rpvFactura);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmReporteFactura";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmReporteFactura";
             this.Load += new System.EventHandler(this.frmReporteFactura_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DetallesBindingSource)).EndInit();

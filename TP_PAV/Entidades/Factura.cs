@@ -8,7 +8,7 @@ namespace TP_PAV.Entidades
 {
     public class Factura
     {
-        public int IdFactura { get; set; }
+        //public int IdFactura { get; set; }
         public string NumeroFactura { get; set; }
         public IList<DetalleFactura> ListadoDetalles { get; set; }
         public Cliente Cliente { get; set; }

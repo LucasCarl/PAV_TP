@@ -78,8 +78,6 @@ namespace TP_PAV.Interfaz.Consultas
             cbxBarrio.DisplayMember = "nombre";
             cbxBarrio.ValueMember = "idBarrio";
             cbxBarrio.SelectedIndex = -1;
-
-            btnConsultar_Click(sender, e);
         }
 
         private void btnConsultar_Click(object sender, EventArgs e)

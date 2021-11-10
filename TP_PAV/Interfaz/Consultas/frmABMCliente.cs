@@ -64,6 +64,8 @@ namespace TP_PAV.Interfaz.Consultas
                     txtNumero.Enabled = false;
                     cbxBarrio.Enabled = false;
                     cbxContacto.Enabled = false;
+                    btnNuevoCont.Enabled = false;
+                    btnModifCont.Enabled = false;
                     break;
 
                 case FormMode.modificar:
@@ -82,6 +84,8 @@ namespace TP_PAV.Interfaz.Consultas
                     txtNumero.Enabled = false;
                     cbxBarrio.Enabled = false;
                     cbxContacto.Enabled = false;
+                    btnNuevoCont.Enabled = false;
+                    btnModifCont.Enabled = false;
                     break;
             }
         }
@@ -205,5 +209,35 @@ namespace TP_PAV.Interfaz.Consultas
 
             return newCliente;
         }
+
+        #region Combobox_Contacto
+        private void btnNuevoCont_Click(object sender, EventArgs e)
+        {
+            frmABMContacto abmContacto = new frmABMContacto();
+            abmContacto.IniciarFormulario(frmABMContacto.FormMode.nuevo);
+            abmContacto.ShowDialog();
+            cbxContacto.DataSource = null;
+            LlenarCombobox(cbxContacto, contactoService.ObtenerContactos(), "nombreCompleto", "idContacto");
+            cbxContacto.SelectedIndex = cbxContacto.Items.Count - 1;
+        }
+
+        private void btnModifCont_Click(object sender, EventArgs e)
+        {
+            frmABMContacto abmContacto = new frmABMContacto();
+            abmContacto.IniciarFormulario(frmABMContacto.FormMode.modificar, (Contacto)cbxContacto.SelectedItem);
+            abmContacto.ShowDialog();
+            int indexPrev = cbxContacto.SelectedIndex;
+            cbxContacto.DataSource = null;
+            LlenarCombobox(cbxContacto, contactoService.ObtenerContactos(), "nombreCompleto", "idContacto");
+            cbxContacto.SelectedIndex = indexPrev;
+        }
+
+        private void btnMostrarCont_Click(object sender, EventArgs e)
+        {
+            frmABMContacto abmContacto = new frmABMContacto();
+            abmContacto.IniciarFormulario(frmABMContacto.FormMode.mostrar, (Contacto)cbxContacto.SelectedItem);
+            abmContacto.ShowDialog();
+        }
+        #endregion
     }
 }

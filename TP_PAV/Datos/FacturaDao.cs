@@ -13,7 +13,7 @@ namespace TP_PAV.Datos
     {
         public int UltimaFactura()
         {
-            string sqlComand = "SELECT TOP 1 numero_factura FROM Facturas WHERE borrado = 0 ORDER BY numero_factura DESC";
+            string sqlComand = "SELECT TOP 1 numero_factura FROM Facturas ORDER BY numero_factura DESC";
 
             var resultadoConsulta = DataManager.Instancia().ConsultaSQL(sqlComand).Rows;
             if (resultadoConsulta.Count == 1)
@@ -29,7 +29,7 @@ namespace TP_PAV.Datos
             try
             {
                 //Conexion a DB
-                dbConexion.ConnectionString = "Data Source=.\\SQLEXPRESS;Initial Catalog=BugTrackerTP;Integrated Security=true;";
+                dbConexion.ConnectionString = "Data Source=.\\SQLEXPRESS;Initial Catalog=BugTrackerTP_2;Integrated Security=true;";
                 dbConexion.Open();
                 //Genero transaccion
                 transaccion = dbConexion.BeginTransaction();
@@ -40,8 +40,8 @@ namespace TP_PAV.Datos
                 facturaInsert.CommandType = CommandType.Text;
                 facturaInsert.Transaction = transaccion;
 
-                facturaInsert.CommandText = string.Concat("INSERT INTO Facturas (numero_factura, id_cliente, fecha, id_usuario_creador, borrado) ",
-                                                            "VALUES (@numeroFactura, @idCliente, @fechaAlta, @idUsuario, 0)");
+                facturaInsert.CommandText = string.Concat("INSERT INTO Facturas (numero_factura, id_cliente, fecha, id_usuario_creador) ",
+                                                            "VALUES (@numeroFactura, @idCliente, @fechaAlta, @idUsuario)");
                 facturaInsert.Parameters.AddWithValue("numeroFactura", factura.NumeroFactura);
                 facturaInsert.Parameters.AddWithValue("idCliente", factura.Cliente.IdCliente);
                 facturaInsert.Parameters.AddWithValue("fechaAlta", factura.FechaAlta);
@@ -49,15 +49,17 @@ namespace TP_PAV.Datos
 
                 facturaInsert.ExecuteNonQuery();
 
+                /*
                 //Tomar idfactura
                 SqlCommand idfacturaSelect = new SqlCommand();
                 idfacturaSelect.Connection = dbConexion;
                 idfacturaSelect.CommandType = CommandType.Text;
                 idfacturaSelect.Transaction = transaccion;
-                idfacturaSelect.CommandText = "SELECT id_factura FROM Facturas WHERE numero_factura = " + factura.NumeroFactura;
+                idfacturaSelect.CommandText = "SELECT numero_factura FROM Facturas WHERE numero_factura = " + factura.NumeroFactura;
                 DataTable resultadoConsulta = new DataTable();
                 resultadoConsulta.Load(idfacturaSelect.ExecuteReader());
                 factura.IdFactura = Convert.ToInt32(resultadoConsulta.Rows[0]["id_factura"].ToString());
+                */
 
                 //Insertar Detalle
                 foreach (DetalleFactura detalle in factura.ListadoDetalles)
@@ -67,21 +69,23 @@ namespace TP_PAV.Datos
                     detalleInsert.CommandType = CommandType.Text;
                     detalleInsert.Transaction = transaccion;
 
-                    detalleInsert.Parameters.AddWithValue("idFactura", factura.IdFactura);
+                    detalleInsert.CommandText = string.Concat("INSERT INTO FacturasDetalle (numero_factura, numero_orden_detalle, id_producto, id_proyecto, precio) ",
+                                                            "VALUES (@numeroFactura, @numeroOrden, @idProducto, @idProyecto, @precio)");
+
+                    //detalleInsert.Parameters.AddWithValue("idFactura", factura.IdFactura);
+                    detalleInsert.Parameters.AddWithValue("numeroFactura", factura.NumeroFactura);
                     detalleInsert.Parameters.AddWithValue("numeroOrden", detalle.NumeroOrden);
                     detalleInsert.Parameters.AddWithValue("precio", detalle.Precio);
+
                     if (detalle.Producto != null)
-                    {
-                        detalleInsert.CommandText = string.Concat("INSERT INTO FacturasDetalle (id_factura, numero_orden, id_producto, precio, borrado) ",
-                                                            "VALUES (@idFactura, @numeroOrden, @idProducto, @precio, 0)");
                         detalleInsert.Parameters.AddWithValue("idProducto", detalle.Producto.IdProducto);
-                    }
+                    else
+                        detalleInsert.Parameters.AddWithValue("idProducto", DBNull.Value);
+
                     if (detalle.Proyecto != null)
-                    {
-                        detalleInsert.CommandText = string.Concat("INSERT INTO FacturasDetalle (id_factura, numero_orden, id_proyecto, precio, borrado) ",
-                                                            "VALUES (@idFactura, @numeroOrden,  @idProyecto, @precio, 0)");
                         detalleInsert.Parameters.AddWithValue("idProyecto", detalle.Proyecto.IdProyecto);
-                    }
+                    else
+                        detalleInsert.Parameters.AddWithValue("idProyecto", DBNull.Value);
 
                     detalleInsert.ExecuteNonQuery();
                 }
@@ -110,7 +114,6 @@ namespace TP_PAV.Datos
         private Factura MapeoFactura(DataRow fila)
         {
             Factura factura = new Factura();
-            factura.IdFactura = Convert.ToInt32(fila["id_factura"].ToString());
             factura.NumeroFactura = fila["numero_factura"].ToString();
             factura.FechaAlta = Convert.ToDateTime(fila["fecha"].ToString());
             
@@ -122,18 +125,17 @@ namespace TP_PAV.Datos
 
             //Detalles
             factura.ListadoDetalles = new List<DetalleFactura>();
-            string sqlComandoDetalles = string.Concat("SELECT D.id_detalle_factura, D.numero_orden, D.precio , ",
+            string sqlComandoDetalles = string.Concat("SELECT D.numero_orden_detalle, D.precio , ",
                                                       "PD.id_producto AS 'ProductoID' , PD.nombre AS 'ProductoNombre' , ",
                                                       "PY.id_proyecto AS 'ProyectoID' , PY.descripcion AS 'ProyectoDescripcion' ",
                                                       "FROM FacturasDetalle D LEFT JOIN Productos PD ON D.id_producto = PD.id_producto ",
                                                       "LEFT JOIN Proyectos PY ON D.id_proyecto = PY.id_proyecto ",
-                                                      "WHERE id_factura = ", Convert.ToInt32(fila["id_factura"].ToString()), " ORDER BY numero_orden");
+                                                      "WHERE numero_factura = ", Convert.ToInt32(fila["numero_factura"].ToString()), " ORDER BY numero_orden_detalle");
             var resultadoConsulta = DataManager.Instancia().ConsultaSQL(sqlComandoDetalles).Rows;
             foreach(DataRow filaDetalle in resultadoConsulta)
             {
                 DetalleFactura detalle = new DetalleFactura();
-                detalle.IdDetalleFactura = Convert.ToInt32(filaDetalle["id_detalle_factura"].ToString());
-                detalle.NumeroOrden = Convert.ToInt32(filaDetalle["numero_orden"].ToString());
+                detalle.NumeroOrden = Convert.ToInt32(filaDetalle["numero_orden_detalle"].ToString());
                 detalle.Precio = float.Parse(filaDetalle["precio"].ToString());
                 if(filaDetalle["ProductoID"] != DBNull.Value)
                 {
@@ -158,7 +160,7 @@ namespace TP_PAV.Datos
         public IList<Factura> ObtenerTodas()
         {
             IList<Factura> listadoFacturas = new List<Factura>();
-            string sqlComando = string.Concat("SELECT id_factura, numero_factura, id_cliente, fecha, id_usuario_creador ",
+            string sqlComando = string.Concat("SELECT numero_factura, id_cliente, fecha, id_usuario_creador ",
                                              "FROM Facturas ORDER BY numero_factura");
 
             var resultadoConsulta = DataManager.Instancia().ConsultaSQL(sqlComando).Rows;
@@ -173,7 +175,7 @@ namespace TP_PAV.Datos
         public IList<Factura> ObtenerFacturasFiltros(Dictionary<string, object> parametros = null)
         {
             IList<Factura> listadoFacturas = new List<Factura>();
-            string sqlComando = string.Concat("SELECT id_factura, numero_factura, id_cliente, fecha, id_usuario_creador ",
+            string sqlComando = string.Concat("SELECT numero_factura, id_cliente, fecha, id_usuario_creador ",
                                              "FROM Facturas WHERE 1=1 ");
             //Parametros
             if (parametros.ContainsKey("nroFactura"))

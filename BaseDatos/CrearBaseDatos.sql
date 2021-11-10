@@ -164,7 +164,7 @@ SET QUOTED_IDENTIFIER ON
 GO
 
 CREATE TABLE [dbo].[Facturas](
-	[numero_factura] [int] IDENTITY(1,1) NOT NULL,
+	[numero_factura] [int] NOT NULL,
 	[id_cliente] [int] NOT NULL,
 	[fecha] [datetime] NOT NULL,
 	[id_usuario_creador] [int] NOT NULL,

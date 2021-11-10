@@ -86,7 +86,9 @@ namespace TP_PAV.Interfaz.Consultas
                 parametros.Add("fechaHasta", dtpFechaHasta.Value);
             }
 
-            dgvFacturas.DataSource = facturaService.ObtenerFacturas(parametros);
+            IList<Factura> listadoFacturas = facturaService.ObtenerFacturas(parametros);
+            dgvFacturas.DataSource = listadoFacturas;
+            lblFilas.Text = "Cantidad de resultados: " + listadoFacturas.Count;
         }
 
         private void chkFecha_CheckedChanged(object sender, EventArgs e)

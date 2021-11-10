@@ -250,9 +250,9 @@ namespace TP_PAV.Interfaz.Consultas
             this.lblFilas.AutoSize = true;
             this.lblFilas.Location = new System.Drawing.Point(82, 119);
             this.lblFilas.Name = "lblFilas";
-            this.lblFilas.Size = new System.Drawing.Size(150, 13);
+            this.lblFilas.Size = new System.Drawing.Size(121, 13);
             this.lblFilas.TabIndex = 37;
-            this.lblFilas.Text = "Cantidad de Resultados: 0000";
+            this.lblFilas.Text = "Cantidad de resultados: ";
             this.lblFilas.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // frmProyectos
@@ -278,6 +278,7 @@ namespace TP_PAV.Interfaz.Consultas
             this.Controls.Add(this.dgvTabla);
             this.Controls.Add(this.btnConsultar);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(438, 383);
             this.MinimumSize = new System.Drawing.Size(438, 383);
             this.Name = "frmProyectos";

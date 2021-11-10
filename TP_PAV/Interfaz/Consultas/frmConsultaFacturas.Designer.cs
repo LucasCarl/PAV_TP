@@ -51,6 +51,7 @@ namespace TP_PAV.Interfaz.Consultas
             this.cbxCliente = new System.Windows.Forms.ComboBox();
             this.lblCliente = new System.Windows.Forms.Label();
             this.btnConsultar = new System.Windows.Forms.Button();
+            this.lblFilas = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvFacturas)).BeginInit();
             this.gbxFechaEmision.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudNroFactura)).BeginInit();
@@ -255,12 +256,24 @@ namespace TP_PAV.Interfaz.Consultas
             this.btnConsultar.UseVisualStyleBackColor = true;
             this.btnConsultar.Click += new System.EventHandler(this.btnConsultar_Click);
             // 
+            // lblFilas
+            // 
+            this.lblFilas.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblFilas.AutoSize = true;
+            this.lblFilas.Location = new System.Drawing.Point(93, 119);
+            this.lblFilas.Name = "lblFilas";
+            this.lblFilas.Size = new System.Drawing.Size(121, 13);
+            this.lblFilas.TabIndex = 45;
+            this.lblFilas.Text = "Cantidad de resultados: ";
+            this.lblFilas.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
             // frmConsultaFacturas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(199)))), ((int)(((byte)(210)))));
             this.ClientSize = new System.Drawing.Size(451, 347);
+            this.Controls.Add(this.lblFilas);
             this.Controls.Add(this.btnConsultar);
             this.Controls.Add(this.lblCliente);
             this.Controls.Add(this.cbxCliente);
@@ -272,6 +285,7 @@ namespace TP_PAV.Interfaz.Consultas
             this.Controls.Add(this.btnImprimir);
             this.Controls.Add(this.dgvFacturas);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(467, 386);
             this.MinimumSize = new System.Drawing.Size(467, 386);
             this.Name = "frmConsultaFacturas";
@@ -308,5 +322,6 @@ namespace TP_PAV.Interfaz.Consultas
         private System.Windows.Forms.DataGridViewTextBoxColumn fechaAlta;
         private System.Windows.Forms.DataGridViewTextBoxColumn monto;
         private System.Windows.Forms.DataGridViewTextBoxColumn usuarioCreador;
+        private System.Windows.Forms.Label lblFilas;
     }
 }

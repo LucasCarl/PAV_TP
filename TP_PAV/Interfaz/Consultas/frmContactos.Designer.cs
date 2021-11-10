@@ -219,9 +219,9 @@ namespace TP_PAV.Interfaz.Consultas
             this.lblFilas.AutoSize = true;
             this.lblFilas.Location = new System.Drawing.Point(81, 114);
             this.lblFilas.Name = "lblFilas";
-            this.lblFilas.Size = new System.Drawing.Size(150, 13);
+            this.lblFilas.Size = new System.Drawing.Size(121, 13);
             this.lblFilas.TabIndex = 26;
-            this.lblFilas.Text = "Cantidad de Resultados: 0000";
+            this.lblFilas.Text = "Cantidad de resultados: ";
             this.lblFilas.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // frmContactos
@@ -245,11 +245,11 @@ namespace TP_PAV.Interfaz.Consultas
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.lblNombre);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(427, 380);
             this.MinimumSize = new System.Drawing.Size(427, 380);
             this.Name = "frmContactos";
             this.Text = "Contactos";
-            this.Load += new System.EventHandler(this.frmContactos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvTabla)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

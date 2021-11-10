@@ -40,9 +40,13 @@ namespace TP_PAV.Interfaz.Consultas
             this.btnAccion = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.cbxBarrio = new System.Windows.Forms.ComboBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.cbxContacto = new System.Windows.Forms.ComboBox();
             this.txtCuit = new System.Windows.Forms.MaskedTextBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnMostrarCont = new System.Windows.Forms.Button();
+            this.btnModifCont = new System.Windows.Forms.Button();
+            this.btnNuevoCont = new System.Windows.Forms.Button();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblCuit
@@ -72,7 +76,7 @@ namespace TP_PAV.Interfaz.Consultas
             // 
             // txtCalle
             // 
-            this.txtCalle.Location = new System.Drawing.Point(237, 17);
+            this.txtCalle.Location = new System.Drawing.Point(67, 86);
             this.txtCalle.Name = "txtCalle";
             this.txtCalle.Size = new System.Drawing.Size(100, 20);
             this.txtCalle.TabIndex = 5;
@@ -80,7 +84,7 @@ namespace TP_PAV.Interfaz.Consultas
             // lblCalle
             // 
             this.lblCalle.AutoSize = true;
-            this.lblCalle.Location = new System.Drawing.Point(188, 20);
+            this.lblCalle.Location = new System.Drawing.Point(18, 89);
             this.lblCalle.Name = "lblCalle";
             this.lblCalle.Size = new System.Drawing.Size(30, 13);
             this.lblCalle.TabIndex = 4;
@@ -88,7 +92,7 @@ namespace TP_PAV.Interfaz.Consultas
             // 
             // txtNumero
             // 
-            this.txtNumero.Location = new System.Drawing.Point(237, 47);
+            this.txtNumero.Location = new System.Drawing.Point(67, 112);
             this.txtNumero.Name = "txtNumero";
             this.txtNumero.Size = new System.Drawing.Size(100, 20);
             this.txtNumero.TabIndex = 7;
@@ -96,7 +100,7 @@ namespace TP_PAV.Interfaz.Consultas
             // lblNumero
             // 
             this.lblNumero.AutoSize = true;
-            this.lblNumero.Location = new System.Drawing.Point(188, 50);
+            this.lblNumero.Location = new System.Drawing.Point(18, 115);
             this.lblNumero.Name = "lblNumero";
             this.lblNumero.Size = new System.Drawing.Size(44, 13);
             this.lblNumero.TabIndex = 6;
@@ -104,7 +108,7 @@ namespace TP_PAV.Interfaz.Consultas
             // 
             // btnAccion
             // 
-            this.btnAccion.Location = new System.Drawing.Point(154, 122);
+            this.btnAccion.Location = new System.Drawing.Point(156, 138);
             this.btnAccion.Name = "btnAccion";
             this.btnAccion.Size = new System.Drawing.Size(64, 20);
             this.btnAccion.TabIndex = 9;
@@ -115,7 +119,7 @@ namespace TP_PAV.Interfaz.Consultas
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(188, 89);
+            this.label1.Location = new System.Drawing.Point(186, 89);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(34, 13);
             this.label1.TabIndex = 10;
@@ -124,24 +128,15 @@ namespace TP_PAV.Interfaz.Consultas
             // cbxBarrio
             // 
             this.cbxBarrio.FormattingEnabled = true;
-            this.cbxBarrio.Location = new System.Drawing.Point(237, 86);
+            this.cbxBarrio.Location = new System.Drawing.Point(226, 86);
             this.cbxBarrio.Name = "cbxBarrio";
             this.cbxBarrio.Size = new System.Drawing.Size(121, 21);
             this.cbxBarrio.TabIndex = 11;
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(16, 89);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(50, 13);
-            this.label2.TabIndex = 12;
-            this.label2.Text = "Contacto";
-            // 
             // cbxContacto
             // 
             this.cbxContacto.FormattingEnabled = true;
-            this.cbxContacto.Location = new System.Drawing.Point(65, 86);
+            this.cbxContacto.Location = new System.Drawing.Point(60, 0);
             this.cbxContacto.Name = "cbxContacto";
             this.cbxContacto.Size = new System.Drawing.Size(100, 21);
             this.cbxContacto.TabIndex = 13;
@@ -154,15 +149,57 @@ namespace TP_PAV.Interfaz.Consultas
             this.txtCuit.Size = new System.Drawing.Size(80, 20);
             this.txtCuit.TabIndex = 1;
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.btnMostrarCont);
+            this.groupBox1.Controls.Add(this.btnModifCont);
+            this.groupBox1.Controls.Add(this.btnNuevoCont);
+            this.groupBox1.Controls.Add(this.cbxContacto);
+            this.groupBox1.Location = new System.Drawing.Point(182, 12);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(184, 60);
+            this.groupBox1.TabIndex = 14;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Contacto";
+            // 
+            // btnMostrarCont
+            // 
+            this.btnMostrarCont.Location = new System.Drawing.Point(127, 31);
+            this.btnMostrarCont.Name = "btnMostrarCont";
+            this.btnMostrarCont.Size = new System.Drawing.Size(51, 23);
+            this.btnMostrarCont.TabIndex = 16;
+            this.btnMostrarCont.Text = "Mostrar";
+            this.btnMostrarCont.UseVisualStyleBackColor = true;
+            this.btnMostrarCont.Click += new System.EventHandler(this.btnMostrarCont_Click);
+            // 
+            // btnModifCont
+            // 
+            this.btnModifCont.Location = new System.Drawing.Point(60, 31);
+            this.btnModifCont.Name = "btnModifCont";
+            this.btnModifCont.Size = new System.Drawing.Size(61, 23);
+            this.btnModifCont.TabIndex = 15;
+            this.btnModifCont.Text = "Modificar";
+            this.btnModifCont.UseVisualStyleBackColor = true;
+            this.btnModifCont.Click += new System.EventHandler(this.btnModifCont_Click);
+            // 
+            // btnNuevoCont
+            // 
+            this.btnNuevoCont.Location = new System.Drawing.Point(7, 31);
+            this.btnNuevoCont.Name = "btnNuevoCont";
+            this.btnNuevoCont.Size = new System.Drawing.Size(47, 23);
+            this.btnNuevoCont.TabIndex = 14;
+            this.btnNuevoCont.Text = "Nuevo";
+            this.btnNuevoCont.UseVisualStyleBackColor = true;
+            this.btnNuevoCont.Click += new System.EventHandler(this.btnNuevoCont_Click);
+            // 
             // frmABMCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(199)))), ((int)(((byte)(210)))));
-            this.ClientSize = new System.Drawing.Size(378, 154);
+            this.ClientSize = new System.Drawing.Size(378, 166);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.txtCuit);
-            this.Controls.Add(this.cbxContacto);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.cbxBarrio);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnAccion);
@@ -174,11 +211,14 @@ namespace TP_PAV.Interfaz.Consultas
             this.Controls.Add(this.lblRazon);
             this.Controls.Add(this.lblCuit);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MaximumSize = new System.Drawing.Size(394, 193);
-            this.MinimumSize = new System.Drawing.Size(394, 193);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(394, 205);
+            this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(394, 205);
             this.Name = "frmABMCliente";
             this.Text = "frmABMCliente";
             this.Load += new System.EventHandler(this.frmABMCliente_Load);
+            this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -196,8 +236,11 @@ namespace TP_PAV.Interfaz.Consultas
         private System.Windows.Forms.Button btnAccion;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox cbxBarrio;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox cbxContacto;
         private System.Windows.Forms.MaskedTextBox txtCuit;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Button btnMostrarCont;
+        private System.Windows.Forms.Button btnModifCont;
+        private System.Windows.Forms.Button btnNuevoCont;
     }
 }

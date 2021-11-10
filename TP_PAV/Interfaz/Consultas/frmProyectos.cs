@@ -42,8 +42,6 @@ namespace TP_PAV.Interfaz.Consultas
             //Llenar ComboBox
             LlenarCombobox(cbxProductos, productoService.ListaProductos(), "nombre", "idProducto");
             LlenarCombobox(cbxResponsable, usuarioService.ListaUsuarios(), "usuario", "id_usuario");
-
-            btnConsultar_Click(sender, e);
         }
 
         private void LlenarCombobox(ComboBox cbx, object source, string mostrar, string valor)

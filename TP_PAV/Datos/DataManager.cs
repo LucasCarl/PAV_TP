@@ -16,7 +16,7 @@ namespace TP_PAV.Datos
         //Constructor
         public DataManager()
         {
-            strgConexion = "Data Source=.\\SQLEXPRESS;Initial Catalog=BugTrackerTP;Integrated Security=true;";
+            strgConexion = "Data Source=.\\SQLEXPRESS;Initial Catalog=BugTrackerTP_2;Integrated Security=true;";
         }
 
         /// <summary>Obtiene instancia del DataManager, si no hay la crea</summary>

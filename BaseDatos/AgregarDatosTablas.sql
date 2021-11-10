@@ -16,7 +16,7 @@ INSERT INTO Usuarios (id_usuario, id_perfil, usuario, password, email, estado, b
 INSERT INTO Usuarios (id_usuario, id_perfil, usuario, password, email, estado, borrado) VALUES (5, 2, 'Tester Ana', '12345', 'ana@gmail.com', 'N', 0)
 INSERT INTO Usuarios (id_usuario, id_perfil, usuario, password, email, estado, borrado) VALUES (6, 3, 'Tester Diego', '12345', 'diego@gmail.com', 'N', 0)
 INSERT INTO Usuarios (id_usuario, id_perfil, usuario, password, email, estado, borrado) VALUES (7, 4, 'Tester Micaela', '12345', 'mica@gmail.com', 'S', 0)
-INSERT INTO Usuarios (id_usuario, id_perfil, usuario, password, email, estado, borrado) VALUES (8, 1, 'a', 'a', 'a@a.com', 'S', 0)
+INSERT INTO Usuarios (id_usuario, id_perfil, usuario, password, email, estado, borrado) VALUES (8, 1, 'LucasC', 'admin', 'lucas@gmail.com', 'S', 0)
 SET IDENTITY_INSERT Usuarios OFF
 
 /** Productos **/

@@ -93,10 +93,5 @@ namespace TP_PAV.Interfaz.Consultas
             abmContacto.ShowDialog();
             btnConsultar_Click(sender, e);
         }
-
-        private void frmContactos_Load(object sender, EventArgs e)
-        {
-            btnConsultar_Click(sender, e);
-        }
     }
 }
