@@ -34,32 +34,32 @@ namespace TP_PAV.Interfaz.Reportes
 
             //Tabla de detalles
             DataTable tablaDetalles = new DataTable();
-            tablaDetalles.Columns.Add("nroOrden");
-            tablaDetalles.Columns.Add("tipo");
-            tablaDetalles.Columns.Add("descripcion");
-            tablaDetalles.Columns.Add("precio", typeof(float));
+            tablaDetalles.Columns.Add("NumeroOrden");
+            tablaDetalles.Columns.Add("Tipo");
+            tablaDetalles.Columns.Add("Descripcion");
+            tablaDetalles.Columns.Add("Precio", typeof(float));
 
             for (int i = 0; i < factura.ListadoDetalles.Count; i++)
             {
                 DetalleFactura detalle = factura.ListadoDetalles[i];
                 DataRow fila = tablaDetalles.NewRow();
-                fila["nroOrden"] = detalle.NumeroOrden;
-                fila["precio"] = detalle.Precio;
+                fila["NumeroOrden"] = detalle.NumeroOrden;
+                fila["Precio"] = detalle.Precio;
                 if (detalle.Producto != null)
                 {
-                    fila["tipo"] = "Producto";
-                    fila["descripcion"] = detalle.Producto.ToString();
+                    fila["Tipo"] = "Producto";
+                    fila["Descripcion"] = detalle.Producto.ToString();
                 }
                 else
                 {
-                    fila["tipo"] = "Proyecto";
-                    fila["descripcion"] = detalle.Proyecto.ToString();
+                    fila["Tipo"] = "Proyecto";
+                    fila["Descripcion"] = detalle.Proyecto.ToString();
                 }
                 tablaDetalles.Rows.Add(fila);
             }
 
             rpvFactura.LocalReport.DataSources.Clear();
-            rpvFactura.LocalReport.DataSources.Add(new ReportDataSource("dsFacturas", tablaDetalles));
+            rpvFactura.LocalReport.DataSources.Add(new ReportDataSource("dsDetallesFacturas", tablaDetalles));
             rpvFactura.RefreshReport();
             rpvFactura.SetDisplayMode(DisplayMode.PrintLayout);
             rpvFactura.ZoomMode = ZoomMode.Percent;

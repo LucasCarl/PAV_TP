@@ -93,6 +93,13 @@ namespace TP_PAV.Interfaz
                 txtRazon.Text = clienteSeleccionado.RazonSocial;
                 txtDireccion.Text = clienteSeleccionado.Calle + " " + clienteSeleccionado.Numero;
             }
+            else
+            {
+                clienteSeleccionado = null;
+                txtCuit.Text = string.Empty;
+                txtRazon.Text = string.Empty;
+                txtDireccion.Text = string.Empty;
+            }
         }
 
         private void dtpFecha_ValueChanged(object sender, EventArgs e)

@@ -30,31 +30,15 @@ namespace TP_PAV.Interfaz.Reportes
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmReporteFactura));
             this.DetallesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dsFacturas = new TP_PAV.Interfaz.Reportes.dsFacturas();
             this.rpvFactura = new Microsoft.Reporting.WinForms.ReportViewer();
             ((System.ComponentModel.ISupportInitialize)(this.DetallesBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dsFacturas)).BeginInit();
             this.SuspendLayout();
-            // 
-            // DetallesBindingSource
-            // 
-            this.DetallesBindingSource.DataMember = "Detalles";
-            this.DetallesBindingSource.DataSource = this.dsFacturas;
-            // 
-            // dsFacturas
-            // 
-            this.dsFacturas.DataSetName = "dsFacturas";
-            this.dsFacturas.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // rpvFactura
             // 
             this.rpvFactura.Dock = System.Windows.Forms.DockStyle.Fill;
-            reportDataSource1.Name = "DataSet1";
-            reportDataSource1.Value = this.DetallesBindingSource;
-            this.rpvFactura.LocalReport.DataSources.Add(reportDataSource1);
             this.rpvFactura.LocalReport.ReportEmbeddedResource = "TP_PAV.Interfaz.Reportes.rptFactura.rdlc";
             this.rpvFactura.Location = new System.Drawing.Point(0, 0);
             this.rpvFactura.Name = "rpvFactura";
@@ -74,7 +58,6 @@ namespace TP_PAV.Interfaz.Reportes
             this.Text = "frmReporteFactura";
             this.Load += new System.EventHandler(this.frmReporteFactura_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DetallesBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dsFacturas)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -83,6 +66,5 @@ namespace TP_PAV.Interfaz.Reportes
 
         private Microsoft.Reporting.WinForms.ReportViewer rpvFactura;
         private System.Windows.Forms.BindingSource DetallesBindingSource;
-        private dsFacturas dsFacturas;
     }
 }

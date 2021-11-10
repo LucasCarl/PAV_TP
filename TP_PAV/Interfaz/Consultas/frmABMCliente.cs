@@ -215,25 +215,43 @@ namespace TP_PAV.Interfaz.Consultas
         {
             frmABMContacto abmContacto = new frmABMContacto();
             abmContacto.IniciarFormulario(frmABMContacto.FormMode.nuevo);
-            abmContacto.ShowDialog();
-            cbxContacto.DataSource = null;
-            LlenarCombobox(cbxContacto, contactoService.ObtenerContactos(), "nombreCompleto", "idContacto");
-            cbxContacto.SelectedIndex = cbxContacto.Items.Count - 1;
+            DialogResult result = abmContacto.ShowDialog();
+            if (result != DialogResult.Cancel)
+            {
+                cbxContacto.DataSource = null;
+                LlenarCombobox(cbxContacto, contactoService.ObtenerContactos(), "nombreCompleto", "idContacto");
+                cbxContacto.SelectedIndex = cbxContacto.Items.Count - 1;
+            }
         }
 
         private void btnModifCont_Click(object sender, EventArgs e)
         {
+            if (cbxContacto.SelectedIndex < 0)
+            {
+                MessageBox.Show("Debe seleccionar un contacto", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+
             frmABMContacto abmContacto = new frmABMContacto();
             abmContacto.IniciarFormulario(frmABMContacto.FormMode.modificar, (Contacto)cbxContacto.SelectedItem);
-            abmContacto.ShowDialog();
-            int indexPrev = cbxContacto.SelectedIndex;
-            cbxContacto.DataSource = null;
-            LlenarCombobox(cbxContacto, contactoService.ObtenerContactos(), "nombreCompleto", "idContacto");
-            cbxContacto.SelectedIndex = indexPrev;
+            DialogResult result = abmContacto.ShowDialog();
+            if (result != DialogResult.Cancel)
+            {
+                int indexPrev = cbxContacto.SelectedIndex;
+                cbxContacto.DataSource = null;
+                LlenarCombobox(cbxContacto, contactoService.ObtenerContactos(), "nombreCompleto", "idContacto");
+                cbxContacto.SelectedIndex = indexPrev;
+            }
         }
 
         private void btnMostrarCont_Click(object sender, EventArgs e)
         {
+            if (cbxContacto.SelectedIndex < 0)
+            {
+                MessageBox.Show("Debe seleccionar un contacto", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+
             frmABMContacto abmContacto = new frmABMContacto();
             abmContacto.IniciarFormulario(frmABMContacto.FormMode.mostrar, (Contacto)cbxContacto.SelectedItem);
             abmContacto.ShowDialog();

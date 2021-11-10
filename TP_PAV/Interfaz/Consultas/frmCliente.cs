@@ -123,24 +123,27 @@ namespace TP_PAV.Interfaz.Consultas
         {
             frmABMCliente abmCliente = new frmABMCliente();
             abmCliente.IniciarFormulario(frmABMCliente.FormMode.nuevo);
-            abmCliente.ShowDialog();
-            btnConsultar_Click(sender, e);
+            DialogResult result = abmCliente.ShowDialog();
+            if (result != DialogResult.Cancel)
+                btnConsultar_Click(sender, e);
         }
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
             frmABMCliente abmCliente = new frmABMCliente();
             abmCliente.IniciarFormulario(frmABMCliente.FormMode.modificar, (Cliente)dgvTabla.CurrentRow.DataBoundItem);
-            abmCliente.ShowDialog();
-            btnConsultar_Click(sender, e);
+            DialogResult result = abmCliente.ShowDialog();
+            if (result != DialogResult.Cancel)
+                btnConsultar_Click(sender, e);
         }
 
         private void btnBorrar_Click(object sender, EventArgs e)
         {
             frmABMCliente abmCliente = new frmABMCliente();
             abmCliente.IniciarFormulario(frmABMCliente.FormMode.eliminar, (Cliente)dgvTabla.CurrentRow.DataBoundItem);
-            abmCliente.ShowDialog();
-            btnConsultar_Click(sender, e);
+            DialogResult result = abmCliente.ShowDialog();
+            if (result != DialogResult.Cancel)
+                btnConsultar_Click(sender, e);
         }
     }
 }
