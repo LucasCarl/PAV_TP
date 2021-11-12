@@ -6,8 +6,10 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Microsoft.Reporting.WinForms;
 using System.Windows.Forms;
 using TP_PAV.Negocio;
+using TP_PAV.Entidades;
 
 namespace TP_PAV.Interfaz.Reportes
 {
@@ -26,7 +28,7 @@ namespace TP_PAV.Interfaz.Reportes
             //Setea el dia de los datatimepicker al primero para evitar error si es dia 31
             DateTime fecha = DateTime.Today;
             dtpDesde.Value = new DateTime(fecha.Year, fecha.Month, 1);
-            dtpHasta.Value = new DateTime(fecha.Year, fecha.Month, 1);
+            dtpHasta.Value = new DateTime(fecha.Year, fecha.Month, 2);
         }
 
         #region Cambiar size report si cambia size ventana
@@ -67,18 +69,53 @@ namespace TP_PAV.Interfaz.Reportes
 
             //Crear datatable
             DataTable tablaMes = new DataTable();
-            tablaMes.Columns.Add("Mes");
-            tablaMes.Columns.Add("Total");
-            tablaMes.Columns.Add("Fecha");
+            tablaMes.Columns.Add("Mes", typeof(string));
+            tablaMes.Columns.Add("Total", typeof(float));
+            tablaMes.Columns.Add("Fecha", typeof(DateTime));
 
-            int mesesDif = fechaHasta.Month - fechaDesde.Month;
+            int filasTabla = CalcularMesesDiferencia(fechaDesde, fechaHasta) + 1;
+            for (int i = 0; i < filasTabla; i++)
+            {
+                DataRow fila = tablaMes.NewRow();
+                DateTime fechaFila = fechaDesde.AddMonths(i);
+                fila["Fecha"] = fechaFila;
+                fila["Mes"] = String.Format("{0:MMM yyyy}", fechaFila);
+                fila["Total"] = 0;
+                tablaMes.Rows.Add(fila);
+            }
 
-            //Carga fechas
-            label1.Text = fechaDesde.ToString();
-
+            //Cargar facturas
             int diasMes = DateTime.DaysInMonth(fechaHasta.Year, fechaHasta.Month);
             fechaHasta = new DateTime(fechaHasta.Year, fechaHasta.Month, diasMes);
-            label1.Text += " --> " + fechaHasta.ToShortDateString() + " -Dif " + mesesDif;
+
+            FacturaService facturaService = new FacturaService();
+            Dictionary<string, object> parametros = new Dictionary<string, object>();
+            parametros.Add("fechaDesde", fechaDesde);
+            parametros.Add("fechaHasta", fechaHasta);
+            IList<Factura> listadoFacturas = facturaService.ObtenerFacturas(parametros);
+            foreach (Factura factura in listadoFacturas)
+            {
+                int filaIndex = CalcularMesesDiferencia(fechaDesde, factura.FechaAlta);
+                DataRow fila = tablaMes.Rows[filaIndex];
+                float total = (float)fila["Total"] + factura.Monto;
+                fila["Total"] = total;
+            }
+
+            //Refrescar Reporte
+            ReportParameter fechaDesdeParametro = new ReportParameter("prFechaDesde", String.Format("{0:MMMM yyyy}", fechaDesde));
+            ReportParameter fechaHastaParametro = new ReportParameter("prFechaHasta", String.Format("{0:MMMM yyyy}", fechaHasta));
+            rpvFacturacionMes.LocalReport.SetParameters(new ReportParameter[] { fechaDesdeParametro, fechaHastaParametro });
+            rpvFacturacionMes.LocalReport.DataSources.Clear();
+            rpvFacturacionMes.LocalReport.DataSources.Add(new ReportDataSource("dsFacturasMes", tablaMes));
+            rpvFacturacionMes.RefreshReport();
+        }
+
+        private int CalcularMesesDiferencia(DateTime fechaInicio, DateTime fechaFinal)
+        {
+            int mesesDif = fechaFinal.Month - fechaInicio.Month;
+            if (fechaFinal.Year != fechaInicio.Year)
+                mesesDif += 12;
+            return mesesDif;
         }
     }
 }

@@ -36,7 +36,6 @@ namespace TP_PAV.Interfaz.Reportes
             this.dtpHasta = new System.Windows.Forms.DateTimePicker();
             this.rpvFacturacionMes = new Microsoft.Reporting.WinForms.ReportViewer();
             this.btnConsultar = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // dtpDesde
@@ -79,6 +78,7 @@ namespace TP_PAV.Interfaz.Reportes
             // 
             // rpvFacturacionMes
             // 
+            this.rpvFacturacionMes.LocalReport.ReportEmbeddedResource = "TP_PAV.Interfaz.Reportes.rptFacturacionMes.rdlc";
             this.rpvFacturacionMes.Location = new System.Drawing.Point(12, 38);
             this.rpvFacturacionMes.Name = "rpvFacturacionMes";
             this.rpvFacturacionMes.ServerReport.BearerToken = null;
@@ -95,21 +95,11 @@ namespace TP_PAV.Interfaz.Reportes
             this.btnConsultar.UseVisualStyleBackColor = true;
             this.btnConsultar.Click += new System.EventHandler(this.btnConsultar_Click);
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(540, 12);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "label1";
-            // 
             // frmReporteFacturacionMes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.btnConsultar);
             this.Controls.Add(this.rpvFacturacionMes);
             this.Controls.Add(this.lblHasta);
@@ -135,6 +125,5 @@ namespace TP_PAV.Interfaz.Reportes
         private System.Windows.Forms.DateTimePicker dtpHasta;
         private Microsoft.Reporting.WinForms.ReportViewer rpvFacturacionMes;
         private System.Windows.Forms.Button btnConsultar;
-        private System.Windows.Forms.Label label1;
     }
 }
