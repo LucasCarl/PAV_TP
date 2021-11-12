@@ -29,7 +29,7 @@ namespace TP_PAV.Datos
             try
             {
                 //Conexion a DB
-                dbConexion.ConnectionString = "Data Source=.\\SQLEXPRESS;Initial Catalog=BugTrackerTP_2;Integrated Security=true;";
+                dbConexion.ConnectionString = "Data Source=.\\SQLEXPRESS;Initial Catalog=BugTrackerTP;Integrated Security=true;";
                 dbConexion.Open();
                 //Genero transaccion
                 transaccion = dbConexion.BeginTransaction();
@@ -48,18 +48,6 @@ namespace TP_PAV.Datos
                 facturaInsert.Parameters.AddWithValue("idUsuario", factura.UsuarioCreador.IdUsuario);
 
                 facturaInsert.ExecuteNonQuery();
-
-                /*
-                //Tomar idfactura
-                SqlCommand idfacturaSelect = new SqlCommand();
-                idfacturaSelect.Connection = dbConexion;
-                idfacturaSelect.CommandType = CommandType.Text;
-                idfacturaSelect.Transaction = transaccion;
-                idfacturaSelect.CommandText = "SELECT numero_factura FROM Facturas WHERE numero_factura = " + factura.NumeroFactura;
-                DataTable resultadoConsulta = new DataTable();
-                resultadoConsulta.Load(idfacturaSelect.ExecuteReader());
-                factura.IdFactura = Convert.ToInt32(resultadoConsulta.Rows[0]["id_factura"].ToString());
-                */
 
                 //Insertar Detalle
                 foreach (DetalleFactura detalle in factura.ListadoDetalles)
@@ -185,9 +173,9 @@ namespace TP_PAV.Datos
             if (parametros.ContainsKey("idUsuario"))
                 sqlComando += " AND id_usuario_creador = @idUsuario ";
             if (parametros.ContainsKey("fechaDesde"))
-                sqlComando += " AND fecha > @fechaDesde ";
+                sqlComando += " AND fecha >= @fechaDesde ";
             if (parametros.ContainsKey("fechaHasta"))
-                sqlComando += " AND fecha < @fechaHasta ";
+                sqlComando += " AND fecha <= @fechaHasta ";
             sqlComando += " ORDER BY numero_factura";
 
             var resultadoConsulta = DataManager.Instancia().ConsultaSQL(sqlComando, parametros).Rows;

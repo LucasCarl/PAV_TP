@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using TP_PAV.Interfaz.Consultas;
+using TP_PAV.Interfaz.Reportes;
 
 namespace TP_PAV.Interfaz
 {
@@ -57,6 +58,12 @@ namespace TP_PAV.Interfaz
         {
             frmConsultaFacturas consultaFacturas = new frmConsultaFacturas();
             consultaFacturas.ShowDialog();
+        }
+
+        private void tsmFacturacionMes_Click(object sender, EventArgs e)
+        {
+            frmReporteFacturacionMes facturacionMes = new frmReporteFacturacionMes();
+            facturacionMes.ShowDialog();
         }
     }
 }

@@ -67,9 +67,9 @@ namespace TP_PAV.Datos
             if (parametros.ContainsKey("razon"))
                 sqlComando += " AND C.razon_social LIKE '%' + @razon + '%' ";
             if (parametros.ContainsKey("fechaDesde"))
-                sqlComando += " AND C.fecha_alta > @fechaDesde ";
+                sqlComando += " AND C.fecha_alta >= @fechaDesde ";
             if (parametros.ContainsKey("fechaHasta"))
-                sqlComando += " AND C.fecha_alta < @fechaHasta ";
+                sqlComando += " AND C.fecha_alta <= @fechaHasta ";
             if (parametros.ContainsKey("calle"))
                 sqlComando += " AND C.calle LIKE '%' + @calle + '%' ";
             if (parametros.ContainsKey("numero"))

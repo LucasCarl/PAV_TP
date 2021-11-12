@@ -82,8 +82,8 @@ namespace TP_PAV.Interfaz.Consultas
                 parametros.Add("idUsuario", cbxUsuario.SelectedValue);
             if (chkFecha.Checked)
             {
-                parametros.Add("fechaDesde", dtpFechaDesde.Value);
-                parametros.Add("fechaHasta", dtpFechaHasta.Value);
+                parametros.Add("fechaDesde", dtpFechaDesde.Value.Date);
+                parametros.Add("fechaHasta", dtpFechaHasta.Value.Date);
             }
 
             IList<Factura> listadoFacturas = facturaService.ObtenerFacturas(parametros);

@@ -92,8 +92,8 @@ namespace TP_PAV.Interfaz.Consultas
                 parametros.Add("razon", txtRazon.Text);
             if (chkFecha.CheckState == CheckState.Checked)
             {
-                parametros.Add("fechaDesde", dtpFechaDesde.Value);
-                parametros.Add("fechaHasta", dtpFechaHasta.Value);
+                parametros.Add("fechaDesde", dtpFechaDesde.Value.Date);
+                parametros.Add("fechaHasta", dtpFechaHasta.Value.Date);
             }
             if (!string.IsNullOrEmpty(txtCalle.Text))
                 parametros.Add("calle", txtCalle.Text);

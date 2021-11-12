@@ -35,7 +35,7 @@ CREATE TABLE [dbo].[Clientes](
 	[razon_social] [varchar](50) NULL,
 	[calle] [varchar](500) NULL,
 	[numero] [varchar](50) NULL,
-	[fecha_alta] [datetime] NULL,
+	[fecha_alta] [date] NULL,
 	[id_barrio] [int] NULL,
 	[id_contacto] [int] NULL,
 	[borrado] [bit] NOT NULL,
@@ -166,7 +166,7 @@ GO
 CREATE TABLE [dbo].[Facturas](
 	[numero_factura] [int] NOT NULL,
 	[id_cliente] [int] NOT NULL,
-	[fecha] [datetime] NOT NULL,
+	[fecha] [date] NOT NULL,
 	[id_usuario_creador] [int] NOT NULL,
  CONSTRAINT [PK_Factura] PRIMARY KEY CLUSTERED 
 (
