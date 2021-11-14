@@ -82,7 +82,7 @@ namespace TP_PAV.Interfaz.Reportes
             this.rpvFacturacionMes.Location = new System.Drawing.Point(12, 38);
             this.rpvFacturacionMes.Name = "rpvFacturacionMes";
             this.rpvFacturacionMes.ServerReport.BearerToken = null;
-            this.rpvFacturacionMes.Size = new System.Drawing.Size(776, 400);
+            this.rpvFacturacionMes.Size = new System.Drawing.Size(776, 401);
             this.rpvFacturacionMes.TabIndex = 4;
             // 
             // btnConsultar
@@ -99,7 +99,8 @@ namespace TP_PAV.Interfaz.Reportes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(199)))), ((int)(((byte)(210)))));
+            this.ClientSize = new System.Drawing.Size(800, 451);
             this.Controls.Add(this.btnConsultar);
             this.Controls.Add(this.rpvFacturacionMes);
             this.Controls.Add(this.lblHasta);
@@ -107,6 +108,8 @@ namespace TP_PAV.Interfaz.Reportes
             this.Controls.Add(this.lblDesde);
             this.Controls.Add(this.dtpDesde);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(560, 0);
             this.Name = "frmReporteFacturacionMes";
             this.Text = "Facturación por Mes";
             this.Load += new System.EventHandler(this.frmReporteFacturacionMes_Load);

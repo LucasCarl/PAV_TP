@@ -6,8 +6,8 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Microsoft.Reporting.WinForms;
 using System.Windows.Forms;
+using Microsoft.Reporting.WinForms;
 using TP_PAV.Negocio;
 using TP_PAV.Entidades;
 

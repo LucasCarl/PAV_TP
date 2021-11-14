@@ -65,5 +65,11 @@ namespace TP_PAV.Interfaz
             frmReporteFacturacionMes facturacionMes = new frmReporteFacturacionMes();
             facturacionMes.ShowDialog();
         }
+
+        private void listadoDeFacturasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmListadoFacturas listadoFacturas = new frmListadoFacturas();
+            listadoFacturas.ShowDialog();
+        }
     }
 }

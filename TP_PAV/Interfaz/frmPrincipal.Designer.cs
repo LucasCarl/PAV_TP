@@ -40,8 +40,10 @@ namespace TP_PAV.Interfaz
             this.generarFacturaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reportesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.consultarFacturasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.lblUsuario = new System.Windows.Forms.Label();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.tsmFacturacionMes = new System.Windows.Forms.ToolStripMenuItem();
+            this.listadoDeFacturasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.lblUsuario = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -117,7 +119,9 @@ namespace TP_PAV.Interfaz
             // 
             this.reportesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.consultarFacturasToolStripMenuItem,
-            this.tsmFacturacionMes});
+            this.toolStripSeparator1,
+            this.tsmFacturacionMes,
+            this.listadoDeFacturasToolStripMenuItem});
             this.reportesToolStripMenuItem.Name = "reportesToolStripMenuItem";
             this.reportesToolStripMenuItem.Size = new System.Drawing.Size(65, 20);
             this.reportesToolStripMenuItem.Text = "Reportes";
@@ -125,9 +129,28 @@ namespace TP_PAV.Interfaz
             // consultarFacturasToolStripMenuItem
             // 
             this.consultarFacturasToolStripMenuItem.Name = "consultarFacturasToolStripMenuItem";
-            this.consultarFacturasToolStripMenuItem.Size = new System.Drawing.Size(182, 22);
-            this.consultarFacturasToolStripMenuItem.Text = "Consultar Facturas";
+            this.consultarFacturasToolStripMenuItem.Size = new System.Drawing.Size(242, 22);
+            this.consultarFacturasToolStripMenuItem.Text = "Imprimir Factura";
             this.consultarFacturasToolStripMenuItem.Click += new System.EventHandler(this.consultarFacturasToolStripMenuItem_Click);
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(239, 6);
+            // 
+            // tsmFacturacionMes
+            // 
+            this.tsmFacturacionMes.Name = "tsmFacturacionMes";
+            this.tsmFacturacionMes.Size = new System.Drawing.Size(242, 22);
+            this.tsmFacturacionMes.Text = "Facturación por Mes en Periodo";
+            this.tsmFacturacionMes.Click += new System.EventHandler(this.tsmFacturacionMes_Click);
+            // 
+            // listadoDeFacturasToolStripMenuItem
+            // 
+            this.listadoDeFacturasToolStripMenuItem.Name = "listadoDeFacturasToolStripMenuItem";
+            this.listadoDeFacturasToolStripMenuItem.Size = new System.Drawing.Size(242, 22);
+            this.listadoDeFacturasToolStripMenuItem.Text = "Listado de Facturas";
+            this.listadoDeFacturasToolStripMenuItem.Click += new System.EventHandler(this.listadoDeFacturasToolStripMenuItem_Click);
             // 
             // lblUsuario
             // 
@@ -139,13 +162,6 @@ namespace TP_PAV.Interfaz
             this.lblUsuario.TabIndex = 1;
             this.lblUsuario.Text = "Usuario: ";
             this.lblUsuario.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // tsmFacturacionMes
-            // 
-            this.tsmFacturacionMes.Name = "tsmFacturacionMes";
-            this.tsmFacturacionMes.Size = new System.Drawing.Size(182, 22);
-            this.tsmFacturacionMes.Text = "Facturación por Mes";
-            this.tsmFacturacionMes.Click += new System.EventHandler(this.tsmFacturacionMes_Click);
             // 
             // frmPrincipal
             // 
@@ -186,5 +202,7 @@ namespace TP_PAV.Interfaz
         private System.Windows.Forms.ToolStripMenuItem generarFacturaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem consultarFacturasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem tsmFacturacionMes;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.ToolStripMenuItem listadoDeFacturasToolStripMenuItem;
     }
 }

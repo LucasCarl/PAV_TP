@@ -165,6 +165,17 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>dsFacturasMes.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Interfaz\Reportes\dsListadoFacturas1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsListadoFacturas.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaz\Reportes\frmListadoFacturas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interfaz\Reportes\frmListadoFacturas.Designer.cs">
+      <DependentUpon>frmListadoFacturas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Interfaz\Reportes\frmReporteFactura.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -223,6 +234,9 @@
     <EmbeddedResource Include="Interfaz\frmPrincipal.resx">
       <DependentUpon>frmPrincipal.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Interfaz\Reportes\frmListadoFacturas.resx">
+      <DependentUpon>frmListadoFacturas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Interfaz\Reportes\frmReporteFactura.resx">
       <DependentUpon>frmReporteFactura.cs</DependentUpon>
     </EmbeddedResource>
@@ -231,6 +245,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Interfaz\Reportes\rptFactura.rdlc" />
     <EmbeddedResource Include="Interfaz\Reportes\rptFacturacionMes.rdlc" />
+    <EmbeddedResource Include="Interfaz\Reportes\rptListadoFacturas.rdlc" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -261,6 +276,17 @@
     </None>
     <None Include="Interfaz\Reportes\dsFacturasMes.xss">
       <DependentUpon>dsFacturasMes.xsd</DependentUpon>
+    </None>
+    <None Include="Interfaz\Reportes\dsListadoFacturas.xsc">
+      <DependentUpon>dsListadoFacturas.xsd</DependentUpon>
+    </None>
+    <None Include="Interfaz\Reportes\dsListadoFacturas.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsListadoFacturas1.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Interfaz\Reportes\dsListadoFacturas.xss">
+      <DependentUpon>dsListadoFacturas.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

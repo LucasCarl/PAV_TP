@@ -110,3 +110,4 @@ F:\UTN Programacion\PAV I\PAV_TP\TP_PAV\obj\Debug\TP_PAV.Interfaz.frmLogin.resou
 F:\UTN Programacion\PAV I\PAV_TP\TP_PAV\obj\Debug\TP_PAV.Interfaz.Consultas.frmABMContacto.resources
 F:\UTN Programacion\PAV I\PAV_TP\TP_PAV\obj\Debug\TP_PAV.Interfaz.Consultas.frmConsultaFacturas.resources
 F:\UTN Programacion\PAV I\PAV_TP\TP_PAV\obj\Debug\TP_PAV.Interfaz.Reportes.frmReporteFacturacionMes.resources
+F:\UTN Programacion\PAV I\PAV_TP\TP_PAV\obj\Debug\TP_PAV.Interfaz.Reportes.frmListadoFacturas.resources
