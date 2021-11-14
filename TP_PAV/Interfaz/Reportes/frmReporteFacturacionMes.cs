@@ -66,6 +66,16 @@ namespace TP_PAV.Interfaz.Reportes
                 MessageBox.Show("El periodo debe ser menor a un año.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
+            if (CalcularMesesDiferencia(fechaDesde, fechaHasta) == 0)
+            {
+                MessageBox.Show("El periodo debe tener al menos un mes de diferencia.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            if ((DateTime.Today.Month - fechaHasta.Month) < 0)
+            {
+                MessageBox.Show("El periodo no puede superar el mes actual.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
 
             //Crear datatable
             DataTable tablaMes = new DataTable();
@@ -84,10 +94,11 @@ namespace TP_PAV.Interfaz.Reportes
                 tablaMes.Rows.Add(fila);
             }
 
-            //Cargar facturas
+            //Coloca fecha hasta en el ultimo dia del mes
             int diasMes = DateTime.DaysInMonth(fechaHasta.Year, fechaHasta.Month);
             fechaHasta = new DateTime(fechaHasta.Year, fechaHasta.Month, diasMes);
 
+            //Cargar facturas
             FacturaService facturaService = new FacturaService();
             Dictionary<string, object> parametros = new Dictionary<string, object>();
             parametros.Add("fechaDesde", fechaDesde);

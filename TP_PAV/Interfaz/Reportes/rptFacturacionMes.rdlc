@@ -79,6 +79,8 @@
                       </ChartDataPointValues>
                       <ChartDataLabel>
                         <Style />
+                        <Label>=Fields!Mes.Value</Label>
+                        <Position>Center</Position>
                       </ChartDataLabel>
                       <Style />
                       <ChartMarker>
@@ -101,8 +103,10 @@
                   <ValueAxisName>Primary</ValueAxisName>
                   <CategoryAxisName>Primary</CategoryAxisName>
                   <ChartSmartLabel>
+                    <AllowOutSidePlotArea>True</AllowOutSidePlotArea>
                     <CalloutLineColor>Black</CalloutLineColor>
-                    <MinMovingDistance>0pt</MinMovingDistance>
+                    <ShowOverlapped>true</ShowOverlapped>
+                    <MarkerOverlapping>true</MarkerOverlapping>
                   </ChartSmartLabel>
                 </ChartSeries>
               </ChartSeriesCollection>
@@ -340,7 +344,7 @@
               </ChartArea>
             </ChartAreas>
             <ChartLegends>
-              <ChartLegend Name="Default">
+              <ChartLegend Name="Legend1">
                 <Style>
                   <BackgroundGradientType>None</BackgroundGradientType>
                   <FontSize>8pt</FontSize>
@@ -359,14 +363,14 @@
             </ChartLegends>
             <ChartTitles>
               <ChartTitle Name="Default">
-                <Caption>Título del gráfico</Caption>
+                <Caption />
                 <Style>
                   <BackgroundGradientType>None</BackgroundGradientType>
                   <FontSize>9pt</FontSize>
                   <FontWeight>Normal</FontWeight>
                   <TextAlign>Left</TextAlign>
                   <VerticalAlign>Top</VerticalAlign>
-                  <Color>#a6a6a6</Color>
+                  <Color>DimGray</Color>
                 </Style>
                 <Position>TopLeft</Position>
               </ChartTitle>
@@ -389,10 +393,10 @@
               </Style>
             </ChartNoDataMessage>
             <DataSetName>dsFacturasMes</DataSetName>
-            <Top>6.63787cm</Top>
-            <Left>10.47733cm</Left>
-            <Height>5cm</Height>
-            <Width>7.58172cm</Width>
+            <Top>6.34648cm</Top>
+            <Left>9.20733cm</Left>
+            <Height>5.50271cm</Height>
+            <Width>8.85172cm</Width>
             <Style>
               <Border>
                 <Color>LightGrey</Color>
@@ -486,6 +490,8 @@
                         <Color>#5c5c5c</Color>
                       </Style>
                     </ChartAxisTitle>
+                    <Interval>1</Interval>
+                    <LabelIntervalType>Auto</LabelIntervalType>
                     <ChartMajorGridLines>
                       <Enabled>False</Enabled>
                       <Style>
@@ -521,6 +527,9 @@
                     <CrossAt>NaN</CrossAt>
                     <Minimum>NaN</Minimum>
                     <Maximum>NaN</Maximum>
+                    <AllowLabelRotation>Rotate45</AllowLabelRotation>
+                    <LabelsAutoFitDisabled>true</LabelsAutoFitDisabled>
+                    <MinFontSize>5pt</MinFontSize>
                     <ChartAxisScaleBreak>
                       <Style />
                     </ChartAxisScaleBreak>
@@ -750,9 +759,9 @@
               </Style>
             </ChartNoDataMessage>
             <DataSetName>dsFacturasMes</DataSetName>
-            <Top>1.17009cm</Top>
+            <Top>0.70583cm</Top>
             <Left>0.42016cm</Left>
-            <Height>5cm</Height>
+            <Height>5.46426cm</Height>
             <Width>17.63889cm</Width>
             <ZIndex>1</ZIndex>
             <Style>
@@ -791,7 +800,7 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox1</rd:DefaultName>
-            <Top>0.3937cm</Top>
+            <Top>0.10583cm</Top>
             <Left>0.73766cm</Left>
             <Height>0.6cm</Height>
             <Width>9.56438cm</Width>
@@ -806,6 +815,255 @@
               <PaddingBottom>2pt</PaddingBottom>
             </Style>
           </Textbox>
+          <Tablix Name="Tablix1">
+            <TablixBody>
+              <TablixColumns>
+                <TablixColumn>
+                  <Width>3.10986cm</Width>
+                </TablixColumn>
+                <TablixColumn>
+                  <Width>2.26319cm</Width>
+                </TablixColumn>
+              </TablixColumns>
+              <TablixRows>
+                <TablixRow>
+                  <Height>0.62646cm</Height>
+                  <TablixCells>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox2">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Mes</Value>
+                                  <Style />
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox2</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>DimGray</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <BackgroundColor>LightGreen</BackgroundColor>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox4">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Total</Value>
+                                  <Style />
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox4</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>DimGray</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <BackgroundColor>LightGreen</BackgroundColor>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                  </TablixCells>
+                </TablixRow>
+                <TablixRow>
+                  <Height>0.62646cm</Height>
+                  <TablixCells>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Mes">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Fields!Mes.Value</Value>
+                                  <Style />
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Mes</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>DimGray</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Total">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Fields!Total.Value</Value>
+                                  <Style>
+                                    <Format>'$'0.00;('$'0.00)</Format>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Total</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>DimGray</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                            <rd:FormatSymbolCulture>es-AR</rd:FormatSymbolCulture>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                  </TablixCells>
+                </TablixRow>
+                <TablixRow>
+                  <Height>0.62646cm</Height>
+                  <TablixCells>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox8">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>TOTAL PERIODO:</Value>
+                                  <Style />
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox8</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>DimGray</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <BackgroundColor>LightGrey</BackgroundColor>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox9">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Round(Sum(Fields!Total.Value), 2)</Value>
+                                  <Style>
+                                    <Format>'$'0.00;('$'0.00)</Format>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox9</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>DimGray</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <BackgroundColor>LightGrey</BackgroundColor>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                            <rd:FormatSymbolCulture>es-AR</rd:FormatSymbolCulture>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                  </TablixCells>
+                </TablixRow>
+              </TablixRows>
+            </TablixBody>
+            <TablixColumnHierarchy>
+              <TablixMembers>
+                <TablixMember />
+                <TablixMember />
+              </TablixMembers>
+            </TablixColumnHierarchy>
+            <TablixRowHierarchy>
+              <TablixMembers>
+                <TablixMember>
+                  <KeepWithGroup>After</KeepWithGroup>
+                </TablixMember>
+                <TablixMember>
+                  <Group Name="Detalles" />
+                </TablixMember>
+                <TablixMember>
+                  <KeepWithGroup>Before</KeepWithGroup>
+                </TablixMember>
+              </TablixMembers>
+            </TablixRowHierarchy>
+            <DataSetName>dsFacturasMes</DataSetName>
+            <Top>6.63787cm</Top>
+            <Left>1.50495cm</Left>
+            <Height>1.87938cm</Height>
+            <Width>5.37304cm</Width>
+            <ZIndex>3</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+            </Style>
+          </Tablix>
         </ReportItems>
         <Height>121.40575mm</Height>
         <Style />
@@ -816,10 +1074,47 @@
           <Height>1.53458cm</Height>
           <PrintOnFirstPage>true</PrintOnFirstPage>
           <PrintOnLastPage>true</PrintOnLastPage>
+          <ReportItems>
+            <Textbox Name="Textbox3">
+              <CanGrow>true</CanGrow>
+              <KeepTogether>true</KeepTogether>
+              <Paragraphs>
+                <Paragraph>
+                  <TextRuns>
+                    <TextRun>
+                      <Value>BugTracker SA. - Facturación por mes</Value>
+                      <Style>
+                        <FontFamily>OCR A Extended</FontFamily>
+                        <FontSize>22pt</FontSize>
+                        <TextDecoration>None</TextDecoration>
+                        <Color>Maroon</Color>
+                      </Style>
+                    </TextRun>
+                  </TextRuns>
+                  <Style />
+                </Paragraph>
+              </Paragraphs>
+              <rd:DefaultName>Textbox2</rd:DefaultName>
+              <Top>0.2202cm</Top>
+              <Left>0.42016cm</Left>
+              <Height>1.17327cm</Height>
+              <Width>17.63889cm</Width>
+              <Style>
+                <Border>
+                  <Style>None</Style>
+                </Border>
+                <PaddingLeft>2pt</PaddingLeft>
+                <PaddingRight>2pt</PaddingRight>
+                <PaddingTop>2pt</PaddingTop>
+                <PaddingBottom>2pt</PaddingBottom>
+              </Style>
+            </Textbox>
+          </ReportItems>
           <Style>
             <Border>
               <Style>None</Style>
             </Border>
+            <BackgroundColor>PaleTurquoise</BackgroundColor>
           </Style>
         </PageHeader>
         <PageHeight>29.7cm</PageHeight>

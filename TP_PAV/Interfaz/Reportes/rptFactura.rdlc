@@ -316,7 +316,9 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>=Fields!Precio.Value</Value>
-                                  <Style />
+                                  <Style>
+                                    <Format>'$'0.00;('$'0.00)</Format>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style>
@@ -335,6 +337,7 @@
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
                             <PaddingBottom>2pt</PaddingBottom>
+                            <rd:FormatSymbolCulture>es-AR</rd:FormatSymbolCulture>
                           </Style>
                         </Textbox>
                       </CellContents>
@@ -446,7 +449,9 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>=Round(Sum(Fields!Precio.Value), 2)</Value>
-                                  <Style />
+                                  <Style>
+                                    <Format>'$'0.00;('$'0.00)</Format>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style>
@@ -465,8 +470,10 @@
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
                             <PaddingBottom>2pt</PaddingBottom>
+                            <rd:FormatSymbolCulture>es-AR</rd:FormatSymbolCulture>
                           </Style>
                         </Textbox>
+                        <rd:Selected>true</rd:Selected>
                       </CellContents>
                     </TablixCell>
                   </TablixCells>
