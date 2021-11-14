@@ -41,7 +41,7 @@ namespace TP_PAV.Interfaz.Consultas
             this.txtNombre.MaxLength = 50;
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(103, 20);
-            this.txtNombre.TabIndex = 3;
+            this.txtNombre.TabIndex = 1;
             // 
             // lblNombre
             // 
@@ -57,7 +57,7 @@ namespace TP_PAV.Interfaz.Consultas
             this.btnAccion.Location = new System.Drawing.Point(122, 61);
             this.btnAccion.Name = "btnAccion";
             this.btnAccion.Size = new System.Drawing.Size(64, 20);
-            this.btnAccion.TabIndex = 9;
+            this.btnAccion.TabIndex = 2;
             this.btnAccion.Text = "Accion";
             this.btnAccion.UseVisualStyleBackColor = true;
             this.btnAccion.Click += new System.EventHandler(this.btnAccion_Click);

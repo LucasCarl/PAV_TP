@@ -48,7 +48,7 @@ namespace TP_PAV.Interfaz.Consultas
             this.btnBorrar.Location = new System.Drawing.Point(148, 265);
             this.btnBorrar.Name = "btnBorrar";
             this.btnBorrar.Size = new System.Drawing.Size(64, 20);
-            this.btnBorrar.TabIndex = 22;
+            this.btnBorrar.TabIndex = 4;
             this.btnBorrar.Text = "Borrar";
             this.btnBorrar.UseVisualStyleBackColor = true;
             this.btnBorrar.Click += new System.EventHandler(this.btnBorrar_Click);
@@ -59,7 +59,7 @@ namespace TP_PAV.Interfaz.Consultas
             this.btnEditar.Location = new System.Drawing.Point(79, 265);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(64, 20);
-            this.btnEditar.TabIndex = 21;
+            this.btnEditar.TabIndex = 3;
             this.btnEditar.Text = "Editar";
             this.btnEditar.UseVisualStyleBackColor = true;
             this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
@@ -69,7 +69,7 @@ namespace TP_PAV.Interfaz.Consultas
             this.btnNuevo.Location = new System.Drawing.Point(9, 265);
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.Size = new System.Drawing.Size(64, 20);
-            this.btnNuevo.TabIndex = 20;
+            this.btnNuevo.TabIndex = 2;
             this.btnNuevo.Text = "Nuevo";
             this.btnNuevo.UseVisualStyleBackColor = true;
             this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
@@ -89,6 +89,7 @@ namespace TP_PAV.Interfaz.Consultas
             this.dgvTabla.RowTemplate.Height = 25;
             this.dgvTabla.Size = new System.Drawing.Size(243, 174);
             this.dgvTabla.TabIndex = 18;
+            this.dgvTabla.TabStop = false;
             this.dgvTabla.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTabla_CellClick);
             // 
             // Nombre
@@ -105,7 +106,7 @@ namespace TP_PAV.Interfaz.Consultas
             this.btnConsultar.Location = new System.Drawing.Point(10, 60);
             this.btnConsultar.Name = "btnConsultar";
             this.btnConsultar.Size = new System.Drawing.Size(64, 20);
-            this.btnConsultar.TabIndex = 17;
+            this.btnConsultar.TabIndex = 1;
             this.btnConsultar.Text = "Consultar";
             this.btnConsultar.UseVisualStyleBackColor = true;
             this.btnConsultar.Click += new System.EventHandler(this.btnConsultar_Click);
@@ -116,7 +117,7 @@ namespace TP_PAV.Interfaz.Consultas
             this.txtNombre.MinimumSize = new System.Drawing.Size(117, 23);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(117, 20);
-            this.txtNombre.TabIndex = 24;
+            this.txtNombre.TabIndex = 0;
             // 
             // lblNombre
             // 

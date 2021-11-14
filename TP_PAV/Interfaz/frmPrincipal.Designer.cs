@@ -44,6 +44,8 @@ namespace TP_PAV.Interfaz
             this.tsmFacturacionMes = new System.Windows.Forms.ToolStripMenuItem();
             this.listadoDeFacturasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lblUsuario = new System.Windows.Forms.Label();
+            this.ayudaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.acercaDelProductoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -53,7 +55,8 @@ namespace TP_PAV.Interfaz
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.soporteToolStripMenuItem,
             this.transaccionesToolStripMenuItem,
-            this.reportesToolStripMenuItem});
+            this.reportesToolStripMenuItem,
+            this.ayudaToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
@@ -75,28 +78,28 @@ namespace TP_PAV.Interfaz
             // contactoToolStripMenuItem
             // 
             this.contactoToolStripMenuItem.Name = "contactoToolStripMenuItem";
-            this.contactoToolStripMenuItem.Size = new System.Drawing.Size(123, 22);
+            this.contactoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.contactoToolStripMenuItem.Text = "Contacto";
             this.contactoToolStripMenuItem.Click += new System.EventHandler(this.contactoToolStripMenuItem_Click);
             // 
             // barrioToolStripMenuItem
             // 
             this.barrioToolStripMenuItem.Name = "barrioToolStripMenuItem";
-            this.barrioToolStripMenuItem.Size = new System.Drawing.Size(123, 22);
+            this.barrioToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.barrioToolStripMenuItem.Text = "Barrio";
             this.barrioToolStripMenuItem.Click += new System.EventHandler(this.barrioToolStripMenuItem_Click);
             // 
             // clienteToolStripMenuItem
             // 
             this.clienteToolStripMenuItem.Name = "clienteToolStripMenuItem";
-            this.clienteToolStripMenuItem.Size = new System.Drawing.Size(123, 22);
+            this.clienteToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.clienteToolStripMenuItem.Text = "Cliente";
             this.clienteToolStripMenuItem.Click += new System.EventHandler(this.clienteToolStripMenuItem_Click);
             // 
             // proyectoToolStripMenuItem
             // 
             this.proyectoToolStripMenuItem.Name = "proyectoToolStripMenuItem";
-            this.proyectoToolStripMenuItem.Size = new System.Drawing.Size(123, 22);
+            this.proyectoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.proyectoToolStripMenuItem.Text = "Proyecto";
             this.proyectoToolStripMenuItem.Click += new System.EventHandler(this.proyectoToolStripMenuItem_Click);
             // 
@@ -111,7 +114,7 @@ namespace TP_PAV.Interfaz
             // generarFacturaToolStripMenuItem
             // 
             this.generarFacturaToolStripMenuItem.Name = "generarFacturaToolStripMenuItem";
-            this.generarFacturaToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
+            this.generarFacturaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.generarFacturaToolStripMenuItem.Text = "Generar Factura";
             this.generarFacturaToolStripMenuItem.Click += new System.EventHandler(this.generarFacturaToolStripMenuItem_Click);
             // 
@@ -163,6 +166,21 @@ namespace TP_PAV.Interfaz
             this.lblUsuario.Text = "Usuario: ";
             this.lblUsuario.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
+            // ayudaToolStripMenuItem
+            // 
+            this.ayudaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.acercaDelProductoToolStripMenuItem});
+            this.ayudaToolStripMenuItem.Name = "ayudaToolStripMenuItem";
+            this.ayudaToolStripMenuItem.Size = new System.Drawing.Size(53, 20);
+            this.ayudaToolStripMenuItem.Text = "Ayuda";
+            // 
+            // acercaDelProductoToolStripMenuItem
+            // 
+            this.acercaDelProductoToolStripMenuItem.Name = "acercaDelProductoToolStripMenuItem";
+            this.acercaDelProductoToolStripMenuItem.Size = new System.Drawing.Size(254, 22);
+            this.acercaDelProductoToolStripMenuItem.Text = "Acerca del Sistema de Facturación";
+            this.acercaDelProductoToolStripMenuItem.Click += new System.EventHandler(this.acercaDelProductoToolStripMenuItem_Click);
+            // 
             // frmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -204,5 +222,7 @@ namespace TP_PAV.Interfaz
         private System.Windows.Forms.ToolStripMenuItem tsmFacturacionMes;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripMenuItem listadoDeFacturasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ayudaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem acercaDelProductoToolStripMenuItem;
     }
 }

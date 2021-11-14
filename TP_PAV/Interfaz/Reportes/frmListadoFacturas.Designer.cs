@@ -88,7 +88,7 @@ namespace TP_PAV.Interfaz.Reportes
             this.cbxCliente.Location = new System.Drawing.Point(68, 32);
             this.cbxCliente.Name = "cbxCliente";
             this.cbxCliente.Size = new System.Drawing.Size(126, 21);
-            this.cbxCliente.TabIndex = 2;
+            this.cbxCliente.TabIndex = 0;
             // 
             // gbxFiltros
             // 
@@ -123,7 +123,7 @@ namespace TP_PAV.Interfaz.Reportes
             this.gbxFechaEmision.Location = new System.Drawing.Point(200, 16);
             this.gbxFechaEmision.Name = "gbxFechaEmision";
             this.gbxFechaEmision.Size = new System.Drawing.Size(324, 47);
-            this.gbxFechaEmision.TabIndex = 38;
+            this.gbxFechaEmision.TabIndex = 1;
             this.gbxFechaEmision.TabStop = false;
             this.gbxFechaEmision.Text = "Fecha Emisión";
             // 
@@ -133,7 +133,7 @@ namespace TP_PAV.Interfaz.Reportes
             this.chkFecha.Location = new System.Drawing.Point(85, 0);
             this.chkFecha.Name = "chkFecha";
             this.chkFecha.Size = new System.Drawing.Size(15, 14);
-            this.chkFecha.TabIndex = 36;
+            this.chkFecha.TabIndex = 1;
             this.chkFecha.UseVisualStyleBackColor = true;
             this.chkFecha.CheckedChanged += new System.EventHandler(this.chkFecha_CheckedChanged);
             // 
@@ -154,7 +154,7 @@ namespace TP_PAV.Interfaz.Reportes
             this.dtpFechaHasta.Location = new System.Drawing.Point(215, 19);
             this.dtpFechaHasta.Name = "dtpFechaHasta";
             this.dtpFechaHasta.Size = new System.Drawing.Size(100, 20);
-            this.dtpFechaHasta.TabIndex = 35;
+            this.dtpFechaHasta.TabIndex = 3;
             // 
             // lblFechaDesde
             // 
@@ -173,7 +173,7 @@ namespace TP_PAV.Interfaz.Reportes
             this.dtpFechaDesde.Location = new System.Drawing.Point(53, 19);
             this.dtpFechaDesde.Name = "dtpFechaDesde";
             this.dtpFechaDesde.Size = new System.Drawing.Size(100, 20);
-            this.dtpFechaDesde.TabIndex = 33;
+            this.dtpFechaDesde.TabIndex = 2;
             // 
             // frmListadoFacturas
             // 
@@ -186,7 +186,7 @@ namespace TP_PAV.Interfaz.Reportes
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimumSize = new System.Drawing.Size(670, 39);
             this.Name = "frmListadoFacturas";
-            this.Text = "frmListadoFacturas";
+            this.Text = "Listado de Facturas";
             this.Load += new System.EventHandler(this.frmListadoFacturas_Load);
             this.ResizeBegin += new System.EventHandler(this.frmListadoFacturas_ResizeBegin);
             this.Resize += new System.EventHandler(this.frmListadoFacturas_Resize);

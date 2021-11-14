@@ -60,7 +60,7 @@ namespace TP_PAV.Interfaz.Consultas
             this.btnBorrar.Location = new System.Drawing.Point(150, 317);
             this.btnBorrar.Name = "btnBorrar";
             this.btnBorrar.Size = new System.Drawing.Size(64, 20);
-            this.btnBorrar.TabIndex = 26;
+            this.btnBorrar.TabIndex = 8;
             this.btnBorrar.Text = "Borrar";
             this.btnBorrar.UseVisualStyleBackColor = true;
             this.btnBorrar.Click += new System.EventHandler(this.btnBorrar_Click);
@@ -71,7 +71,7 @@ namespace TP_PAV.Interfaz.Consultas
             this.btnEditar.Location = new System.Drawing.Point(81, 317);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(64, 20);
-            this.btnEditar.TabIndex = 25;
+            this.btnEditar.TabIndex = 7;
             this.btnEditar.Text = "Editar";
             this.btnEditar.UseVisualStyleBackColor = true;
             this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
@@ -81,7 +81,7 @@ namespace TP_PAV.Interfaz.Consultas
             this.btnNuevo.Location = new System.Drawing.Point(11, 317);
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.Size = new System.Drawing.Size(64, 20);
-            this.btnNuevo.TabIndex = 24;
+            this.btnNuevo.TabIndex = 6;
             this.btnNuevo.Text = "Nuevo";
             this.btnNuevo.UseVisualStyleBackColor = true;
             this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
@@ -105,6 +105,7 @@ namespace TP_PAV.Interfaz.Consultas
             this.dgvTabla.RowTemplate.Height = 25;
             this.dgvTabla.Size = new System.Drawing.Size(389, 174);
             this.dgvTabla.TabIndex = 23;
+            this.dgvTabla.TabStop = false;
             this.dgvTabla.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTabla_CellClick);
             // 
             // Descripcion
@@ -157,7 +158,7 @@ namespace TP_PAV.Interfaz.Consultas
             this.btnConsultar.Location = new System.Drawing.Point(12, 112);
             this.btnConsultar.Name = "btnConsultar";
             this.btnConsultar.Size = new System.Drawing.Size(64, 20);
-            this.btnConsultar.TabIndex = 22;
+            this.btnConsultar.TabIndex = 5;
             this.btnConsultar.Text = "Consultar";
             this.btnConsultar.UseVisualStyleBackColor = true;
             this.btnConsultar.Click += new System.EventHandler(this.btnConsultar_Click);
@@ -165,7 +166,7 @@ namespace TP_PAV.Interfaz.Consultas
             // lblDescripcion
             // 
             this.lblDescripcion.AutoSize = true;
-            this.lblDescripcion.Location = new System.Drawing.Point(15, 47);
+            this.lblDescripcion.Location = new System.Drawing.Point(12, 47);
             this.lblDescripcion.Name = "lblDescripcion";
             this.lblDescripcion.Size = new System.Drawing.Size(63, 13);
             this.lblDescripcion.TabIndex = 27;
@@ -176,19 +177,19 @@ namespace TP_PAV.Interfaz.Consultas
             this.txtDescripcion.Location = new System.Drawing.Point(81, 44);
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.Size = new System.Drawing.Size(100, 20);
-            this.txtDescripcion.TabIndex = 28;
+            this.txtDescripcion.TabIndex = 1;
             // 
             // txtAlcance
             // 
-            this.txtAlcance.Location = new System.Drawing.Point(81, 70);
+            this.txtAlcance.Location = new System.Drawing.Point(81, 78);
             this.txtAlcance.Name = "txtAlcance";
             this.txtAlcance.Size = new System.Drawing.Size(100, 20);
-            this.txtAlcance.TabIndex = 30;
+            this.txtAlcance.TabIndex = 2;
             // 
             // lblAlcance
             // 
             this.lblAlcance.AutoSize = true;
-            this.lblAlcance.Location = new System.Drawing.Point(15, 73);
+            this.lblAlcance.Location = new System.Drawing.Point(29, 81);
             this.lblAlcance.Name = "lblAlcance";
             this.lblAlcance.Size = new System.Drawing.Size(46, 13);
             this.lblAlcance.TabIndex = 29;
@@ -197,7 +198,7 @@ namespace TP_PAV.Interfaz.Consultas
             // lblProducto
             // 
             this.lblProducto.AutoSize = true;
-            this.lblProducto.Location = new System.Drawing.Point(15, 21);
+            this.lblProducto.Location = new System.Drawing.Point(25, 20);
             this.lblProducto.Name = "lblProducto";
             this.lblProducto.Size = new System.Drawing.Size(50, 13);
             this.lblProducto.TabIndex = 31;
@@ -209,7 +210,7 @@ namespace TP_PAV.Interfaz.Consultas
             this.cbxProductos.Location = new System.Drawing.Point(81, 17);
             this.cbxProductos.Name = "cbxProductos";
             this.cbxProductos.Size = new System.Drawing.Size(196, 21);
-            this.cbxProductos.TabIndex = 32;
+            this.cbxProductos.TabIndex = 0;
             // 
             // lblResponsable
             // 
@@ -225,24 +226,24 @@ namespace TP_PAV.Interfaz.Consultas
             this.txtVersion.Location = new System.Drawing.Point(283, 44);
             this.txtVersion.Name = "txtVersion";
             this.txtVersion.Size = new System.Drawing.Size(100, 20);
-            this.txtVersion.TabIndex = 34;
+            this.txtVersion.TabIndex = 3;
             // 
             // lblVersion
             // 
             this.lblVersion.AutoSize = true;
-            this.lblVersion.Location = new System.Drawing.Point(208, 47);
+            this.lblVersion.Location = new System.Drawing.Point(235, 47);
             this.lblVersion.Name = "lblVersion";
             this.lblVersion.Size = new System.Drawing.Size(42, 13);
             this.lblVersion.TabIndex = 33;
-            this.lblVersion.Text = "Version";
+            this.lblVersion.Text = "Versión";
             // 
             // cbxResponsable
             // 
             this.cbxResponsable.FormattingEnabled = true;
-            this.cbxResponsable.Location = new System.Drawing.Point(280, 78);
+            this.cbxResponsable.Location = new System.Drawing.Point(283, 78);
             this.cbxResponsable.Name = "cbxResponsable";
             this.cbxResponsable.Size = new System.Drawing.Size(121, 21);
-            this.cbxResponsable.TabIndex = 36;
+            this.cbxResponsable.TabIndex = 4;
             // 
             // lblFilas
             // 

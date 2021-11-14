@@ -66,7 +66,7 @@ namespace TP_PAV.Interfaz.Consultas
             this.txtApellido.MaxLength = 50;
             this.txtApellido.Name = "txtApellido";
             this.txtApellido.Size = new System.Drawing.Size(103, 20);
-            this.txtApellido.TabIndex = 3;
+            this.txtApellido.TabIndex = 2;
             // 
             // lblApellido
             // 
@@ -83,7 +83,7 @@ namespace TP_PAV.Interfaz.Consultas
             this.txtEmail.MaxLength = 50;
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(172, 20);
-            this.txtEmail.TabIndex = 5;
+            this.txtEmail.TabIndex = 3;
             // 
             // lblEmail
             // 
@@ -100,7 +100,7 @@ namespace TP_PAV.Interfaz.Consultas
             this.txtTelefono.MaxLength = 50;
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.Size = new System.Drawing.Size(103, 20);
-            this.txtTelefono.TabIndex = 7;
+            this.txtTelefono.TabIndex = 4;
             // 
             // lblTelefono
             // 
@@ -116,7 +116,7 @@ namespace TP_PAV.Interfaz.Consultas
             this.btnAccion.Location = new System.Drawing.Point(187, 179);
             this.btnAccion.Name = "btnAccion";
             this.btnAccion.Size = new System.Drawing.Size(64, 20);
-            this.btnAccion.TabIndex = 8;
+            this.btnAccion.TabIndex = 5;
             this.btnAccion.Text = "Accion";
             this.btnAccion.UseVisualStyleBackColor = true;
             this.btnAccion.Click += new System.EventHandler(this.btnAccion_Click);

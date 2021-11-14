@@ -55,7 +55,7 @@ namespace TP_PAV.Interfaz.Reportes
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmReporteFactura";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmReporteFactura";
+            this.Text = "Impresión de Factura";
             this.Load += new System.EventHandler(this.frmReporteFactura_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DetallesBindingSource)).EndInit();
             this.ResumeLayout(false);

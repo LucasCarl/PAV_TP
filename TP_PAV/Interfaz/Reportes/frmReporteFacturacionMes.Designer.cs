@@ -90,7 +90,7 @@ namespace TP_PAV.Interfaz.Reportes
             this.btnConsultar.Location = new System.Drawing.Point(450, 9);
             this.btnConsultar.Name = "btnConsultar";
             this.btnConsultar.Size = new System.Drawing.Size(84, 23);
-            this.btnConsultar.TabIndex = 5;
+            this.btnConsultar.TabIndex = 4;
             this.btnConsultar.Text = "Consultar";
             this.btnConsultar.UseVisualStyleBackColor = true;
             this.btnConsultar.Click += new System.EventHandler(this.btnConsultar_Click);
@@ -109,7 +109,7 @@ namespace TP_PAV.Interfaz.Reportes
             this.Controls.Add(this.dtpDesde);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
-            this.MinimumSize = new System.Drawing.Size(560, 0);
+            this.MinimumSize = new System.Drawing.Size(560, 39);
             this.Name = "frmReporteFacturacionMes";
             this.Text = "Facturación por Mes";
             this.Load += new System.EventHandler(this.frmReporteFacturacionMes_Load);

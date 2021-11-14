@@ -73,7 +73,8 @@ namespace TP_PAV.Interfaz.Consultas
             this.dgvFacturas.ReadOnly = true;
             this.dgvFacturas.RowHeadersWidth = 20;
             this.dgvFacturas.Size = new System.Drawing.Size(431, 172);
-            this.dgvFacturas.TabIndex = 0;
+            this.dgvFacturas.TabIndex = 30;
+            this.dgvFacturas.TabStop = false;
             // 
             // nroFactura
             // 
@@ -129,7 +130,7 @@ namespace TP_PAV.Interfaz.Consultas
             this.btnImprimir.Location = new System.Drawing.Point(185, 316);
             this.btnImprimir.Name = "btnImprimir";
             this.btnImprimir.Size = new System.Drawing.Size(75, 23);
-            this.btnImprimir.TabIndex = 1;
+            this.btnImprimir.TabIndex = 7;
             this.btnImprimir.Text = "Imprimir";
             this.btnImprimir.UseVisualStyleBackColor = true;
             this.btnImprimir.Click += new System.EventHandler(this.btnImprimir_Click);
@@ -144,7 +145,7 @@ namespace TP_PAV.Interfaz.Consultas
             this.gbxFechaEmision.Location = new System.Drawing.Point(212, 12);
             this.gbxFechaEmision.Name = "gbxFechaEmision";
             this.gbxFechaEmision.Size = new System.Drawing.Size(190, 83);
-            this.gbxFechaEmision.TabIndex = 37;
+            this.gbxFechaEmision.TabIndex = 3;
             this.gbxFechaEmision.TabStop = false;
             this.gbxFechaEmision.Text = "Fecha Emisión";
             // 
@@ -154,7 +155,7 @@ namespace TP_PAV.Interfaz.Consultas
             this.chkFecha.Location = new System.Drawing.Point(85, 0);
             this.chkFecha.Name = "chkFecha";
             this.chkFecha.Size = new System.Drawing.Size(15, 14);
-            this.chkFecha.TabIndex = 36;
+            this.chkFecha.TabIndex = 3;
             this.chkFecha.UseVisualStyleBackColor = true;
             this.chkFecha.CheckedChanged += new System.EventHandler(this.chkFecha_CheckedChanged);
             // 
@@ -175,7 +176,7 @@ namespace TP_PAV.Interfaz.Consultas
             this.dtpFechaHasta.Location = new System.Drawing.Point(53, 47);
             this.dtpFechaHasta.Name = "dtpFechaHasta";
             this.dtpFechaHasta.Size = new System.Drawing.Size(100, 20);
-            this.dtpFechaHasta.TabIndex = 35;
+            this.dtpFechaHasta.TabIndex = 5;
             // 
             // lblFechaDesde
             // 
@@ -194,7 +195,7 @@ namespace TP_PAV.Interfaz.Consultas
             this.dtpFechaDesde.Location = new System.Drawing.Point(53, 19);
             this.dtpFechaDesde.Name = "dtpFechaDesde";
             this.dtpFechaDesde.Size = new System.Drawing.Size(100, 20);
-            this.dtpFechaDesde.TabIndex = 33;
+            this.dtpFechaDesde.TabIndex = 4;
             // 
             // lblNroFactura
             // 
@@ -210,7 +211,7 @@ namespace TP_PAV.Interfaz.Consultas
             this.nudNroFactura.Location = new System.Drawing.Point(116, 13);
             this.nudNroFactura.Name = "nudNroFactura";
             this.nudNroFactura.Size = new System.Drawing.Size(65, 20);
-            this.nudNroFactura.TabIndex = 39;
+            this.nudNroFactura.TabIndex = 0;
             // 
             // cbxUsuario
             // 
@@ -218,7 +219,7 @@ namespace TP_PAV.Interfaz.Consultas
             this.cbxUsuario.Location = new System.Drawing.Point(60, 74);
             this.cbxUsuario.Name = "cbxUsuario";
             this.cbxUsuario.Size = new System.Drawing.Size(121, 21);
-            this.cbxUsuario.TabIndex = 41;
+            this.cbxUsuario.TabIndex = 2;
             // 
             // lblUsuario
             // 
@@ -235,7 +236,7 @@ namespace TP_PAV.Interfaz.Consultas
             this.cbxCliente.Location = new System.Drawing.Point(60, 44);
             this.cbxCliente.Name = "cbxCliente";
             this.cbxCliente.Size = new System.Drawing.Size(121, 21);
-            this.cbxCliente.TabIndex = 42;
+            this.cbxCliente.TabIndex = 1;
             // 
             // lblCliente
             // 
@@ -251,7 +252,7 @@ namespace TP_PAV.Interfaz.Consultas
             this.btnConsultar.Location = new System.Drawing.Point(12, 109);
             this.btnConsultar.Name = "btnConsultar";
             this.btnConsultar.Size = new System.Drawing.Size(75, 23);
-            this.btnConsultar.TabIndex = 44;
+            this.btnConsultar.TabIndex = 6;
             this.btnConsultar.Text = "Consultar";
             this.btnConsultar.UseVisualStyleBackColor = true;
             this.btnConsultar.Click += new System.EventHandler(this.btnConsultar_Click);

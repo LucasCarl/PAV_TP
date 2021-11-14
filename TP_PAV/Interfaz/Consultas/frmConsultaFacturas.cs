@@ -70,6 +70,13 @@ namespace TP_PAV.Interfaz.Consultas
 
         private void btnConsultar_Click(object sender, EventArgs e)
         {
+            //Controlar fecha desde < fecha hasta
+            if (chkFecha.Checked && (dtpFechaDesde.Value.Date > dtpFechaHasta.Value.Date))
+            {
+                MessageBox.Show("La fecha desde debe ser anterior a la fecha hasta.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
             //Cargar parametros consulta
             Dictionary<string, object> parametros = new Dictionary<string, object>();
             if (nudNroFactura.Value > 0)

@@ -57,6 +57,13 @@ namespace TP_PAV.Interfaz.Reportes
 
         private void btnConsultar_Click(object sender, EventArgs e)
         {
+            //Controlar fecha desde < fecha hasta
+            if(chkFecha.Checked && (dtpFechaDesde.Value.Date > dtpFechaHasta.Value.Date))
+            {
+                MessageBox.Show("La fecha desde debe ser anterior a la fecha hasta.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
             //Cargar parametros consulta
             Dictionary<string, object> parametros = new Dictionary<string, object>();
             if (cbxCliente.SelectedIndex >= 0)
@@ -103,8 +110,10 @@ namespace TP_PAV.Interfaz.Reportes
 
         private void chkFecha_CheckedChanged(object sender, EventArgs e)
         {
-            dtpFechaDesde.Enabled = chkFecha.Checked;
-            dtpFechaHasta.Enabled = chkFecha.Checked;
+            dtpFechaDesde.Enabled = !dtpFechaDesde.Enabled;
+            dtpFechaHasta.Enabled = !dtpFechaHasta.Enabled;
+            lblFechaHasta.Enabled = !lblFechaHasta.Enabled;
+            lblFechaDesde.Enabled = !lblFechaDesde.Enabled;
         }
     }
 }

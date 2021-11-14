@@ -56,7 +56,7 @@ namespace TP_PAV.Interfaz.Consultas
             this.txtNombre.Location = new System.Drawing.Point(64, 23);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(117, 20);
-            this.txtNombre.TabIndex = 4;
+            this.txtNombre.TabIndex = 0;
             // 
             // lblNombre
             // 
@@ -72,7 +72,7 @@ namespace TP_PAV.Interfaz.Consultas
             this.txtApellido.Location = new System.Drawing.Point(64, 61);
             this.txtApellido.Name = "txtApellido";
             this.txtApellido.Size = new System.Drawing.Size(117, 20);
-            this.txtApellido.TabIndex = 6;
+            this.txtApellido.TabIndex = 1;
             // 
             // lblApellido
             // 
@@ -88,7 +88,7 @@ namespace TP_PAV.Interfaz.Consultas
             this.txtEmail.Location = new System.Drawing.Point(247, 23);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(145, 20);
-            this.txtEmail.TabIndex = 8;
+            this.txtEmail.TabIndex = 2;
             // 
             // lblEmail
             // 
@@ -104,7 +104,7 @@ namespace TP_PAV.Interfaz.Consultas
             this.txtTelefono.Location = new System.Drawing.Point(247, 62);
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.Size = new System.Drawing.Size(94, 20);
-            this.txtTelefono.TabIndex = 10;
+            this.txtTelefono.TabIndex = 3;
             // 
             // lblTelefono
             // 
@@ -120,7 +120,7 @@ namespace TP_PAV.Interfaz.Consultas
             this.btnConsultar.Location = new System.Drawing.Point(11, 107);
             this.btnConsultar.Name = "btnConsultar";
             this.btnConsultar.Size = new System.Drawing.Size(64, 20);
-            this.btnConsultar.TabIndex = 11;
+            this.btnConsultar.TabIndex = 4;
             this.btnConsultar.Text = "Consultar";
             this.btnConsultar.UseVisualStyleBackColor = true;
             this.btnConsultar.Click += new System.EventHandler(this.btnConsultar_Click);
@@ -143,6 +143,7 @@ namespace TP_PAV.Interfaz.Consultas
             this.dgvTabla.RowTemplate.Height = 25;
             this.dgvTabla.Size = new System.Drawing.Size(389, 174);
             this.dgvTabla.TabIndex = 12;
+            this.dgvTabla.TabStop = false;
             this.dgvTabla.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTabla_CellClick);
             // 
             // Apellido
@@ -186,7 +187,7 @@ namespace TP_PAV.Interfaz.Consultas
             this.btnNuevo.Location = new System.Drawing.Point(10, 312);
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.Size = new System.Drawing.Size(64, 20);
-            this.btnNuevo.TabIndex = 14;
+            this.btnNuevo.TabIndex = 5;
             this.btnNuevo.Text = "Nuevo";
             this.btnNuevo.UseVisualStyleBackColor = true;
             this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
@@ -197,7 +198,7 @@ namespace TP_PAV.Interfaz.Consultas
             this.btnEditar.Location = new System.Drawing.Point(80, 312);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(64, 20);
-            this.btnEditar.TabIndex = 15;
+            this.btnEditar.TabIndex = 6;
             this.btnEditar.Text = "Editar";
             this.btnEditar.UseVisualStyleBackColor = true;
             this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
@@ -208,7 +209,7 @@ namespace TP_PAV.Interfaz.Consultas
             this.btnBorrar.Location = new System.Drawing.Point(149, 312);
             this.btnBorrar.Name = "btnBorrar";
             this.btnBorrar.Size = new System.Drawing.Size(64, 20);
-            this.btnBorrar.TabIndex = 16;
+            this.btnBorrar.TabIndex = 7;
             this.btnBorrar.Text = "Borrar";
             this.btnBorrar.UseVisualStyleBackColor = true;
             this.btnBorrar.Click += new System.EventHandler(this.btnBorrar_Click);

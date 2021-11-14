@@ -71,5 +71,10 @@ namespace TP_PAV.Interfaz
             frmListadoFacturas listadoFacturas = new frmListadoFacturas();
             listadoFacturas.ShowDialog();
         }
+
+        private void acercaDelProductoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Sistema para la gestión de facturas: Permite generar facturas y generar reportes respecto a ellas.\nVersion Alpha 1.0", "Acerca de", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
     }
 }

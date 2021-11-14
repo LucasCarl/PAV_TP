@@ -111,7 +111,7 @@ namespace TP_PAV.Interfaz.Consultas
             this.btnAccion.Location = new System.Drawing.Point(156, 138);
             this.btnAccion.Name = "btnAccion";
             this.btnAccion.Size = new System.Drawing.Size(64, 20);
-            this.btnAccion.TabIndex = 9;
+            this.btnAccion.TabIndex = 13;
             this.btnAccion.Text = "Accion";
             this.btnAccion.UseVisualStyleBackColor = true;
             this.btnAccion.Click += new System.EventHandler(this.btnAccion_Click);
@@ -131,7 +131,7 @@ namespace TP_PAV.Interfaz.Consultas
             this.cbxBarrio.Location = new System.Drawing.Point(226, 86);
             this.cbxBarrio.Name = "cbxBarrio";
             this.cbxBarrio.Size = new System.Drawing.Size(121, 21);
-            this.cbxBarrio.TabIndex = 11;
+            this.cbxBarrio.TabIndex = 12;
             // 
             // cbxContacto
             // 
@@ -139,7 +139,7 @@ namespace TP_PAV.Interfaz.Consultas
             this.cbxContacto.Location = new System.Drawing.Point(60, 0);
             this.cbxContacto.Name = "cbxContacto";
             this.cbxContacto.Size = new System.Drawing.Size(100, 21);
-            this.cbxContacto.TabIndex = 13;
+            this.cbxContacto.TabIndex = 8;
             // 
             // txtCuit
             // 
@@ -158,7 +158,7 @@ namespace TP_PAV.Interfaz.Consultas
             this.groupBox1.Location = new System.Drawing.Point(182, 12);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(184, 60);
-            this.groupBox1.TabIndex = 14;
+            this.groupBox1.TabIndex = 8;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Contacto";
             // 
@@ -167,7 +167,7 @@ namespace TP_PAV.Interfaz.Consultas
             this.btnMostrarCont.Location = new System.Drawing.Point(127, 31);
             this.btnMostrarCont.Name = "btnMostrarCont";
             this.btnMostrarCont.Size = new System.Drawing.Size(51, 23);
-            this.btnMostrarCont.TabIndex = 16;
+            this.btnMostrarCont.TabIndex = 11;
             this.btnMostrarCont.Text = "Mostrar";
             this.btnMostrarCont.UseVisualStyleBackColor = true;
             this.btnMostrarCont.Click += new System.EventHandler(this.btnMostrarCont_Click);
@@ -177,7 +177,7 @@ namespace TP_PAV.Interfaz.Consultas
             this.btnModifCont.Location = new System.Drawing.Point(60, 31);
             this.btnModifCont.Name = "btnModifCont";
             this.btnModifCont.Size = new System.Drawing.Size(61, 23);
-            this.btnModifCont.TabIndex = 15;
+            this.btnModifCont.TabIndex = 10;
             this.btnModifCont.Text = "Modificar";
             this.btnModifCont.UseVisualStyleBackColor = true;
             this.btnModifCont.Click += new System.EventHandler(this.btnModifCont_Click);
@@ -187,7 +187,7 @@ namespace TP_PAV.Interfaz.Consultas
             this.btnNuevoCont.Location = new System.Drawing.Point(7, 31);
             this.btnNuevoCont.Name = "btnNuevoCont";
             this.btnNuevoCont.Size = new System.Drawing.Size(47, 23);
-            this.btnNuevoCont.TabIndex = 14;
+            this.btnNuevoCont.TabIndex = 9;
             this.btnNuevoCont.Text = "Nuevo";
             this.btnNuevoCont.UseVisualStyleBackColor = true;
             this.btnNuevoCont.Click += new System.EventHandler(this.btnNuevoCont_Click);

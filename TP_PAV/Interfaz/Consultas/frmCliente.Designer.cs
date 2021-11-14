@@ -79,7 +79,7 @@ namespace TP_PAV.Interfaz.Consultas
             this.btnBorrar.Location = new System.Drawing.Point(150, 375);
             this.btnBorrar.Name = "btnBorrar";
             this.btnBorrar.Size = new System.Drawing.Size(64, 20);
-            this.btnBorrar.TabIndex = 21;
+            this.btnBorrar.TabIndex = 15;
             this.btnBorrar.Text = "Borrar";
             this.btnBorrar.UseVisualStyleBackColor = true;
             this.btnBorrar.Click += new System.EventHandler(this.btnBorrar_Click);
@@ -90,7 +90,7 @@ namespace TP_PAV.Interfaz.Consultas
             this.btnEditar.Location = new System.Drawing.Point(81, 375);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(64, 20);
-            this.btnEditar.TabIndex = 20;
+            this.btnEditar.TabIndex = 14;
             this.btnEditar.Text = "Editar";
             this.btnEditar.UseVisualStyleBackColor = true;
             this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
@@ -100,7 +100,7 @@ namespace TP_PAV.Interfaz.Consultas
             this.btnNuevo.Location = new System.Drawing.Point(11, 375);
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.Size = new System.Drawing.Size(64, 20);
-            this.btnNuevo.TabIndex = 19;
+            this.btnNuevo.TabIndex = 13;
             this.btnNuevo.Text = "Nuevo";
             this.btnNuevo.UseVisualStyleBackColor = true;
             this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
@@ -126,6 +126,7 @@ namespace TP_PAV.Interfaz.Consultas
             this.dgvTabla.RowTemplate.Height = 25;
             this.dgvTabla.Size = new System.Drawing.Size(525, 174);
             this.dgvTabla.TabIndex = 18;
+            this.dgvTabla.TabStop = false;
             this.dgvTabla.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTabla_CellClick);
             // 
             // RazonSocial
@@ -196,7 +197,7 @@ namespace TP_PAV.Interfaz.Consultas
             this.btnConsultar.Location = new System.Drawing.Point(12, 170);
             this.btnConsultar.Name = "btnConsultar";
             this.btnConsultar.Size = new System.Drawing.Size(64, 20);
-            this.btnConsultar.TabIndex = 17;
+            this.btnConsultar.TabIndex = 12;
             this.btnConsultar.Text = "Consultar";
             this.btnConsultar.UseVisualStyleBackColor = true;
             this.btnConsultar.Click += new System.EventHandler(this.btnConsultar_Click);
@@ -215,7 +216,7 @@ namespace TP_PAV.Interfaz.Consultas
             this.txtRazon.Location = new System.Drawing.Point(88, 45);
             this.txtRazon.Name = "txtRazon";
             this.txtRazon.Size = new System.Drawing.Size(100, 20);
-            this.txtRazon.TabIndex = 25;
+            this.txtRazon.TabIndex = 1;
             // 
             // lblRazon
             // 
@@ -231,7 +232,7 @@ namespace TP_PAV.Interfaz.Consultas
             this.txtCalle.Location = new System.Drawing.Point(254, 19);
             this.txtCalle.Name = "txtCalle";
             this.txtCalle.Size = new System.Drawing.Size(100, 20);
-            this.txtCalle.TabIndex = 27;
+            this.txtCalle.TabIndex = 5;
             // 
             // lblCalle
             // 
@@ -247,7 +248,7 @@ namespace TP_PAV.Interfaz.Consultas
             this.txtNumero.Location = new System.Drawing.Point(254, 45);
             this.txtNumero.Name = "txtNumero";
             this.txtNumero.Size = new System.Drawing.Size(100, 20);
-            this.txtNumero.TabIndex = 29;
+            this.txtNumero.TabIndex = 6;
             // 
             // lblNumero
             // 
@@ -284,7 +285,7 @@ namespace TP_PAV.Interfaz.Consultas
             this.dtpFechaDesde.Location = new System.Drawing.Point(53, 19);
             this.dtpFechaDesde.Name = "dtpFechaDesde";
             this.dtpFechaDesde.Size = new System.Drawing.Size(100, 20);
-            this.dtpFechaDesde.TabIndex = 33;
+            this.dtpFechaDesde.TabIndex = 3;
             // 
             // cbxBarrio
             // 
@@ -292,7 +293,7 @@ namespace TP_PAV.Interfaz.Consultas
             this.cbxBarrio.Location = new System.Drawing.Point(254, 74);
             this.cbxBarrio.Name = "cbxBarrio";
             this.cbxBarrio.Size = new System.Drawing.Size(100, 21);
-            this.cbxBarrio.TabIndex = 34;
+            this.cbxBarrio.TabIndex = 7;
             // 
             // gbxFechaAlta
             // 
@@ -304,7 +305,7 @@ namespace TP_PAV.Interfaz.Consultas
             this.gbxFechaAlta.Location = new System.Drawing.Point(11, 74);
             this.gbxFechaAlta.Name = "gbxFechaAlta";
             this.gbxFechaAlta.Size = new System.Drawing.Size(177, 83);
-            this.gbxFechaAlta.TabIndex = 36;
+            this.gbxFechaAlta.TabIndex = 2;
             this.gbxFechaAlta.TabStop = false;
             this.gbxFechaAlta.Text = "Fecha Alta";
             // 
@@ -314,7 +315,7 @@ namespace TP_PAV.Interfaz.Consultas
             this.chkFecha.Location = new System.Drawing.Point(77, 0);
             this.chkFecha.Name = "chkFecha";
             this.chkFecha.Size = new System.Drawing.Size(15, 14);
-            this.chkFecha.TabIndex = 36;
+            this.chkFecha.TabIndex = 2;
             this.chkFecha.UseVisualStyleBackColor = true;
             this.chkFecha.CheckedChanged += new System.EventHandler(this.chkFecha_CheckedChanged);
             // 
@@ -335,7 +336,7 @@ namespace TP_PAV.Interfaz.Consultas
             this.dtpFechaHasta.Location = new System.Drawing.Point(53, 47);
             this.dtpFechaHasta.Name = "dtpFechaHasta";
             this.dtpFechaHasta.Size = new System.Drawing.Size(100, 20);
-            this.dtpFechaHasta.TabIndex = 35;
+            this.dtpFechaHasta.TabIndex = 4;
             // 
             // gbxContacto
             // 
@@ -350,7 +351,7 @@ namespace TP_PAV.Interfaz.Consultas
             this.gbxContacto.Location = new System.Drawing.Point(360, 19);
             this.gbxContacto.Name = "gbxContacto";
             this.gbxContacto.Size = new System.Drawing.Size(177, 138);
-            this.gbxContacto.TabIndex = 37;
+            this.gbxContacto.TabIndex = 8;
             this.gbxContacto.TabStop = false;
             this.gbxContacto.Text = "Contacto";
             // 
@@ -359,7 +360,7 @@ namespace TP_PAV.Interfaz.Consultas
             this.txtTelefonoC.Location = new System.Drawing.Point(63, 97);
             this.txtTelefonoC.Name = "txtTelefonoC";
             this.txtTelefonoC.Size = new System.Drawing.Size(100, 20);
-            this.txtTelefonoC.TabIndex = 45;
+            this.txtTelefonoC.TabIndex = 11;
             // 
             // lblTelefono
             // 
@@ -375,7 +376,7 @@ namespace TP_PAV.Interfaz.Consultas
             this.txtEmailC.Location = new System.Drawing.Point(63, 71);
             this.txtEmailC.Name = "txtEmailC";
             this.txtEmailC.Size = new System.Drawing.Size(100, 20);
-            this.txtEmailC.TabIndex = 43;
+            this.txtEmailC.TabIndex = 10;
             // 
             // lblEmail
             // 
@@ -391,7 +392,7 @@ namespace TP_PAV.Interfaz.Consultas
             this.txtApellidoC.Location = new System.Drawing.Point(63, 45);
             this.txtApellidoC.Name = "txtApellidoC";
             this.txtApellidoC.Size = new System.Drawing.Size(100, 20);
-            this.txtApellidoC.TabIndex = 41;
+            this.txtApellidoC.TabIndex = 9;
             // 
             // lblApellido
             // 
@@ -407,7 +408,7 @@ namespace TP_PAV.Interfaz.Consultas
             this.txtNombreC.Location = new System.Drawing.Point(63, 19);
             this.txtNombreC.Name = "txtNombreC";
             this.txtNombreC.Size = new System.Drawing.Size(100, 20);
-            this.txtNombreC.TabIndex = 39;
+            this.txtNombreC.TabIndex = 8;
             // 
             // lblNombre
             // 
@@ -424,7 +425,7 @@ namespace TP_PAV.Interfaz.Consultas
             this.txtCuit.Mask = "00-00000000-0";
             this.txtCuit.Name = "txtCuit";
             this.txtCuit.Size = new System.Drawing.Size(80, 20);
-            this.txtCuit.TabIndex = 1;
+            this.txtCuit.TabIndex = 0;
             this.txtCuit.TextMaskFormat = System.Windows.Forms.MaskFormat.IncludePromptAndLiterals;
             // 
             // lblFilas

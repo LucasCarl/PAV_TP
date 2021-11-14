@@ -48,7 +48,7 @@ namespace TP_PAV.Interfaz.Consultas
             this.btnAccion.Location = new System.Drawing.Point(182, 210);
             this.btnAccion.Name = "btnAccion";
             this.btnAccion.Size = new System.Drawing.Size(64, 20);
-            this.btnAccion.TabIndex = 9;
+            this.btnAccion.TabIndex = 5;
             this.btnAccion.Text = "Accion";
             this.btnAccion.UseVisualStyleBackColor = true;
             this.btnAccion.Click += new System.EventHandler(this.btnAccion_Click);
@@ -59,7 +59,7 @@ namespace TP_PAV.Interfaz.Consultas
             this.txtAlcance.MaxLength = 50;
             this.txtAlcance.Name = "txtAlcance";
             this.txtAlcance.Size = new System.Drawing.Size(103, 20);
-            this.txtAlcance.TabIndex = 17;
+            this.txtAlcance.TabIndex = 3;
             // 
             // lblAlcance
             // 
@@ -76,7 +76,7 @@ namespace TP_PAV.Interfaz.Consultas
             this.txtVersion.MaxLength = 50;
             this.txtVersion.Name = "txtVersion";
             this.txtVersion.Size = new System.Drawing.Size(68, 20);
-            this.txtVersion.TabIndex = 15;
+            this.txtVersion.TabIndex = 2;
             // 
             // lblVersion
             // 
@@ -94,7 +94,7 @@ namespace TP_PAV.Interfaz.Consultas
             this.txtDescripcion.MaxLength = 50;
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.Size = new System.Drawing.Size(103, 20);
-            this.txtDescripcion.TabIndex = 13;
+            this.txtDescripcion.TabIndex = 1;
             // 
             // lblDescripcion
             // 
@@ -120,7 +120,7 @@ namespace TP_PAV.Interfaz.Consultas
             this.cbxProductos.Location = new System.Drawing.Point(91, 20);
             this.cbxProductos.Name = "cbxProductos";
             this.cbxProductos.Size = new System.Drawing.Size(155, 21);
-            this.cbxProductos.TabIndex = 18;
+            this.cbxProductos.TabIndex = 0;
             // 
             // cbxResponsable
             // 
@@ -128,7 +128,7 @@ namespace TP_PAV.Interfaz.Consultas
             this.cbxResponsable.Location = new System.Drawing.Point(91, 177);
             this.cbxResponsable.Name = "cbxResponsable";
             this.cbxResponsable.Size = new System.Drawing.Size(121, 21);
-            this.cbxResponsable.TabIndex = 20;
+            this.cbxResponsable.TabIndex = 4;
             // 
             // label1
             // 

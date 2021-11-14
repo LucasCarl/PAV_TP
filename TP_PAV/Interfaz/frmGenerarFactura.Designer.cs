@@ -107,7 +107,7 @@ namespace TP_PAV.Interfaz
             this.btnMostrar.Location = new System.Drawing.Point(468, 26);
             this.btnMostrar.Name = "btnMostrar";
             this.btnMostrar.Size = new System.Drawing.Size(56, 38);
-            this.btnMostrar.TabIndex = 13;
+            this.btnMostrar.TabIndex = 2;
             this.btnMostrar.Text = "Mostrar\r\nDatos";
             this.btnMostrar.UseVisualStyleBackColor = true;
             this.btnMostrar.Click += new System.EventHandler(this.btnMostrar_Click);
@@ -169,7 +169,7 @@ namespace TP_PAV.Interfaz
             this.cbxCliente.Location = new System.Drawing.Point(54, 0);
             this.cbxCliente.Name = "cbxCliente";
             this.cbxCliente.Size = new System.Drawing.Size(121, 21);
-            this.cbxCliente.TabIndex = 0;
+            this.cbxCliente.TabIndex = 1;
             // 
             // dgvDetalles
             // 
@@ -186,7 +186,8 @@ namespace TP_PAV.Interfaz
             this.dgvDetalles.ReadOnly = true;
             this.dgvDetalles.RowHeadersWidth = 20;
             this.dgvDetalles.Size = new System.Drawing.Size(544, 179);
-            this.dgvDetalles.TabIndex = 3;
+            this.dgvDetalles.TabIndex = 30;
+            this.dgvDetalles.TabStop = false;
             this.dgvDetalles.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDetalles_CellClick);
             // 
             // NroOrden
@@ -257,7 +258,7 @@ namespace TP_PAV.Interfaz
             0});
             this.nudPrecio.Name = "nudPrecio";
             this.nudPrecio.Size = new System.Drawing.Size(73, 20);
-            this.nudPrecio.TabIndex = 17;
+            this.nudPrecio.TabIndex = 7;
             // 
             // btnSacar
             // 
@@ -265,7 +266,7 @@ namespace TP_PAV.Interfaz
             this.btnSacar.Location = new System.Drawing.Point(281, 62);
             this.btnSacar.Name = "btnSacar";
             this.btnSacar.Size = new System.Drawing.Size(75, 23);
-            this.btnSacar.TabIndex = 15;
+            this.btnSacar.TabIndex = 9;
             this.btnSacar.Text = "Quitar";
             this.btnSacar.UseVisualStyleBackColor = true;
             this.btnSacar.Click += new System.EventHandler(this.btnSacar_Click);
@@ -275,7 +276,7 @@ namespace TP_PAV.Interfaz
             this.btnAgregar.Location = new System.Drawing.Point(281, 20);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(75, 23);
-            this.btnAgregar.TabIndex = 13;
+            this.btnAgregar.TabIndex = 8;
             this.btnAgregar.Text = "Añadir";
             this.btnAgregar.UseVisualStyleBackColor = true;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
@@ -296,7 +297,7 @@ namespace TP_PAV.Interfaz
             this.cbxProyecto.Location = new System.Drawing.Point(94, 42);
             this.cbxProyecto.Name = "cbxProyecto";
             this.cbxProyecto.Size = new System.Drawing.Size(121, 21);
-            this.cbxProyecto.TabIndex = 12;
+            this.cbxProyecto.TabIndex = 6;
             // 
             // cbxProducto
             // 
@@ -305,7 +306,7 @@ namespace TP_PAV.Interfaz
             this.cbxProducto.Location = new System.Drawing.Point(94, 19);
             this.cbxProducto.Name = "cbxProducto";
             this.cbxProducto.Size = new System.Drawing.Size(121, 21);
-            this.cbxProducto.TabIndex = 11;
+            this.cbxProducto.TabIndex = 4;
             // 
             // rdbProyecto
             // 
@@ -313,7 +314,7 @@ namespace TP_PAV.Interfaz
             this.rdbProyecto.Location = new System.Drawing.Point(20, 43);
             this.rdbProyecto.Name = "rdbProyecto";
             this.rdbProyecto.Size = new System.Drawing.Size(67, 17);
-            this.rdbProyecto.TabIndex = 1;
+            this.rdbProyecto.TabIndex = 5;
             this.rdbProyecto.TabStop = true;
             this.rdbProyecto.Text = "Proyecto";
             this.rdbProyecto.UseVisualStyleBackColor = true;
@@ -325,7 +326,7 @@ namespace TP_PAV.Interfaz
             this.rdbProducto.Location = new System.Drawing.Point(20, 20);
             this.rdbProducto.Name = "rdbProducto";
             this.rdbProducto.Size = new System.Drawing.Size(68, 17);
-            this.rdbProducto.TabIndex = 0;
+            this.rdbProducto.TabIndex = 3;
             this.rdbProducto.TabStop = true;
             this.rdbProducto.Text = "Producto";
             this.rdbProducto.UseVisualStyleBackColor = true;
@@ -363,7 +364,7 @@ namespace TP_PAV.Interfaz
             this.btnGenerar.Location = new System.Drawing.Point(15, 412);
             this.btnGenerar.Name = "btnGenerar";
             this.btnGenerar.Size = new System.Drawing.Size(75, 23);
-            this.btnGenerar.TabIndex = 14;
+            this.btnGenerar.TabIndex = 10;
             this.btnGenerar.Text = "Generar";
             this.btnGenerar.UseVisualStyleBackColor = true;
             this.btnGenerar.Click += new System.EventHandler(this.btnGenerar_Click);
@@ -374,7 +375,7 @@ namespace TP_PAV.Interfaz
             this.dtpFecha.Location = new System.Drawing.Point(459, 15);
             this.dtpFecha.Name = "dtpFecha";
             this.dtpFecha.Size = new System.Drawing.Size(100, 20);
-            this.dtpFecha.TabIndex = 15;
+            this.dtpFecha.TabIndex = 0;
             this.dtpFecha.ValueChanged += new System.EventHandler(this.dtpFecha_ValueChanged);
             // 
             // frmGenerarFactura
