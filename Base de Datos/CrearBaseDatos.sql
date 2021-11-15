@@ -11,7 +11,7 @@ GO
 SET QUOTED_IDENTIFIER ON
 GO
 	
-/** Tablas **/
+/** Crear Tablas **/
 
 CREATE TABLE [dbo].[Barrios](
 	[id_barrio] [int] IDENTITY(1,1) NOT NULL,
@@ -175,7 +175,7 @@ CREATE TABLE [dbo].[Facturas](
 ) ON [PRIMARY]
 GO
 
-/** Restricciones **/
+/** Crear Restricciones **/
 
 ALTER TABLE [dbo].[Clientes]  WITH CHECK ADD  CONSTRAINT [FK_Clientes_Barrios] FOREIGN KEY([id_barrio])
 REFERENCES [dbo].[Barrios] ([id_barrio])

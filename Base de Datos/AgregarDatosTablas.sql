@@ -54,14 +54,21 @@ SET IDENTITY_INSERT Contactos OFF
 /** Barrios **/
 SET IDENTITY_INSERT Barrios ON
 INSERT INTO Barrios (id_barrio, nombre, borrado) VALUES (1, 'Alta Córdoba', 0)
-INSERT INTO Barrios (id_barrio, nombre, borrado) VALUES (2, 'Alberdi', 0)
+INSERT INTO Barrios (id_barrio, nombre, borrado) VALUES (2, 'Cofico', 0)
 INSERT INTO Barrios (id_barrio, nombre, borrado) VALUES (3, 'Güemes', 0)
-INSERT INTO Barrios (id_barrio, nombre, borrado) VALUES (4, 'Cofico', 0)
+INSERT INTO Barrios (id_barrio, nombre, borrado) VALUES (4, 'Centro', 0)
 INSERT INTO Barrios (id_barrio, nombre, borrado) VALUES (5, 'Cerro', 0)
 SET IDENTITY_INSERT Barrios OFF
 
 /** Proyectos **/
 SET IDENTITY_INSERT Proyectos ON
-INSERT INTO Proyectos (id_proyecto, id_producto, descripcion, alcance, version, id_responsable, borrado) VALUES (1, 2, 'testDesc', 'testAlc', '0.0.0', 4, 0)
+INSERT INTO Proyectos (id_proyecto, id_producto, descripcion, alcance, version, id_responsable, borrado) VALUES (1, 2, 'testDescripcion', 'testAlcance', '0.0.0', 4, 0)
 INSERT INTO Proyectos (id_proyecto, id_producto, descripcion, alcance, version, id_responsable, borrado) VALUES (2, 4, 'Probar vulnerabilidades', 'Sin definir', '0.0.1', 6, 0)
 SET IDENTITY_INSERT Proyectos OFF
+
+/** Clientes **/
+SET IDENTITY_INSERT Clientes ON
+INSERT INTO Clientes (id_cliente, cuit, razon_social, calle, numero, fecha_alta, id_barrio, id_contacto, borrado) VALUES (1, '30-99907484-3', 'Municipalidad de Cordoba', 'Marcelo T. de Alvear', '120', '2020-10-04 04:16:13', 4, 1, 0)
+INSERT INTO Clientes (id_cliente, cuit, razon_social, calle, numero, fecha_alta, id_barrio, id_contacto, borrado) VALUES (2, '30-03344082-1', 'Testers SA', 'Av. Colon', '1500', '2020-11-12 06:46:20', 4, 9, 0)
+INSERT INTO Clientes (id_cliente, cuit, razon_social, calle, numero, fecha_alta, id_barrio, id_contacto, borrado) VALUES (3, '30-68452471-2', 'TechSoft', 'Juan Campillo', '347', '2021-5-10 08:26:50', 2, 13, 0)
+SET IDENTITY_INSERT Clientes OFF
