@@ -94,6 +94,8 @@ namespace TP_PAV.Interfaz.Consultas
             IList<Factura> listadoFacturas = facturaService.ObtenerFacturas(parametros);
             dgvFacturas.DataSource = listadoFacturas;
             lblFilas.Text = "Cantidad de resultados: " + listadoFacturas.Count;
+
+            btnImprimir.Enabled = false;
         }
 
         private void chkFecha_CheckedChanged(object sender, EventArgs e)
@@ -102,6 +104,11 @@ namespace TP_PAV.Interfaz.Consultas
             dtpFechaHasta.Enabled = !dtpFechaHasta.Enabled;
             lblFechaHasta.Enabled = !lblFechaHasta.Enabled;
             lblFechaDesde.Enabled = !lblFechaDesde.Enabled;
+        }
+
+        private void dgvFacturas_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            btnImprimir.Enabled = true;
         }
     }
 }

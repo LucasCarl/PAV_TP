@@ -75,6 +75,7 @@ namespace TP_PAV.Interfaz.Consultas
             this.dgvFacturas.Size = new System.Drawing.Size(431, 172);
             this.dgvFacturas.TabIndex = 30;
             this.dgvFacturas.TabStop = false;
+            this.dgvFacturas.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvFacturas_CellClick);
             // 
             // nroFactura
             // 
@@ -127,6 +128,7 @@ namespace TP_PAV.Interfaz.Consultas
             // 
             // btnImprimir
             // 
+            this.btnImprimir.Enabled = false;
             this.btnImprimir.Location = new System.Drawing.Point(185, 316);
             this.btnImprimir.Name = "btnImprimir";
             this.btnImprimir.Size = new System.Drawing.Size(75, 23);
