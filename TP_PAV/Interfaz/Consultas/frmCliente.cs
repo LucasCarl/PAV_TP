@@ -131,7 +131,7 @@ namespace TP_PAV.Interfaz.Consultas
             frmABMCliente abmCliente = new frmABMCliente();
             abmCliente.IniciarFormulario(frmABMCliente.FormMode.nuevo);
             DialogResult result = abmCliente.ShowDialog();
-            if (result != DialogResult.Cancel)
+            //if (result != DialogResult.Cancel)
                 btnConsultar_Click(sender, e);
         }
 
