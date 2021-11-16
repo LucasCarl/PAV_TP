@@ -151,10 +151,11 @@ namespace TP_PAV.Interfaz.Consultas
                     break;
 
                 case FormMode.mostrar:
-                    this.Close();
+                    
                     break;
             }
 
+            this.DialogResult = DialogResult.OK;
             this.Close();
         }
 
@@ -220,7 +221,8 @@ namespace TP_PAV.Interfaz.Consultas
             {
                 cbxContacto.DataSource = null;
                 LlenarCombobox(cbxContacto, contactoService.ObtenerContactos(), "nombreCompleto", "idContacto");
-                cbxContacto.SelectedIndex = cbxContacto.Items.Count - 1;
+                int index = cbxContacto.FindString(abmContacto.GetoContacto().NombreCompleto);
+                cbxContacto.SelectedIndex = index;
             }
         }
 

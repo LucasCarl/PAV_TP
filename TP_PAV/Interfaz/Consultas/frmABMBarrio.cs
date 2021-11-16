@@ -113,6 +113,7 @@ namespace TP_PAV.Interfaz.Consultas
                     break;
             }
 
+            this.DialogResult = DialogResult.OK;
             this.Close();
         }
 

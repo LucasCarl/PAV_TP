@@ -99,8 +99,10 @@ namespace TP_PAV.Interfaz.Consultas
                         return;
                     }
 
-                    if (contactoService.NuevoContacto(CargarContacto()))
+                    Contacto nuevoContacto = CargarContacto();
+                    if (contactoService.NuevoContacto(nuevoContacto))
                     {
+                        oContacto = nuevoContacto;
                         MessageBox.Show("Contacto creado", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                     else
@@ -143,10 +145,11 @@ namespace TP_PAV.Interfaz.Consultas
                     break;
 
                 case FormMode.mostrar:
-                    this.Close();
+                    
                     break;
             }
 
+            this.DialogResult = DialogResult.OK;
             this.Close();
         }
 
@@ -197,6 +200,11 @@ namespace TP_PAV.Interfaz.Consultas
                 txtTelefono.BackColor = Color.White;
 
             return vacio;
+        }
+
+        public Contacto GetoContacto()
+        {
+            return oContacto;
         }
     }
 }

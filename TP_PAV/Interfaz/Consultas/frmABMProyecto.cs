@@ -136,6 +136,8 @@ namespace TP_PAV.Interfaz.Consultas
                         MessageBox.Show("Error al modificar proyecto", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     break;
             }
+
+            this.DialogResult = DialogResult.OK;
             this.Close();
         }
 
